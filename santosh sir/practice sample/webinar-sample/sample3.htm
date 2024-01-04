@@ -1,0 +1,701 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <title>CodePen - [Last Call] Zoom Webinar Basics</title>
+
+  <link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/fullpage/fullpage-9a6f5ffcc359b81b95df109e4b8ce436f472f4f828fcc75227cd5266125d459b.css" />
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+
+
+  <title>CodePen - [Last Call] Zoom Webinar Basics</title>
+
+  <style>
+    html { font-size: 15px; }
+    html, body { margin: 0; padding: 0; min-height: 100%; }
+    body { height:100%; display: flex; flex-direction: column; }
+    .referer-warning {
+      background: black;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      padding: 0.75em;
+      color: white;
+      text-align: center;
+      font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, system-ui, Sans-Serif;
+      line-height: 1.2;
+      font-size: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    .referer-warning span { font-family: initial; }
+    .referer-warning h1 { font-size: 1.2rem; margin: 0; }
+    .referer-warning a { color: #56bcf9; }
+  </style>
+</head>
+
+<body class="">
+  <div class="referer-warning">
+    <h1><span>⚠️</span> Do not enter passwords or personal information on this page. <span>⚠️</span></h1>
+      This is a code demo posted by a web developer on <a href="https://codepen.io">CodePen</a>.
+    <br />
+    A referer from CodePen is required to render this page view, and your browser is not sending one (<a href="https://blog.codepen.io/2017/10/05/regarding-referer-headers/" target="_blank" rel="noreferrer noopener">more details</a>).</h1>
+  </div>
+
+  <div id="result-iframe-wrap" role="main">
+    <iframe
+      id="result"
+      srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot; >
+
+<head>
+  <meta charset=&quot;UTF-8&quot;>
+  
+
+    <link rel=&quot;apple-touch-icon&quot; type=&quot;image/png&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png&quot; />
+
+    <meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;CodePen&quot;>
+
+    <link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico&quot; />
+
+    <link rel=&quot;mask-icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg&quot; color=&quot;#111&quot; />
+
+
+
+  
+  <title>CodePen - [Last Call] Zoom Webinar Basics</title>
+    <link rel=&quot;canonical&quot; href=&quot;https://codepen.io/reallygoodemails/pen/qBWmMav&quot; />
+  
+  
+  
+  
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate=&quot;no&quot;>
+  <!DOCTYPE html>
+<html lang=&quot;en&quot; xmlns:v=&quot;urn:schemas-microsoft-com:vml&quot; xmlns:o=&quot;urn:schemas-microsoft-com:office:office&quot;>
+<head>
+    <meta http-equiv=&quot;Contenpt-Type&quot; content=&quot;text/html; charset=utf-8&quot; />
+    <meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot; />
+    <meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; />
+    <style type=&quot;text/css&quot;>
+
+      @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+      @media only screen {
+        .serif {font-family: 'Lato', Helvetica, Arial, sans-serif;}
+        .sans-serif {font-family: 'Lato', Helvetica, Arial, sans-serif;}
+      }
+
+      ::selection {color: #FFFFFF; background: #33363A;}
+      #outlook a {padding: 0;}
+      table, th, td {-webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-size: 16px; font-weight: 400; line-height: 26px; text-align: left;}
+      table, th, td, h1, h2, h3, h4, h5, h6 {font-family: Helvetica, Arial, sans-serif;}
+      img {-ms-interpolation-mode: bicubic; border: 0; display: block; height: auto; line-height: 100%; outline: none; text-decoration: none;}
+      table {border-collapse: collapse;}
+
+      .row {width: 700px;}
+      .row .row {width: 100%;}
+
+      th.menu-item {display: inline;}
+
+      .hover-shrink:hover {transform: scale(0.7);}
+
+      @media only screen and (max-width: 699px) {
+
+        .row {width: 90% !important;}
+        .row .row {width: 100% !important;}
+
+        .column {
+          box-sizing: border-box;
+          display: inline-block !important; 
+          width: 100% !important;
+        }
+        .mobile-1  {max-width: 8.33333%;}
+        .mobile-2  {max-width: 16.66667%;}
+        .mobile-3  {max-width: 25%;}
+        .mobile-4  {max-width: 33.33333%;}
+        .mobile-5  {max-width: 41.66667%;}
+        .mobile-6  {max-width: 50%;}
+        .mobile-7  {max-width: 58.33333%;}
+        .mobile-8  {max-width: 66.66667%;}
+        .mobile-9  {max-width: 75%;}
+        .mobile-10 {max-width: 83.33333%;}
+        .mobile-11 {max-width: 91.66667%;}
+        .mobile-12 {
+          padding-right: 30px !important;
+          padding-left: 30px !important;
+        }
+
+        .mobile-offset-1  {margin-left: 8.33333% !important;}
+        .mobile-offset-2  {margin-left: 16.66667% !important;}
+        .mobile-offset-3  {margin-left: 25% !important;}
+        .mobile-offset-4  {margin-left: 33.33333% !important;}
+        .mobile-offset-5  {margin-left: 41.66667% !important;}
+        .mobile-offset-6  {margin-left: 50% !important;}
+        .mobile-offset-7  {margin-left: 58.33333% !important;}
+        .mobile-offset-8  {margin-left: 66.66667% !important;}
+        .mobile-offset-9  {margin-left: 75% !important;}
+        .mobile-offset-10 {margin-left: 83.33333% !important;}
+        .mobile-offset-11 {margin-left: 91.66667% !important;}
+
+        .has-columns {
+          padding-right: 20px !important;
+          padding-left: 20px !important;
+        }
+
+        .has-columns .column {
+          padding-right: 10px !important;
+          padding-left: 10px !important;
+        }
+
+        .mobile-collapsed .column {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+
+        img {
+          max-width: 100%;
+          width: auto;
+          height: auto;
+        }
+
+        .mobile-center {
+          display: table !important;
+          float: none;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .mobile-text-center {text-align: center !important;}
+        .mobile-text-left   {text-align: left !important;}
+        .mobile-text-right  {text-align: right !important;}
+
+        .show-on-mobile {
+          display: table !important;
+          overflow: visible !important;
+          line-height: inherit !important;
+        }
+
+        .hide-on-mobile {
+          display: none !important;
+          width: 0;
+          overflow: hidden;
+        }
+
+        .mobile-full-width {
+          display: table;
+          width: 100%;
+        }
+
+        .mobile-first {display: table-header-group !important;}
+        .mobile-intermediate {display: table-row !important;}
+        .mobile-last {display: table-footer-group !important;}
+
+        .mobile-first th,
+        .mobile-intermediate th,
+        .mobile-last th {
+          padding-left: 30px !important;
+          padding-right: 30px !important;
+        }
+
+        .menu[align=&quot;center&quot;],
+        .menu.mobile-center {
+          width: auto !important;
+        }
+        .menu th {
+          width: auto !important;
+          display: inline-block !important;
+          padding-bottom: 15px !important;
+        }
+        .menu.mobile-vertical th {
+          display: block !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+
+        .hamburger-menu,
+        .accordion-content {
+          max-height: 0;
+          overflow: hidden;
+          -ms-transition: max-height .2s ease-in-out;
+          -webkit-transition: max-height .2s ease-in-out;
+            transition: max-height .2s ease-in-out;
+        }
+        .menu-trigger img {
+          display: block;
+          margin: 0 auto !important;
+          float: none !important;
+          max-height: none !important;
+        }
+        .menu-trigger:hover + .hamburger-menu,
+        .hamburger-menu:hover,
+        .accordion-item:hover .accordion-content {
+          max-height: 999px !important;
+          overflow: visible !important;
+        }
+
+        .spacer,
+        .divider th                 {height: 30px; line-height: 100% !important; font-size: 100% !important;}
+		.spacer20                	{height: 20px; line-height: 100% !important; font-size: 100% !important;}
+		.spacer15                	{height: 15px; line-height: 100% !important; font-size: 100% !important;}
+		.spacer10                	{height: 10px; line-height: 100% !important; font-size: 100% !important;}
+        .mobile-padding-top         {padding-top: 30px !important;}
+        .mobile-padding-top-mini    {padding-top: 10px !important;}
+        .mobile-padding-bottom      {padding-bottom: 30px !important;}
+        .mobile-padding-bottom-mini {padding-bottom: 10px !important;}
+        .mobile-margin-top          {margin-top: 30px !important;}
+        .mobile-margin-top-mini     {margin-top: 10px !important;}
+        .mobile-margin-bottom       {margin-bottom: 30px !important;}
+        .mobile-margin-bottom-mini  {margin-bottom: 10px !important;}
+		.mobile-margin-bottom-none  {margin-bottom: 0 !important;}
+		.rounded-mobile				{border-radius:6px !important; margin: 0 auto;}
+		.no-collapse				{border-collapse: separate;}
+      }
+
+    </style>
+  </head>
+  <body style=&quot;box-sizing: border-box; margin: 0; padding: 0; width: 100%;&quot;>
+<!-- Preheader -->
+<p style=&quot;display:none;&quot;>Join us today at 11AM PT / 2PM ET to discover everything you need to know to host a successful webinar event. Can't attend? Get on the guest list for our upcoming webinars. We'll be covering an Intro to Zoom Meetings, Tips and Tricks for Learning &amp;amp; Development Professionals, Zoom Best Practices for Small Businesses and more!</p>
+<!-- Email Wrapper -->
+
+<table align=&quot;center&quot; bgcolor=&quot;#EEEEEE&quot; class=&quot;wrapper&quot; style=&quot;border-spacing:0; margin:0 auto; width:100%&quot;>
+	<tbody>
+		<tr>
+			<td style=&quot;padding: 0;&quot;><!-- Zoom Header -->
+			<table align=&quot;center&quot; bgcolor=&quot;#FFFFFF&quot; class=&quot;row&quot; style=&quot;margin:0 auto&quot;>
+				<tbody>
+					<tr>
+						<td class=&quot;spacer&quot; colspan=&quot;2&quot; height=&quot;30&quot; style=&quot;font-size: 30px; line-height:30px; margin: 0; padding: 0;&quot;>&amp;nbsp;</td>
+					</tr>
+					<tr style=&quot;vertical-align: top;&quot; valign=&quot;top&quot;>
+						<th class=&quot;column mobile-6&quot; style=&quot;width: 640px; padding: 5px 30px; font-weight: 400;&quot; width=&quot;640&quot;><a href=&quot;https://zoom.us/&quot; target=&quot;_blank&quot;><img alt=&quot;Header Logo&quot; height=&quot;25&quot; src=&quot; http://click.zoom.us/l/84442/2017-02-13/6zdsxg/84442/96605/Logo_2017.png&quot; style=&quot;border:0; margin:0; width: 95px; height: auto;&quot; width=&quot;95&quot;> </a></th>
+						<th class=&quot;sans-serif column mobile-6&quot; style=&quot;width: 640px; padding: 5px 30px; font-weight: 400; text-align:right; font-size: 14px;&quot; width=&quot;640&quot;><a href=&quot;https://zoom.us/signin&quot; style=&quot;text-decoration: none; color:#424242&quot; target=&quot;_blank&quot;>Sign In </a></th>
+					</tr>
+					<tr>
+						<td class=&quot;spacer&quot; colspan=&quot;2&quot; height=&quot;30&quot; style=&quot;font-size: 30px; line-height: 30px; margin: 0; padding: 0;&quot;>&amp;nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- /Zoom Header --><!-- Zoom Featured 01 -->
+
+			<table align=&quot;center&quot; bgcolor=&quot;#FFFFFF&quot; cellpadding=&quot;0&quot; class=&quot;row&quot;>
+				<tbody>
+					<tr>
+						<th style=&quot;margin: 0 auto; padding: 0 30px;&quot; width=&quot;640&quot;>
+						<table align=&quot;center&quot; bgcolor=&quot;#F2F2F2&quot; cellpadding=&quot;0&quot; class=&quot;row&quot; style=&quot;width: 640px; border-radius: 6px; &quot; width=&quot;640&quot;>
+							<tbody>
+								<tr>
+									<th class=&quot;column mobile-padding-top&quot; width=&quot;297&quot;>
+									<table cellpadding=&quot;0&quot; width=&quot;100%&quot;>
+										<tbody>
+											<tr>
+												<th class=&quot;mobile-12&quot; style=&quot;padding-left: 30px; padding-right: 30px; color: #4A494F; font-size: 13px; font-weight: 400; text-align: left;&quot;>
+												<h4 class=&quot;sans-serif mobile-center mobile-text-center&quot; style=&quot;margin: 0; padding:0; color: #4A494F; font-size: 22px; line-height: 150%; font-weight: 600; margin-bottom: 10px; &quot;>Zoom Webinar Basics</h4>
+
+												<h5 class=&quot;sans-serif mobile-center&quot; style=&quot;margin: 0 auto; color: #747487; font-size: 18px; font-weight: 400; line-height: 30px; padding: 0 0 5px; margin-bottom: 5px;&quot;>Today • 11AM PT</h5>
+
+												<p class=&quot;sans-serif mobile-center&quot; style=&quot;margin:0; padding:0; margin-bottom:20px; color: #747487; font-size: 14px; font-weight: 400; line-height: 26px;&quot;>In this demo, we will dive into the basics of hosting a successful online event. We will cover how to schedule, hosting tips, reporting and more!</p>
+
+												<table bgcolor=&quot;#F5713A&quot; class=&quot;mobile-center&quot; style=&quot;border-radius:3px; border-spacing:0;&quot;>
+													<tbody>
+														<tr>
+															<td class=&quot;sans-serif&quot;><a href=&quot;https://zoom.us/webinar/registerevent/WN_5lQPqWojQZe6g2m85D5agw?id=DUNqsQeJS1GiByl_F4zxAw&amp;zcid=1308&quot; style=&quot;border: 0 solid #F5713A;  display: inline-block; font-size: 14px; font-weight: 600; padding: 8px 18px 8px 18px; text-align: center; text-decoration:none;color: #FFFFFF;&quot; target=&quot;_blank&quot;>Get on the Guest List</a></td>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+									</th>
+									<th background=&quot;http://click.zoom.us/l/84442/2018-12-10/bdbzbl/84442/137625/Web_Feat_365_Webinar_Dec18.jpg&quot; bgcolor=&quot;#FFFFFF&quot; class=&quot;column&quot; style=&quot;background-repeat: no-repeat; background-position: center; background-size: cover; border-radius: 0 6px 6px 0;&quot; width=&quot;344&quot;><!--[if gte mso 9]>
+								<v:image src=&quot;http://click.zoom.us/l/84442/2018-12-10/bdbzbl/84442/137625/Web_Feat_365_Webinar_Dec18.jpg&quot; style=&quot;width:344px;height:365px;&quot; ></v:image>
+								<v:rect fill=&quot;true&quot; stroke=&quot;false&quot; style=&quot;position:absolute; width:344px;height:365px;&quot;>
+								<v:fill opacity=&quot;0&quot;>
+								<div>
+								<![endif]--><img alt=&quot;&quot; class=&quot;hide-on-mobile&quot; src=&quot;http://click.zoom.us/l/84442/2018-10-15/bcrzcl/84442/136047/Web_Feat_Description_Divider.png&quot; style=&quot;border: 0;&quot; width=&quot;152&quot;> <!--[if gte mso 9]></div></v:fill></v:rect><![endif]--></th>
+								</tr>
+							</tbody>
+						</table>
+						</th>
+					</tr>
+				</tbody>
+			</table>
+			<!-- /Zoom Featured 01 --><!-- Next Week -->
+
+			<table align=&quot;center&quot; bgcolor=&quot;#FFFFFF&quot; class=&quot;row&quot; style=&quot;border-spacing:0; margin:0 auto&quot;>
+				<tbody>
+					<tr>
+						<td class=&quot;spacer&quot; height=&quot;40&quot; style=&quot;font-size: 40px; line-height:40px; margin: 0; padding: 0;&quot; width=&quot;100%&quot;>&amp;nbsp;</td>
+					</tr>
+					<tr style=&quot;vertical-align: top;&quot; valign=&quot;top&quot;>
+						<th class=&quot;column has-columns&quot; style=&quot;width: 640px; padding: 0; padding-left: 30px; padding-right: 30px;&quot; width=&quot;640&quot;>
+						<table align=&quot;center&quot; class=&quot;row mobile-margin-bottom-none&quot; style=&quot;border-spacing:0; margin:0 auto; margin-bottom: 15px;&quot;>
+							<tbody>
+								<tr style=&quot;vertical-align: middle;&quot; valign=&quot;middle&quot;>
+									<th class=&quot;column&quot; style=&quot;width: 640px; padding: 0;&quot; width=&quot;640&quot;>
+									<h2 class=&quot;sans-serif mobile-text-center&quot; style=&quot;margin: 0; color: #4A494F; font-size: 22px; font-weight: 700;&quot;>Upcoming Webinars</h2>
+									</th>
+								</tr>
+							</tbody>
+						</table>
+
+						<table align=&quot;center&quot; style=&quot;border-spacing:0; margin:0 auto; width:100%&quot;>
+							<tbody>
+							</tbody>
+						</table>
+						<!-- 1 -->
+
+						<table align=&quot;center&quot; class=&quot;mobile-padding-top row no-collapse&quot; style=&quot;border-spacing:0; margin:0 auto; margin-bottom: 25px;&quot;>
+							<tbody>
+								<tr style=&quot;vertical-align: middle;&quot; valign=&quot;middle&quot;>
+									<th class=&quot;column mobile-12 mobile-center&quot; style=&quot;width: 100px; padding: 0; padding-left: 15px; padding-right: 10px; font-weight: 400; padding-top: 6px;&quot; width=&quot;100&quot;>
+									<div class=&quot;mobile-center&quot; style=&quot;border: 1px solid #E4E4ED; border-radius: 100px; height: 95px; width: 95px; text-align: center; &quot;>
+									<h2 class=&quot;sans-serif&quot; style=&quot;padding: 0; margin: 0; text-align: center; color: #2d8cff; font-size: 28px; line-height: 100%; font-weight: 600; padding-top: 14px; padding-bottom: 6px;&quot;>16</h2>
+
+									<table align=&quot;center&quot; class=&quot;row&quot; style=&quot;border-spacing:0; margin:0 auto; line-height: 1px;&quot;>
+										<tbody>
+											<tr>
+												<th class=&quot;column&quot; style=&quot;width: 30px; padding: 0;&quot; width=&quot;30&quot;>
+												<table class=&quot;divider&quot; style=&quot;border-spacing:0; width:30px; margin: 0 auto; &quot;>
+													<tbody>
+														<tr>
+															<td height=&quot;1&quot; style=&quot;height: 1px; border-top: 1px solid #E4E4ED; padding: 0; font-size: 1px; line-height: 1px;&quot; class=&quot;&quot;>&amp;nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+
+									<p class=&quot;sans-serif&quot; style=&quot;padding: 0; margin: 0; text-align: center; color: #4A494F; font-size: 15px; line-height: 100%; letter-spacing: 2px; font-weight: 600; padding-top: 8px;&quot;>JAN</p>
+									</div>
+									</th>
+									<th class=&quot;column mobile-12 mobile-padding-top-mini&quot; style=&quot;width: 310px; padding: 0; padding-left: 10px; font-weight: 400;&quot; width=&quot;310&quot;>
+									<h4 class=&quot;sans-serif mobile-center mobile-text-center&quot; style=&quot;padding: 0; margin: 0; color: #4A494F; font-size: 18px; line-height: 24px; font-weight: 700; max-width: 265px;&quot;>Intro to Zoom Meetings</h4>
+
+									<h5 class=&quot;sans-serif mobile-center&quot; style=&quot;margin: 0; color: #747487; font-size: 15px; font-weight: 400; line-height: 30px; padding: 0; &quot;>Wednesday, January 16th â€¢ 8AM PT</h5>
+									</th>
+									<th class=&quot;column mobile-12 mobile-padding-top-mini&quot; style=&quot;width: 200px; margin:0; padding: 0; padding-right: 15px; font-weight: 400;&quot; width=&quot;200&quot;>
+									<table align=&quot;right&quot; bgcolor=&quot;#FFFFFF&quot; class=&quot;mobile-center&quot; style=&quot;border-radius:3px; border-spacing:0&quot;>
+										<tbody>
+											<tr>
+												<td class=&quot;sans-serif&quot;><a href=&quot;https://zoom.us/webinar/registerevent/WN_NdDnJfASRe6EDqmye2N-BA?id=cT9CCi_MQrml_63Mn1DGxQ&amp;zcid=2039&quot; style=&quot;border:1px solid #2d8cff; border-radius: 3px;  display: inline-block; font-size: 13px; font-weight: 600; padding: 5px 15px; text-align: center; text-decoration:none;color: #2d8cff;&quot; target=&quot;_blank&quot;>Get on the Guest List</a></td>
+											</tr>
+										</tbody>
+									</table>
+									</th>
+								</tr>
+							</tbody>
+						</table>
+						<!-- /1--><!-- 2 -->
+
+						<table align=&quot;center&quot; class=&quot;mobile-padding-top row no-collapse&quot; style=&quot;border-spacing:0; margin:0 auto; margin-bottom: 25px;&quot;>
+							<tbody>
+								<tr style=&quot;vertical-align: middle;&quot; valign=&quot;middle&quot;>
+									<th class=&quot;column mobile-12 mobile-center&quot; style=&quot;width: 100px; padding: 0; padding-left: 15px; padding-right: 10px; font-weight: 400; padding-top: 6px;&quot; width=&quot;100&quot;>
+									<div class=&quot;mobile-center&quot; style=&quot;border: 1px solid #E4E4ED; border-radius: 100px; height: 95px; width: 95px; text-align: center; &quot;>
+									<h2 class=&quot;sans-serif&quot; style=&quot;padding: 0; margin: 0; text-align: center; color: #2d8cff; font-size: 28px; line-height: 100%; font-weight: 600; padding-top: 14px; padding-bottom: 6px;&quot;>16</h2>
+
+									<table align=&quot;center&quot; class=&quot;row&quot; style=&quot;border-spacing:0; margin:0 auto; line-height: 1px;&quot;>
+										<tbody>
+											<tr>
+												<th class=&quot;column&quot; style=&quot;width: 30px; padding: 0;&quot; width=&quot;30&quot;>
+												<table class=&quot;divider&quot; style=&quot;border-spacing:0; width:30px; margin: 0 auto; &quot;>
+													<tbody>
+														<tr>
+															<td height=&quot;1&quot; style=&quot;height: 1px; border-top: 1px solid #E4E4ED; padding: 0; font-size: 1px; line-height: 1px;&quot; class=&quot;&quot;>&amp;nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+
+									<p class=&quot;sans-serif&quot; style=&quot;padding: 0; margin: 0; text-align: center; color: #4A494F; font-size: 15px; line-height: 100%; letter-spacing: 2px; font-weight: 600; padding-top: 8px;&quot;>JAN</p>
+									</div>
+									</th>
+									<th class=&quot;column mobile-12 mobile-padding-top-mini&quot; style=&quot;width: 310px; padding: 0; padding-left: 10px; font-weight: 400;&quot; width=&quot;310&quot;>
+									<h4 class=&quot;sans-serif mobile-center mobile-text-center&quot; style=&quot;padding: 0; margin: 0; color: #4A494F; font-size: 18px; line-height: 24px; font-weight: 700; max-width: 265px;&quot;>Tips and Tricks for Learning &amp;amp; Development Professionals</h4>
+
+									<h5 class=&quot;sans-serif mobile-center&quot; style=&quot;margin: 0; color: #747487; font-size: 15px; font-weight: 400; line-height: 30px; padding: 0; &quot;>Wednesday, January 16th â€¢ 11AM PT</h5>
+									</th>
+									<th class=&quot;column mobile-12 mobile-padding-top-mini&quot; style=&quot;width: 200px; margin:0; padding: 0; padding-right: 15px; font-weight: 400;&quot; width=&quot;200&quot;>
+									<table align=&quot;right&quot; bgcolor=&quot;#FFFFFF&quot; class=&quot;mobile-center&quot; style=&quot;border-radius:3px; border-spacing:0&quot;>
+										<tbody>
+											<tr>
+												<td class=&quot;sans-serif&quot;><a href=&quot;https://zoom.us/webinar/registerevent/WN_QNf_hbszQRegz4a78RHYFw?id=DAePQu4WQbOIJU2yJsrr0A&amp;zcid=2353&quot; style=&quot;border:1px solid #2d8cff; border-radius: 3px;  display: inline-block; font-size: 13px; font-weight: 600; padding: 5px 15px; text-align: center; text-decoration:none;color: #2d8cff;&quot; target=&quot;_blank&quot;>Get on the Guest List</a></td>
+											</tr>
+										</tbody>
+									</table>
+									</th>
+								</tr>
+							</tbody>
+						</table>
+						<!-- /2--><!-- 3 -->
+
+						<table align=&quot;center&quot; class=&quot;mobile-padding-top row no-collapse&quot; style=&quot;border-spacing:0; margin:0 auto; margin-bottom: 25px;&quot;>
+							<tbody>
+								<tr style=&quot;vertical-align: middle;&quot; valign=&quot;middle&quot;>
+									<th class=&quot;column mobile-12 mobile-center&quot; style=&quot;width: 100px; padding: 0; padding-left: 15px; padding-right: 10px; font-weight: 400; padding-top: 6px;&quot; width=&quot;100&quot;>
+									<div class=&quot;mobile-center&quot; style=&quot;border: 1px solid #E4E4ED; border-radius: 100px; height: 95px; width: 95px; text-align: center; &quot;>
+									<h2 class=&quot;sans-serif&quot; style=&quot;padding: 0; margin: 0; text-align: center; color: #2d8cff; font-size: 28px; line-height: 100%; font-weight: 600; padding-top: 14px; padding-bottom: 6px;&quot;>17</h2>
+
+									<table align=&quot;center&quot; class=&quot;row&quot; style=&quot;border-spacing:0; margin:0 auto; line-height: 1px;&quot;>
+										<tbody>
+											<tr>
+												<th class=&quot;column&quot; style=&quot;width: 30px; padding: 0;&quot; width=&quot;30&quot;>
+												<table class=&quot;divider&quot; style=&quot;border-spacing:0; width:30px; margin: 0 auto; &quot;>
+													<tbody>
+														<tr>
+															<td height=&quot;1&quot; style=&quot;height: 1px; border-top: 1px solid #E4E4ED; padding: 0; font-size: 1px; line-height: 1px;&quot; class=&quot;&quot;>&amp;nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+
+									<p class=&quot;sans-serif&quot; style=&quot;padding: 0; margin: 0; text-align: center; color: #4A494F; font-size: 15px; line-height: 100%; letter-spacing: 2px; font-weight: 600; padding-top: 8px;&quot;>JAN</p>
+									</div>
+									</th>
+									<th class=&quot;column mobile-12 mobile-padding-top-mini&quot; style=&quot;width: 310px; padding: 0; padding-left: 10px; font-weight: 400;&quot; width=&quot;310&quot;>
+									<h4 class=&quot;sans-serif mobile-center mobile-text-center&quot; style=&quot;padding: 0; margin: 0; color: #4A494F; font-size: 18px; line-height: 24px; font-weight: 700; max-width: 265px;&quot;>Zoom Best Practices for Small Businesses</h4>
+
+									<h5 class=&quot;sans-serif mobile-center&quot; style=&quot;margin: 0; color: #747487; font-size: 15px; font-weight: 400; line-height: 30px; padding: 0; &quot;>Thursday, January 17th â€¢ 11AM PT</h5>
+									</th>
+									<th class=&quot;column mobile-12 mobile-padding-top-mini&quot; style=&quot;width: 200px; margin:0; padding: 0; padding-right: 15px; font-weight: 400;&quot; width=&quot;200&quot;>
+									<table align=&quot;right&quot; bgcolor=&quot;#FFFFFF&quot; class=&quot;mobile-center&quot; style=&quot;border-radius:3px; border-spacing:0&quot;>
+										<tbody>
+											<tr>
+												<td class=&quot;sans-serif&quot;><a href=&quot;https://zoom.us/webinar/registerevent/WN_aYrA600QSO2scX90n5AdtQ?id=fsy8GqHDR4KsjhGgF_bEog&amp;zcid=2108&quot; style=&quot;border:1px solid #2d8cff; border-radius: 3px;  display: inline-block; font-size: 13px; font-weight: 600; padding: 5px 15px; text-align: center; text-decoration:none;color: #2d8cff;&quot; target=&quot;_blank&quot;>Get on the Guest List</a></td>
+											</tr>
+										</tbody>
+									</table>
+									</th>
+								</tr>
+							</tbody>
+						</table>
+						<!-- /3--><!-- 4 -->
+
+						<table align=&quot;center&quot; class=&quot;mobile-padding-top row no-collapse&quot; style=&quot;border-spacing:0; margin:0 auto; margin-bottom: 25px;&quot;>
+							<tbody>
+								<tr style=&quot;vertical-align: middle;&quot; valign=&quot;middle&quot;>
+									<th class=&quot;column mobile-12 mobile-center&quot; style=&quot;width: 100px; padding: 0; padding-left: 15px; padding-right: 10px; font-weight: 400; padding-top: 6px;&quot; width=&quot;100&quot;>
+									<div class=&quot;mobile-center&quot; style=&quot;border: 1px solid #E4E4ED; border-radius: 100px; height: 95px; width: 95px; text-align: center; &quot;>
+									<h2 class=&quot;sans-serif&quot; style=&quot;padding: 0; margin: 0; text-align: center; color: #2d8cff; font-size: 28px; line-height: 100%; font-weight: 600; padding-top: 14px; padding-bottom: 6px;&quot;>22</h2>
+
+									<table align=&quot;center&quot; class=&quot;row&quot; style=&quot;border-spacing:0; margin:0 auto; line-height: 1px;&quot;>
+										<tbody>
+											<tr>
+												<th class=&quot;column&quot; style=&quot;width: 30px; padding: 0;&quot; width=&quot;30&quot;>
+												<table class=&quot;divider&quot; style=&quot;border-spacing:0; width:30px; margin: 0 auto; &quot;>
+													<tbody>
+														<tr>
+															<td height=&quot;1&quot; style=&quot;height: 1px; border-top: 1px solid #E4E4ED; padding: 0; font-size: 1px; line-height: 1px;&quot; class=&quot;&quot;>&amp;nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+
+									<p class=&quot;sans-serif&quot; style=&quot;padding: 0; margin: 0; text-align: center; color: #4A494F; font-size: 15px; line-height: 100%; letter-spacing: 2px; font-weight: 600; padding-top: 8px;&quot;>JAN</p>
+									</div>
+									</th>
+									<th class=&quot;column mobile-12 mobile-padding-top-mini&quot; style=&quot;width: 310px; padding: 0; padding-left: 10px; font-weight: 400;&quot; width=&quot;310&quot;>
+									<h4 class=&quot;sans-serif mobile-center mobile-text-center&quot; style=&quot;padding: 0; margin: 0; color: #4A494F; font-size: 18px; line-height: 24px; font-weight: 700; max-width: 265px;&quot;>Product Update: Learn About the Latest Zoom Client Release</h4>
+
+									<h5 class=&quot;sans-serif mobile-center&quot; style=&quot;margin: 0; color: #747487; font-size: 15px; font-weight: 400; line-height: 30px; padding: 0; &quot;>Tuesday, January 22nd â€¢ 11AM PT</h5>
+									</th>
+									<th class=&quot;column mobile-12 mobile-padding-top-mini&quot; style=&quot;width: 200px; margin:0; padding: 0; padding-right: 15px; font-weight: 400;&quot; width=&quot;200&quot;>
+									<table align=&quot;right&quot; bgcolor=&quot;#FFFFFF&quot; class=&quot;mobile-center&quot; style=&quot;border-radius:3px; border-spacing:0&quot;>
+										<tbody>
+											<tr>
+												<td class=&quot;sans-serif&quot;><a href=&quot;https://zoom.us/webinar/registerevent/WN_bfZPOY8sSaqN1-bLKSASPA?id=8Ovvi0vLRU6GN7ntHxx2xQ&amp;zcid=2350&quot; style=&quot;border:1px solid #2d8cff; border-radius: 3px;  display: inline-block; font-size: 13px; font-weight: 600; padding: 5px 15px; text-align: center; text-decoration:none;color: #2d8cff;&quot; target=&quot;_blank&quot;>Get on the Guest List</a></td>
+											</tr>
+										</tbody>
+									</table>
+									</th>
+								</tr>
+							</tbody>
+						</table>
+						<!-- /4--></th>
+					</tr>
+				</tbody>
+			</table>
+			<!-- Next Week --><!-- Feature With Content Left -->
+
+			<table align=&quot;center&quot; bgcolor=&quot;#FFFFFF&quot; class=&quot;row&quot; style=&quot;border-spacing:0; margin:0 auto&quot;>
+				<tbody>
+					<tr style=&quot;vertical-align: middle;&quot; valign=&quot;middle&quot;>
+						<th class=&quot;column mobile-last&quot; style=&quot;width: 310px; padding: 0; padding-left: 30px; padding-right: 50px; color: #969AA1; font-size: 13px; font-weight: 400;&quot; width=&quot;310&quot;>
+						<table style=&quot;border-spacing:0; width:100%&quot;>
+							<tbody>
+								<tr>
+									<th class=&quot;sans-serif&quot; style=&quot;padding: 0;&quot;>
+									<h2 class=&quot;sans-serif mobile-text-center&quot; style=&quot;margin: 0; margin: 0; color: #4A494F; font-size: 22px; font-weight: 700; margin-bottom: 10px;&quot;>Daily Live Demos</h2>
+
+									<div class=&quot;mobile-text-center&quot; style=&quot;color: #4A494F; font-size: 14px; margin-bottom: 10px;&quot;>Join Zoom expert Raul Montes to learn the Zoom basics: scheduling, recording, screen sharing, and more.</div>
+
+									<div class=&quot;mobile-text-center&quot; style=&quot;color: #4A494F; font-size: 14px;&quot;><strong>Mondays</strong> @ 2pm<br>
+									<strong>Tuesdays</strong> @ 10am and 2pm<br>
+									<strong>Thursdays</strong> @ 10am and 2pm<br>
+									<strong>Fridays</strong> @ 10am<br>
+									(All times in PST)</div>
+
+									<table align=&quot;center&quot; style=&quot;border-spacing:0; margin:0 auto; width:100%&quot;>
+										<tbody>
+											<tr>
+												<td class=&quot;spacer10&quot; height=&quot;10&quot; style=&quot;font-size: 10px; line-height: 10px; margin: 0; padding: 0;&quot;>&amp;nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table bgcolor=&quot;#F5713A&quot; class=&quot;mobile-center&quot; style=&quot;border-radius:3px; border-spacing:0;&quot;>
+										<tbody>
+											<tr>
+												<td class=&quot;sans-serif&quot;><a href=&quot;https://zoom.us/webinar/register/weeklylivedemo?id=1805&amp;zcid=1236&quot; style=&quot;border: 0 solid #F5713A; color: #FFFFFF; display: inline-block; font-size: 13px; font-weight: 600; padding: 8px 18px 8px 18px; text-align: center; text-decoration: none;&quot; target=&quot;_blank&quot;>Get on the Guest List</a></td>
+											</tr>
+										</tbody>
+									</table>
+									</th>
+								</tr>
+							</tbody>
+						</table>
+						</th>
+						<th class=&quot;column mobile-first&quot; style=&quot;width: 310px; padding: 0;&quot; width=&quot;310&quot;>
+						<table style=&quot;border-spacing:0; width:100%&quot;>
+							<tbody>
+								<tr>
+									<th class=&quot;mobile-padding-bottom&quot; style=&quot;padding: 0; text-align: right;&quot;><img alt=&quot;Feature image&quot; class=&quot;rounded-mobile&quot; src=&quot;http://click.zoom.us/l/84442/2018-01-16/9hlwp9/84442/121818/WebinarDemosV2.png&quot; style=&quot;border:0&quot;></th>
+								</tr>
+							</tbody>
+						</table>
+						</th>
+					</tr>
+					<tr>
+						<td class=&quot;spacer&quot; colspan=&quot;2&quot; height=&quot;60&quot; style=&quot;font-size: 60px; line-height: 60px; margin: 0; padding: 0;&quot;>&amp;nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- /Feature With Content Left --><!-- Gray Box -->
+
+			<table align=&quot;center&quot; bgcolor=&quot;#c6c6c6&quot; class=&quot;row&quot; style=&quot;border-spacing:0; margin:0 auto&quot;>
+				<tbody>
+					<tr>
+						<th class=&quot;column&quot; style=&quot;width: 640px; padding: 0; padding-left: 30px; padding-right: 30px; color: #969AA1; font-size: 13px; font-weight: 400;&quot; width=&quot;640&quot;>
+						<table align=&quot;center&quot; class=&quot;row&quot; style=&quot;border-spacing:0; margin:0 auto&quot;>
+							<tbody>
+								<tr>
+									<td class=&quot;spacer&quot; colspan=&quot;2&quot; height=&quot;40&quot; style=&quot;font-size: 40px; line-height: 40px; margin: 0; padding: 0;&quot;>&amp;nbsp;</td>
+								</tr>
+								<tr class=&quot;mobile-full-width&quot; style=&quot;vertical-align: top;&quot; valign=&quot;top&quot;>
+									<th class=&quot;column hide-on-mobile sans-serif&quot; style=&quot;width: 145px; padding: 0px 10px 0px 0px; color: rgb(150, 154, 161); font-size: 13px; font-weight: 400;&quot; width=&quot;145&quot;>&amp;nbsp;</th>
+									<th class=&quot;column mobile-first&quot; style=&quot;width: 310px; padding: 0; padding-left: 10px; padding-right: 10px; text-align: center; font-weight: 400;&quot; width=&quot;310&quot;>
+									<div class=&quot;mobile-margin-top-mini mobile-margin-bottom&quot; style=&quot;margin: 0 auto; margin-bottom: 20px;&quot;><a href=&quot;https://twitter.com/zoom_us&quot; style=&quot;color: #3FB58B; display: inline-block; text-decoration: none;&quot; target=&quot;_blank&quot;><img alt=&quot;Twitter&quot; height=&quot;28&quot; src=&quot;http://click.zoom.us/l/84442/2017-06-23/81kp5q/84442/106937/Social17_Twitter_new.png&quot; style=&quot;border:0; display:inline-block; height: 28px; width: 28px;&quot; width=&quot;28&quot;>&amp;nbsp;</a> <a href=&quot;https://www.linkedin.com/company/zoom-video-communications-inc-/&quot; style=&quot;color: #3FB58B; display: inline-block; text-decoration: none;&quot; target=&quot;_blank&quot;> &amp;nbsp; <img alt=&quot;LinkedIn&quot; height=&quot;28&quot; src=&quot;http://click.zoom.us/l/84442/2017-06-23/81kp5l/84442/106935/Social17_Linked_new.png&quot; style=&quot;border:0;
+display:inline-block;  height: 28px; width: 28px;&quot; width=&quot;28&quot;>&amp;nbsp;</a> <a href=&quot;https://blog.zoom.us/&quot; style=&quot;color: #3FB58B; display: inline-block; text-decoration: none;&quot; target=&quot;_blank&quot;> &amp;nbsp; <img alt=&quot;Pinterest&quot; height=&quot;28&quot; src=&quot;http://click.zoom.us/l/84442/2017-06-23/81kp5n/84442/106933/Social17_Blog_new.png&quot; style=&quot;border:0; display:inline-block;  height: 28px; width: 28px;&quot; width=&quot;28&quot;>&amp;nbsp;</a></div>
+
+									<div class=&quot;mobile-margin-top-mini mobile-margin-bottom&quot; style=&quot;margin: 0 auto; margin-bottom: 25px; font-size: 13px; line-height: 22px; color: #828282;&quot;><a href=&quot;tel:1-888-799-9666&quot; style=&quot; text-decoration: none; color: #828282;&quot;>+1.888.799.9666</a><br>
+									Â© 2019 Zoom - All Rights Reserved</div>
+									</th>
+									<th class=&quot;column hide-on-mobile sans-serif&quot; style=&quot;width: 145px; padding: 0px 0px 0px 10px; font-weight: 400;&quot; width=&quot;145&quot;>&amp;nbsp;</th>
+								</tr>
+							</tbody>
+						</table>
+						</th>
+					</tr>
+				</tbody>
+			</table>
+			<!-- Gray Box --><!-- Footer 3 -->
+
+			<table align=&quot;center&quot; class=&quot;row&quot; style=&quot;border-spacing:0; margin:0 auto&quot;>
+				<tbody>
+					<tr>
+						<th class=&quot;column&quot; style=&quot;width: 640px; padding: 0; padding-left: 30px; padding-right: 30px; color: #969AA1; font-size: 13px; font-weight: 400;&quot; width=&quot;640&quot;>
+						<table align=&quot;center&quot; class=&quot;row&quot; style=&quot;border-spacing:0; margin:0 auto&quot;>
+							<tbody>
+								<tr>
+									<td class=&quot;spacer&quot; colspan=&quot;2&quot; height=&quot;40&quot; style=&quot;font-size: 40px; line-height: 40px; margin: 0; padding: 0;&quot;>&amp;nbsp;</td>
+								</tr>
+								<tr class=&quot;mobile-full-width&quot; style=&quot;vertical-align: top;&quot; valign=&quot;top&quot;>
+									<th class=&quot;column mobile-intermediate sans-serif&quot; style=&quot;width: 145px; padding: 0; padding-right: 10px; color: #969AA1; font-size: 13px; font-weight: 400;&quot; width=&quot;145&quot;>&amp;nbsp;</th>
+									<th class=&quot;column mobile-first&quot; style=&quot;width: 310px; padding: 0; padding-left: 10px; padding-right: 10px; text-align: center; font-weight: 400;&quot; width=&quot;310&quot;>
+									<div class=&quot;mobile-margin-top-mini mobile-margin-bottom&quot; style=&quot;margin: 0 auto; margin-bottom: 25px; font-size: 13px; line-height: 22px; color:#969AA1&quot;>Visit <a href=&quot;https://zoom.us/&quot; style=&quot;color:#969AA1&quot; target=&quot;_blank&quot;>zoom.us</a><br>
+									<a href=&quot;https://www.google.com/maps/place/55+Almaden+Blvd,+San+Jose,+CA+95113/@37.3328541,-121.897097,17z/data=!3m1!4b1!4m5!3m4!1s0x808fcca40adf3cb7:0x5a2d33d3593e0a33!8m2!3d37.3328541!4d-121.8949083&quot; style=&quot;color:#969AA1; text-decoration: none;&quot; target=&quot;_blank&quot;>55 Almaden Blvd<br>
+									San Jose, CA 95113</a></div>
+
+									<div class=&quot;mobile-margin-top-mini mobile-margin-bottom&quot; style=&quot;margin: 0 auto; margin-bottom: 25px; font-size: 10px; line-height: 150%; color:#969AA1&quot;>You're receiving this email because you signed up for a Zoom account. If you wish to be removed from our email list, <a href=&quot;#&quot; style=&quot;text-decoration:underline;color:#969AA1;&quot;>unsubscribe.</a></div>
+									</th>
+									<th class=&quot;column mobile-last sans-serif&quot; style=&quot;width: 145px; padding: 0; padding-right: 10px; font-weight: 400;&quot; width=&quot;145&quot;>&amp;nbsp;</th>
+								</tr>
+							</tbody>
+						</table>
+						</th>
+					</tr>
+				</tbody>
+			</table>
+			<!-- Footer 3 --></td>
+		</tr>
+		<tr>
+			<td class=&quot;spacer&quot; height=&quot;65&quot; style=&quot;font-size: 65px; line-height: 65px; margin: 0; padding: 0;&quot;>&amp;nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+    
+  
+  </body>
+</html>
+  
+  
+  
+  
+</body>
+
+</html>
+"
+      sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" allow="accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write; web-share" allowTransparency="true"
+      allowpaymentrequest="true" allowfullscreen="true" class="result-iframe">
+      </iframe>
+  </div>
+
+</body>
+
+</html>

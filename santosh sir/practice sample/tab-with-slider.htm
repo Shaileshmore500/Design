@@ -1,0 +1,208 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  
+
+
+  
+  <title>CodePen - Tag rail</title>
+  
+  
+<style>
+body {
+  height: 100vh;
+}
+.tag-rail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  padding: 0;
+  white-space: nowrap;
+}
+.rail-container {
+  overflow: hidden;
+  height: 36px;
+  padding-top: 6px;
+  cursor: pointer;
+  scroll-behavior: smooth;
+}
+.tag {
+  background: #e3ebf7;
+  border-radius: 8px;
+  padding: 3px 8px 4px;
+  margin: 5px 4px;
+  color: #285192;
+  font-weight: 500;
+  user-select: none;
+  border: 1px solid #e3ebf7;
+  transition-duration: 0.25s;
+  white-space: nowrap;
+}
+.tag:first-child {
+  margin-left: 16px;
+}
+.tag:last-child {
+  margin-right: 16px;
+}
+.tag:hover {
+  background: #dce4f0;
+}
+.tag:active {
+  background: #e3ebf7;
+}
+.tag-selected {
+  background: #3b71ca;
+  color: #fff;
+  border: 1px solid #3b71ca;
+}
+.tag-selected:hover {
+  background: #3265b9;
+  color: #fff;
+}
+.tag-selected:active {
+  background: #3b71ca;
+  color: #fff;
+}
+.btn-left-con,
+.btn-right-con {
+  position: absolute;
+}
+.btn-right-con {
+  right: 0;
+}
+.btn-left,
+.btn-right {
+  height: 32px;
+  width: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  border-radius: 100%;
+  cursor: pointer;
+  transition-duration: 0.25s;
+  box-shadow: 0 0 16px 24px #fff;
+  background: #fff;
+}
+.btn-left {
+  margin-left: 2px;
+}
+.btn-right {
+  margin-right: 2px;
+}
+.btn-left:hover,
+.btn-right:hover {
+  background: #f2f2f2;
+}
+.btn-left:active,
+.btn-right:active {
+  background: #d9d9d9;
+}
+.d-none {
+  display: none;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate="no">
+  <div class="container tag-rail">
+  <div id="btnLeftCon" class="btn-left-con">
+    <i class="fa fa-angle-left btn-left" aria-hidden="true"></i>
+  </div>
+  <div class="rail-container">
+    <div class="rail" id="rail">
+      <span id="tag1" class="tag tag-selected">All</span><span id="tag2" class="tag">Action</span><span id="tag3" class="tag">Disaster thriller</span><span id="tag4" class="tag">Drama</span><span id="tag5" class="tag">Fantasy</span><span id="tag6" class="tag">Horror</span><span id="tag7" class="tag">Mystery</span><span id="tag8" class="tag">Psychological thriller</span><span id="tag9" class="tag">Thriller</span><span id="tag10" class="tag">Western</span><span id="tag11" class="tag">Crime thriller</span><span id="tag12" class="tag">Comedy</span><span id="tag13" class="tag">Romance</span><span id="tag14" class="tag">Techno thriller</span><span id="tag15" class="tag">War and military action</span><span id="tag16" class="tag">Spy and espionage action</span><span id="tag17" class="tag">Martial arts action</span><span id="tag18" class="tag">Western shoot ‘em up action</span><span id="tag19" class="tag">Action hybrid genres</span><span id="tag20" class="tag">Slapstick comedy</span><span id="tag21" class="tag">Black comedy</span><span id="tag22" class="tag">Found footage Horror</span><span id="tag23" class="tag">Cyberpunk</span><span id="tag24" class="tag">Space Opera</span><span id="tag25" class="tag">Dacoit Westerns</span><span id="tag26" class="tag">Romantic Drama</span><span id="tag27" class="tag">Spy Thriller</span><span id="tag28" class="tag">Portal fantasy</span><span id="tag29" class="tag">Historical Romance</span><span id="tag30" class="tag">Invasion apocalypse</span><span id="tag31" class="tag">The Wuxia film</span><span id="tag32" class="tag">Karate films</span><span id="tag33" class="tag">Zombie apocalypse</span><span id="tag34" class="tag">Urban fantasy</span><span id="tag35" class="tag">Sword and sorcery</span><span id="tag36" class="tag">Magical realism</span><span id="tag37" class="tag">Conspiracy Thriller</span><span id="tag38" class="tag">Chick Flick</span>
+    </div>
+  </div>
+  <div id="btnRightCon" class="btn-right-con">
+    <i class="fa fa-angle-right btn-right" aria-hidden="true"></i>
+  </div>
+</div>
+  
+      <script id="rendered-js" >
+const railCon = document.querySelector(".rail-container"),
+rail = document.getElementById("rail"),
+btnLeftCon = document.getElementById("btnLeftCon"),
+btnRightCon = document.getElementById("btnRightCon"),
+tags = document.getElementsByClassName("tag");
+let mouseDown = false;
+let startX, scrollLeft, mDwnOntag;
+
+let startDragging = function (e) {
+  railCon.style.scrollBehavior = "auto";
+  mouseDown = true;
+  startX = e.pageX - railCon.offsetLeft;
+  scrollLeft = railCon.scrollLeft;
+};
+let stopDragging = function (event) {
+  railCon.style.scrollBehavior = "smooth";
+  mouseDown = false;
+};
+
+railCon.addEventListener("mousemove", e => {
+  e.preventDefault();
+  if (!mouseDown) {
+    return;
+  }
+  const x = e.pageX - railCon.offsetLeft;
+  const scroll = x - startX;
+  railCon.scrollLeft = scrollLeft - scroll;
+  showHideBtns(scrollLeft - scroll);
+});
+
+// Add the event listeners
+railCon.addEventListener("mousedown", startDragging, false);
+railCon.addEventListener("mouseup", stopDragging, false);
+railCon.addEventListener("mouseleave", stopDragging, false);
+btnRightCon.addEventListener("click", () => {
+  railCon.scrollLeft = railCon.scrollLeft + railCon.offsetWidth / 2;
+  showHideBtns(railCon.scrollLeft + railCon.offsetWidth / 2);
+});
+btnLeftCon.addEventListener("click", () => {
+  railCon.scrollLeft = railCon.scrollLeft - railCon.offsetWidth / 2;
+  showHideBtns(railCon.scrollLeft - railCon.offsetWidth / 2);
+});
+
+window.addEventListener("mousedown", e => {
+  if (e.target.id.startsWith("tag")) {
+    mDwnOntag = e.pageX * e.pageY;
+  }
+});
+window.addEventListener("mouseup", e => {
+  if (e.target.id.startsWith("tag")) {
+    if (mDwnOntag - e.pageX * e.pageY === 0) {
+      Array.from(tags).forEach(tag => {
+        tag.classList.remove("tag-selected");
+      });
+      e.target.classList.add("tag-selected");
+    }
+  }
+});
+showHideBtns(railCon.scrollLeft);
+function showHideBtns(railConLeft) {
+  if (railConLeft <= 0) btnLeftCon.classList.add("d-none");else
+  btnLeftCon.classList.remove("d-none");
+  if (railConLeft >= rail.scrollWidth - railCon.offsetWidth)
+  btnRightCon.classList.add("d-none");else
+  btnRightCon.classList.remove("d-none");
+}
+    </script>
+
+  
+</body>
+
+</html>

@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Css Service Box Style: Demo 257</title>
+    <link href="https://bestjquery.com/tutorial/css/fontawesome-all.min.css" rel="Stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.row:before{
+    content: " ";
+    display: table;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.demo {
+    background-color: #f1f1f1;
+    padding: 20px 0 30px;
+}
+:root{ --main-color: #5EA400; }
+
+.serviceBox{
+    font-family:'Poppins', sans-serif;
+    text-align: center;
+    padding: 25px 35px 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.serviceBox:before,
+.serviceBox:after{
+    content: "";
+    background-color: var(--main-color);
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.serviceBox:after{
+    background-color: #fff;
+    height: auto;
+    border-radius: 50%/15%;
+    top: 0;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+}
+
+.serviceBox .service-icon{
+    color: var(--main-color);
+    font-size: 40px;
+    margin: 0 0 20px;
+}
+
+.serviceBox .title{
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    margin: 0 0 10px;
+}
+
+.serviceBox .description{
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin: 0;
+}
+
+.serviceBox.red{ --main-color: #FF4E01; }
+
+.serviceBox.green{ --main-color: #008B85; }
+
+.serviceBox.orange{ --main-color: #FF7C19; }
+/*media query*/
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+}
+.fa, .far, .fas {
+    font-family: normal normal normal 14px/1 FontAwesome;
+}
+@media (min-width: 768px){
+        .col-sm-6 {width: 50%;}
+        .container {width: 750px;}
+}
+@media (min-width: 992px){
+    .col-md-3 {width: 25%;}
+    .container {width: 970px;}
+}
+@media only screen and (max-width: 1199px){
+    .serviceBox{ margin: 0 0 30px; }
+}
+@media (min-width: 1200px){
+    .container {width: 1170px;}
+}
+    </style>
+</head>
+<body>
+    <div class="demo">
+        <div class="container">
+            <div class="row text-center">
+                <h1 class="white">service box style : demo 257</h1>
+            </div>
+
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="serviceBox">
+                        <div class="service-icon">
+                            <span><i class="fa fa-globe"></i></span>
+                        </div>
+                        <h3 class="title">Web Design</h3>
+                        <p class="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="serviceBox red">
+                        <div class="service-icon">
+                            <span><i class="fa fa-rocket"></i></span>
+                        </div>
+                        <h3 class="title">Web Development</h3>
+                        <p class="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="serviceBox green">
+                        <div class="service-icon">
+                            <span><i class="fa fa-mobile"></i></span>
+                        </div>
+                        <h3 class="title">Responsive Design</h3>
+                        <p class="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="serviceBox orange">
+                        <div class="service-icon">
+                            <span><i class="fa fa-briefcase"></i></span>
+                        </div>
+                        <h3 class="title">Brand Building</h3>
+                        <p class="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+</body>
+</html>

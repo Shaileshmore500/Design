@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+body,
+html {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    font-size: 16px;
+    line-height: 21px;
+    color: black;
+    height: 100%;
+}
+
+.login-screen {
+    height: 100%;
+}
+
+.img-wrap {
+    width: 70%;
+    float: left;
+    height: 100%;
+    background-image: url("images/vacancy-login-bg-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.login-content {
+    height: 100%;
+    float: right;
+    padding: 20px;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-heading {
+    color: #106caf;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-row {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    border-radius: 5px;
+    width: 300px;
+    border: 1px solid #a9a9a9;
+    padding-left: 45px;
+    cursor: pointer;
+}
+
+input[type="text"]:hover {
+    background-color: #e0e0e06e;
+}
+
+input[type="text"]:focus {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.btn-submit {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    background-image: linear-gradient(0deg, #106caf, #2398ef);
+    font-size: 14px;
+    line-height: 19px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-image: linear-gradient(0deg, #106caf, #0f93f5)
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.margin-right {
+    margin-right: 100px;
+}
+
+.remember-checkbox {
+    font-size: 13px;
+    color: #a9a9a9;
+    margin-left: 5px;
+}
+
+.cancel-login {
+    margin-bottom: 15px;
+    text-align: left;
+    align-self: flex-start;
+    margin-left: 5px;
+}
+
+.password {
+    font-size: 13px;
+}
+
+.password a {
+    color: #a9a9a9;
+}
+
+.password a:hover {
+    color: #898686;
+}
+
+.vacancy-icon-bg {
+    background-image: linear-gradient(0deg, #106caf, #2398ef);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+@media (max-width: 992px) {
+    .img-wrap {
+        width: 60%;
+    }
+
+    .login-content {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) and (max-width: 992px){
+    .img-wrap {
+        width: 50%;
+        background-position: 41%;
+    }
+
+    .login-content {
+        width: 50%;
+    }
+}
+
+@media (max-width: 576px) and (max-width: 768px){
+    .img-wrap {
+        width: 40%;
+        background-position: 32%;
+    }
+
+    .login-content {
+        width: 60%;
+    }
+
+    input[type="text"] {
+        width: 250px;
+    }
+
+    .btn-submit {
+        width: 250px;
+    }
+
+    .margin-right {
+        margin-right: 50px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 576px){
+    .img-wrap {
+        width: 1%;
+        background-image: none;
+    }
+
+    .login-content {
+        width: 99%;
+    }
+
+    input[type="text"] {
+        width: 250px;
+    }
+
+    .btn-submit {
+        width: 250px;
+    }
+
+    .margin-right {
+        margin-right: 50px;
+    }
+}

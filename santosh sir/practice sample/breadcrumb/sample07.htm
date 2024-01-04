@@ -1,0 +1,155 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+  
+  <title>CodePen - Breadcrumb</title>
+    <link rel="canonical" href="https://codepen.io/arti2002/pen/mdrXXpo" />
+  
+  
+  
+  
+<style>
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  
+  font: 20px  sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.breadcrumb li{
+  float:right;
+  padding:5px;
+  border-radius:50px;
+  position:relative;
+  margin-left:-50px;
+  margin-top:3px;
+  background:#fff5e6;
+  transition:all 0.2s ease-in-out;
+  
+}
+.breadcrumb li a{
+  
+  overflow:hidden;
+  border-radius:50px;
+   transition:all 0.2s ease-in-out;
+  text-decoration:none;
+  width:80px;
+  height:50px;
+  color:red;
+  background:#ffd699;
+  text-align:center;
+  display:block;
+  line-height:50px;
+  padding-left:52px;
+  padding-right:33.33px;
+  
+}
+.breadcrumb li a .icon{
+  display:inline-block;
+
+}
+.breadcrumb li a .text{
+  display:none;
+  opacity:0;
+}
+.breadcrumb li a:hover{
+  width:150px;
+  background:#ffccff;
+}
+.breadcrumb li a:hover .text{
+  display:inline-block;
+  opacity:1;
+}
+.breadcrumb li:last-child a{
+  padding:0;
+}
+.breadcrumb li:last-child:hover{
+  padding:3px;
+  margin-top:0;
+}
+
+.breadcrumb li:last-child:hover a{
+  width:100px;
+  height:60px;
+  line-height:60px;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate="no">
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+
+<ul class="breadcrumb">
+  <li>
+    <a href="#">
+      <span class="icon icon-file"></span>
+      <span class="text">File</span>
+    </a>
+  </li>
+  
+    <li>
+    <a href="#">
+      <span class="icon icon-folder-open"></span>
+      <span class="text">Folder</span>
+    </a>
+  </li>
+  
+    <li>
+    <a href="#">
+      <span class="icon icon-code"></span>
+      <span class="text">HTML</span>
+    </a>
+  </li>
+  
+    <li>
+    <a href="#">
+      <span class="icon icon-beaker"></span>
+      <span class="text">Lab</span>
+    </a>
+  </li>
+  
+    <li>
+    <a href="#">
+      <span class="icon icon-home"></span>
+    
+    </a>
+  </li>
+</ul>
+  
+  
+  
+  
+</body>
+
+</html>

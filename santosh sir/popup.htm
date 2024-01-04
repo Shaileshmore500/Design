@@ -1,0 +1,368 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+ 
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+  <title>CodePen - Different Popups w/ Animation</title>
+<style>
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,400");
+
+/*
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*:before, *:after {
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  padding: 24px 32px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #444;
+}
+
+h1 {
+  margin-bottom: 20px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #ddd;
+  font-size: 32px;
+  font-weight: 100;
+  color: #626262;
+}
+p {
+  margin-bottom: 8px;
+}
+input:focus {
+  box-shadow: none;
+  outline: 0;
+}
+input[type=text] {
+  width: 400px;
+  padding: 8px 12px;
+  border: 10px solid #f00;
+  border-radius: 3px;
+}
+*/
+.button {
+  margin-bottom: 4px;
+  padding: 8px 12px;
+  border: 10px solid #75B9E1;
+  border-radius: 3px;
+  background: #4FA0D0;
+  cursor: pointer;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: #fff;
+}
+.button:focus {
+  outline: none;
+}
+.button--warning {
+  border: 1px solid #FFB039;
+  background: #ff9800;
+}
+.button--success {
+  border: 1px solid #71E6AB;
+  background: #4AD890;
+}
+.button--error {
+  border: 1px solid #F578A4;
+  background: #EF5289;
+}
+/*** Popups.*/
+.popup {
+visibility: visible;
+  transition: visibility 0ms;
+ /* visibility: hidden;
+  transition: visibility 0ms linear 0.3s;
+  */
+}
+.popup--visible {
+  visibility: visible;
+  transition: visibility 0ms;
+}
+
+.popup__background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.popup--visible .popup__background {
+  opacity: 1;
+}
+.popup__content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10001;
+  min-width: 400px;
+  padding: 25px 50px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  text-align: center;
+  -webkit-animation: hide-popup 0.3s forwards;
+          animation: hide-popup 0.3s forwards;
+  /**
+   * Popup types.
+   */
+}
+.popup--visible .popup__content {
+  -webkit-animation: show-popup 0.3s forwards;
+          animation: show-popup 0.3s forwards;
+}
+.popup--icon .popup__content {
+  padding-top: 130px;
+}
+.popup--icon .popup__content:before, .popup--icon .popup__content:after {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  height: 90px;
+  width: 90px;
+}
+.popup--icon .popup__content:before {
+  content: "";
+  border: 3px solid currentColor;
+  border-radius: 50%;
+  transform: translateX(-50%) scale(1, 0);
+  opacity: 0;
+}
+.popup--icon .popup__content:after {
+  content: "✓";
+  line-height: 90px;
+  font-size: 45px;
+  transform: translateX(-50%) scale(0);
+  opacity: 0;
+}
+.popup--visible.popup--icon .popup__content:before {
+  -webkit-animation: show-icon-cirlce 0.3s forwards 0.15s;
+          animation: show-icon-cirlce 0.3s forwards 0.15s;
+}
+.popup--visible.popup--icon .popup__content:after {
+  -webkit-animation: show-icon 0.3s forwards 0.3s;
+          animation: show-icon 0.3s forwards 0.3s;
+}
+
+.-question.popup--icon .popup__content:before {
+  border-color: #ff9800;
+}
+.-question.popup--icon .popup__content:after {
+  content: "?";
+  color: #ff9800;
+}
+
+.-success.popup--icon .popup__content:before {
+  border-color: #4AD890;
+}
+.-success.popup--icon .popup__content:after {
+  content: "✓";
+  color: #4AD890;
+}
+
+.-error.popup--icon .popup__content:before {
+  border-color: #EF5289;
+}
+.-error.popup--icon .popup__content:after {
+  content: "✗";
+  color: #EF5289;
+}
+
+.popup__content__title {
+  margin-bottom: 10px;
+  font-size: 28px;
+  font-weight: 100;
+  color: #626262;
+}
+
+/**
+ * Popup animations.
+ * Based on Sweet Alert: "https://t4t5.github.io/sweetalert/"
+ */
+@-webkit-keyframes show-popup {
+  0% {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+  }
+  45% {
+    transform: translate(-50%, -50%) scale(1.05);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes show-popup {
+  0% {
+    transform: translate(-50%, -50%) scale(0.7);
+    opacity: 0;
+  }
+  45% {
+    transform: translate(-50%, -50%) scale(1.05);
+    opacity: 1;
+  }
+  80% {
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@-webkit-keyframes hide-popup {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+}
+@keyframes hide-popup {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+}
+/**
+ * Icon animations.
+ */
+@-webkit-keyframes show-icon {
+  0% {
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+@keyframes show-icon {
+  0% {
+    transform: translateX(-50%) scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes show-icon-cirlce {
+  0% {
+    transform: translateX(-50%) scale(1, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) scale(1, 1);
+    opacity: 1;
+  }
+}
+@keyframes show-icon-cirlce {
+  0% {
+    transform: translateX(-50%) scale(1, 0);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%) scale(1, 1);
+    opacity: 1;
+  }
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<p>  
+  <button class="button button--warning" data-for="js_question-popup">Show question popup</button>
+
+  <button class="button button--success" data-for="js_success-popup">Show success popup</button> 
+  
+  <button class="button button--error" data-for="js_error-popup">Show error popup</button>   
+</p>
+
+<div class="popup popup--icon -question js_question-popup ">
+  <div class="popup__background"></div>
+  <div class="popup__content">
+    <h3 class="popup__content__title">
+      Question Popup
+    </h1>
+    <p>Lorem Ipsum dolor sit amet?</p>
+    <p>
+      <button class="button button--warning" data-for="js_question-popup">Hide Popup</button>
+    </p>
+  </div>
+</div>
+
+<div class="popup popup--icon -success js_success-popup popup--visible">
+  <div class="popup__background"></div>
+  <div class="popup__content">
+    <h3 class="popup__content__title">
+      Success Popup
+    </h1>
+    <p>Lorem Ipsum dolor sit amet!</p>
+    <p>
+      <button class="button button--success" data-for="js_success-popup">Hide Popup</button>
+    </p>
+  </div>
+</div>
+
+<div class="popup popup--icon -error js_error-popup">
+  <div class="popup__background"></div>
+  <div class="popup__content">
+    <h3 class="popup__content__title">
+      Error Popup
+    </h1>
+    <p>Lorem Ipsum dolor sit amet!</p>
+    <p>
+      <button class="button button--error" data-for="js_error-popup">Hide Popup</button>
+    </p>
+  </div>
+</div>
+  
+      <script id="rendered-js" >
+const addButtonTrigger = el => {
+  el.addEventListener('click', () => {
+    const popupEl = document.querySelector(`.${el.dataset.for}`);
+    popupEl.classList.toggle('popup--visible');
+  });
+};
+/*
+Array.from(document.querySelectorAll('button[data-for]')).
+forEach(addButtonTrigger);
+*/
+//# sourceURL=pen.js
+    </script>
+
+  
+</body>
+
+</html>

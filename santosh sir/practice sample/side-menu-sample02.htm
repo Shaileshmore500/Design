@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<style>
+body {
+  margin:0;
+  padding:0;
+}
+.sidepanel {
+  position:absolute;
+  height:100vh;
+  background-color:#01848f;
+  width:20%;
+  min-width:100px;
+  margin-left:-269.797px;
+  z-index:2;
+  font-size:1.5em;
+  line-height:1.5em;
+  color:#f1f1f2;
+  font-family:Helvetica;
+  text-align:center;
+}
+.sidepanel:before {
+  content:'';
+  position:absolute;
+  height:100vh;
+  width:10px;
+  top:0;
+  left:100%;
+  background-image:linear-gradient(to left,#fff,rgba(0,0,0,0.3) 10px);
+  z-index:1;
+}
+.sidepanel span {
+  position:relative;
+  display:block;
+  width:calc(100% - 2em);
+  min-width:100px;  
+  padding:1em;
+  background-color:#01848f;
+}
+.line {
+  height:1px;
+  width:calc(100% - 44px);
+  background-color:#E9D985;
+  margin:0 22px;
+}
+.circle {
+  position:absolute;
+  width:44px;
+  height:44px;
+  border-radius:0;
+  font-size:16px;
+  background-color:#ef4581;
+  color:#f1f1f2;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  top:0;
+  left:269.797px;
+  z-index:3;
+  cursor:pointer;
+}
+.fa-chevron-left {
+  margin-right:5px;
+}
+.fa-chevron-right {
+  margin-left:5px;
+}
+.hide {
+  display:none;
+}
+/*santosh*/
+.header{
+    width:1200px;
+    margin:0 auto;
+}
+.header h1
+{
+    margin:0px; padding:0px;
+}
+.container{
+    width:1200px;
+    margin:0 auto;         
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+<div class="sidepanel">
+  <span>Click the button on the side to watch this panel collapse gracefully</span>
+  <div class="line"></div>
+  <div class="circle">
+    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+    <i class="fa fa-chevron-left hide" aria-hidden="true"></i>    
+  </div>
+</div>
+<div class="header">
+ <h1>Title Here</h1>
+</div>
+<div class="container">
+    <h2>HTML Table</h2>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>Ernst Handel</td>
+    <td>Roland Mendel</td>
+    <td>Austria</td>
+  </tr>
+  <tr>
+    <td>Island Trading</td>
+    <td>Helen Bennett</td>
+    <td>UK</td>
+  </tr>
+  <tr>
+    <td>Laughing Bacchus Winecellars</td>
+    <td>Yoshi Tannamuri</td>
+    <td>Canada</td>
+  </tr>
+  <tr>
+    <td>Magazzini Alimentari Riuniti</td>
+    <td>Giovanni Rovelli</td>
+    <td>Italy</td>
+  </tr>
+</table>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script>
+$('.circle').click(function () {
+  let spWidth = $('.sidepanel').width();
+  let spMarginLeft = parseInt($('.sidepanel').css('margin-left'), 10);
+  let w = spMarginLeft >= 0 ? spWidth * -1 : 0;
+  let cw = w < 0 ? -w : spWidth - 22;
+  $('.sidepanel').animate({
+    marginLeft: w });
+
+  $('.sidepanel span').animate({
+    marginLeft: w });
+
+  $('.circle').animate({
+    left: cw },
+  function () {
+    $('.fa-chevron-left').toggleClass('hide');
+    $('.fa-chevron-right').toggleClass('hide');
+  });
+});
+</script>
+</body>
+</html>

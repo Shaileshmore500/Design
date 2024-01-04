@@ -1,0 +1,654 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="X-UA-Compatible" content="IE=edge" /><title>
+	Welcome to Add Master
+</title><meta content="width=device-width, initial-scale=1.0, shrink-to-fit=no" name="viewport" />
+<link rel="stylesheet" href="css/azzara.min.css" />
+<link rel="stylesheet" href="css/bootstrap.min.css" /><link rel="stylesheet" href="css/fonts.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" href="css/demo.css" />
+<link rel="stylesheet" href="css/popupcss.css" />-->
+    <style type="text/css">
+        body h1, h2, h3, h4, h5, h6
+        {
+            font-family: arial !important;
+        }
+    </style>
+    
+</head>
+<body>
+    <form name="aspnetForm" method="post" action="./Default.aspx" id="aspnetForm">
+
+    <div class="wrapper">
+        <div class="main-header" data-background-color="purple">
+            <div class="logo-header">
+                <a href="Default.aspx" class="logo" style="padding-top: 15px;">
+                    <h2>Company</h2>
+                </a>
+                <a class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
+                    data-target="collapse" aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"><i class="fa fa-bars">M</i></span></a>
+                        
+                        <a class="topbar-toggler more">
+                            <i class="fa fa-ellipsis-v">::</i></a>
+                <div class="navbar-minimize">
+                    <a class="btn btn-minimize btn-rounded"><i class="fa fa-bars">D</i></a>
+                </div>
+            </div>
+            <nav class="navbar navbar-header navbar-expand-lg">
+                    <div class="container-fluid">
+                        <div class="collapse" id="search-nav">
+                        </div>
+                        <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                            <li class="nav-item dropdown hidden-caret">
+                                <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
+                                    <div class="avatar-sm">
+                                        <a id="ctl00_LoginStatus1" title="Log Out" href="javascript:__doPostBack(&#39;ctl00$LoginStatus1$ctl00&#39;,&#39;&#39;)" style="color:White;font-weight:bold;"><:></a>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+        </div>
+        <div class="sidebar">
+            <div class="sidebar-background">
+            </div>
+            <div class="sidebar-wrapper scrollbar-inner">
+                <div class="sidebar-content">
+                    <div class="user">
+                        <table width="100%">
+                            <tr>
+                                <td height="10">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    <img id="ctl00_ImgUser2" class="rounded-circle" src="../Profile/Small/AM214490dec5120c-2a4d-44e5-b9a7-37c8bef98c66adhira02.jpg" style="width:80px;border-width:0px;" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="5">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="color: #001940; font-size: 12px;">
+                                    <span id="ctl00_LblMemberName2" style="font-weight:bold;">Your Name</span>
+                                    (<span id="ctl00_LoginName1" style="font-weight:bold;">AM214490</span>)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="5">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="color: #001940; font-size: 12px;">
+                                    <span id="ctl00_LblPackagename" style="font-weight:bold;">Silver</span>
+                                    (<span id="ctl00_LblPackage" style="font-weight:bold;">249.00</span>)
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="5">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="color: #001940;">
+                                    <a id="ctl00_LoginStatus2" title="Log Out" href="javascript:__doPostBack(&#39;ctl00$LoginStatus2$ctl00&#39;,&#39;&#39;)" style="color:#001940;font-weight:bold;">Logout</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="10">
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <ul class="nav">
+                        <li class="nav-item"><a href="Default.aspx"><i class="fa fa-home"></i>
+                            <p>
+                                Dash Board</p>
+                        </a></li>
+                        <li class="nav-item"><a data-toggle="collapse" href="#Create"><i class="fa fa-pen-square">
+                        </i>
+                            <p>
+                                Create</p>
+                            <span class="caret"></span></a>
+                            <div class="collapse" id="Create">
+                                <ul class="nav nav-collapse">
+                                    <li><a href="CreateMember.aspx"><i class="fa fa-arrow-right"></i>Create Member </a>
+                                    </li>
+                                    <li><a href="FreeJoining.aspx"><i class="fa fa-arrow-right"></i>Joining </a></li>
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a data-toggle="collapse" href="#Downline"><i class="fa fa-pen-square">
+                        </i>
+                            <p>
+                                Downline</p>
+                            <span class="caret"></span></a>
+                            <div class="collapse" id="Downline">
+                                <ul class="nav nav-collapse">
+                                    <li><a href="GenerationTreeView.aspx"><i class="fa fa-arrow-right"></i>Generation Tree
+                                        View </a></li>
+                                    
+                                    <li><a href="DirectSponsor.aspx"><i class="fa fa-arrow-right"></i>Direct Sponsor </a>
+                                    </li>
+                                    <li><a href="DirectSponsorActive.aspx"><i class="fa fa-arrow-right"></i>Direct Sponsor
+                                        Active </a></li>
+                                    <li><a href="DirectSponsorInActive.aspx"><i class="fa fa-arrow-right"></i>Direct Sponsor
+                                        InActive </a></li>
+                                    <li><a href="TotalDownlineMember.aspx"><i class="fa fa-arrow-right"></i>Total Downline
+                                        Member </a></li>
+                                    <li><a href="TotalDownlineMember.aspx?Status=True"><i class="fa fa-arrow-right"></i>
+                                        Total Downline Member Active </a></li>
+                                    <li><a href="TotalDownlineMember.aspx?Status=False"><i class="fa fa-arrow-right"></i>
+                                        Total Downline Member InActive </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                          <li class="nav-item"><a href="MemberInActive.aspx"><i
+                            class="fa fa-pen-square"></i>
+                            <p>
+                                Activate Now</p>
+                        </a></li>
+                        <li class="nav-item"><a data-toggle="collapse" href="#Profile"><i class="fa fa-pen-square">
+                        </i>
+                            <p>
+                                Profile</p>
+                            <span class="caret"></span></a>
+                            <div class="collapse" id="Profile">
+                                <ul class="nav nav-collapse">
+                                    <li><a href="MyProfile.aspx"><i class="fa fa-arrow-right"></i>My Profile </a></li>
+                                    
+                                    <li><a href="ProfileImage.aspx"><i class="fa fa-arrow-right"></i>Update Profile Image
+                                    </a></li>
+                                    <li style="display: none;"><a href="KYCUpdate.aspx"><i class="fa fa-arrow-right"></i>
+                                        KYC Update </a></li>
+                                    <li><a href="ChangePassword.aspx"><i class="fa fa-arrow-right"></i>Change Password
+                                    </a></li>
+                                    <li><a href="ChangeTransactionalPassword.aspx"><i class="fa fa-arrow-right"></i>Change
+                                        Tran Password </a></li>
+                                    <li><a href="ForgotTransactionalPassword.aspx"><i class="fa fa-arrow-right"></i>Forgot
+                                        Tran Password </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a data-toggle="collapse" href="#MyWallet"><i class="fa fa-pen-square">
+                        </i>
+                            <p>
+                                My Wallet</p>
+                            <span class="caret"></span></a>
+                            <div class="collapse" id="MyWallet">
+                                <ul class="nav nav-collapse">
+                                    <li><a href="AddFund.aspx"><i class="fa fa-arrow-right"></i>Add Fund </a></li>
+                                    
+                                    <li><a href="WalletStatement.aspx?WalletType=Fund Wallet"><i class="fa fa-arrow-right">
+                                    </i>Fund Wallet Statement </a></li>
+                                    <li><a href="WalletStatement.aspx?WalletType=Commission Wallet"><i class="fa fa-arrow-right">
+                                    </i>Commission Wallet Statement </a></li>
+                                    <li style="display: none;"><a href="WalletStatement.aspx?WalletType=Reward Point"><i
+                                        class="fa fa-arrow-right"></i>Reward Point Statement </a></li>
+                                    <li><a href="FundDetails.aspx"><i class="fa fa-arrow-right"></i>Fund Request Details
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a data-toggle="collapse" href="#MyPayoutDetails"><i class="fa fa-pen-square">
+                        </i>
+                            <p>
+                                Withdrawal</p>
+                            <span class="caret"></span></a>
+                            <div class="collapse" id="MyPayoutDetails">
+                                <ul class="nav nav-collapse">
+                                    <li><a href="WithdrawalRequest.aspx"><i class="fa fa-arrow-right"></i>Withdrawal Request
+                                    </a></li>
+                                    <li><a href="PendingRequest.aspx"><i class="fa fa-arrow-right"></i>Pending Request
+                                    </a></li>
+                                    <li><a href="CompletedRequest.aspx"><i class="fa fa-arrow-right"></i>Completed Request
+                                    </a></li>
+                                    <li><a href="RefundWalletAmountRequest.aspx"><i class="fa fa-arrow-right"></i>Refund
+                                        Amount Request </a></li>
+                                    <li style="display: none;"><a href="TotalAmount.aspx"><i class="fa fa-arrow-right">
+                                    </i>Total Income </a></li>
+                                    <li style="display: none;"><a href="UnPaidAmount.aspx"><i class="fa fa-arrow-right">
+                                    </i>UnPaid Income </a></li>
+                                    <li style="display: none;"><a href="ReceivedAmount.aspx"><i class="fa fa-arrow-right">
+                                    </i>Received Income </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item" style="display: none;"><a data-toggle="collapse" href="#Pin"><i
+                            class="fa fa-pen-square"></i>
+                            <p>
+                                E-Pin Account</p>
+                            <span class="caret"></span></a>
+                            <div class="collapse" id="Pin">
+                                <ul class="nav nav-collapse">
+                                    <li><a href="GeneratePin.aspx"><i class="fa fa-arrow-right"></i>Generate E-Pins </a>
+                                    </li>
+                                    <li><a href="PinTransfer.aspx"><i class="fa fa-arrow-right"></i>E-Pin Transfer </a>
+                                    </li>
+                                    <li><a href="PinTransferHistory.aspx"><i class="fa fa-arrow-right"></i>E-Pin Transfer
+                                        History </a></li>
+                                    <li><a href="ReceivedPinHistory.aspx"><i class="fa fa-arrow-right"></i>Received E-Pin
+                                        History </a></li>
+                                    <li><a href="UsedPinHistory.aspx"><i class="fa fa-arrow-right"></i>Used E-Pin History
+                                    </a></li>
+                                    <li><a href="UnUsedPinsHistory.aspx"><i class="fa fa-arrow-right"></i>UnUsed E-Pins
+                                        History </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        
+                        <li class="nav-item" style="display: none;"><a href="FranchiseList.aspx"><i class="fa fa-pen-square">
+                        </i>
+                            <p>
+                                Franchise List</p>
+                        </a></li>
+                        
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <table class="table table-bordered" style="display: none;">
+            
+        </table>
+        
+    <div class="main-panel">
+        <div class="content">
+            <div class="page-inner">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header" style="background: #02090A;">
+                                <div class="card-title" style="background: #02090A;">
+                                    Dash Board (
+                                    <span id="ctl00_ContentPlaceHolder1_LblMemberName2">SANTOSH MANDAVKAR</span>
+                                    )
+                                    <img id="ctl00_ContentPlaceHolder1_ImgUser2" class="rounded-circle" src="" style="width:35px;border-width:0px;" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="ctl00_ContentPlaceHolder1_divNotification" class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="card-title">
+                                    Notification
+                                </div>
+                            </div>
+                        </div>
+                        <p style="font-weight: bold; color: maroon; font-size: 17px;">
+                            <marquee scrollamount="4">
+                            <table id="ctl00_ContentPlaceHolder1_RptNotification" cellspacing="0" border="0" style="border-collapse:collapse;">
+	<tr>
+		<td>
+                                
+                                     
+                             1.Welcome to Ad Master. @ Without condition for withdrawal success.  # स्वागत है आपका ऐड मास्टर में  Withdrawal लेने के लिए कोई भी कंडीशन नही है।..&nbsp;&nbsp;
+                          
+                                      
+                                </td>
+	</tr>
+</table></marquee>
+                        </p>
+                    </div>
+                </div>
+                
+                
+                
+                <div class="row" style="display: none;">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header" style="background: #02090A;">
+                                <div class="card-title" style="background: #02090A;">
+                                    <span id="ctl00_ContentPlaceHolder1_LblReferalLink">https://addmaster.live/FreeJoining.aspx?UserID=AM214490</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <a href="https://t.me/addmaster" target="_blank" class="col-sm-6 col-md-6" style="text-decoration: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body"><h3 class="card-title" style="font-size: 16px;">Telegram</h3></div>
+                        </div>
+                    </a><a href="http://wa.me/+919297808711" target="_blank" class="col-sm-6 col-md-6"
+                        style="text-decoration: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body"><h3 class="card-title" style="font-size: 16px;">whatsup</h3></div>
+                        </div>
+                    </a><a href="whatsapp://send?text=https://addmaster.live/FreeJoining.aspx?UserID=AM214490" id="ctl00_ContentPlaceHolder1_aReferalLink" class="col-sm-12 col-md-12" style="text-decoration: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body"><h3 class="card-title" style="font-size: 16px;">abc</h3></div>
+                        </div>
+                    </a>
+                    <a href="TotalAmount.aspx?IncomeName=Daily Add View Income" class="col-sm-6 col-md-4"
+                        style="text-decoration: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #198754;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body"><h3 class="card-title" style="font-size: 16px;">xyz1</h3></div>
+                        </div>
+                    </a>
+                    <a href="UpgradeUserID.aspx" id="ctl00_ContentPlaceHolder1_aUpGrade" class="col-sm-6 col-md-4" style="text-decoration: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #E00000;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body"><h3 class="card-title" style="font-size: 16px;">abc2</h3></div>
+                        </div>
+                    </a>
+                    <a href="AddFund.aspx" class="col-sm-6 col-md-4" style="text-decoration: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #198754;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body"><h3 class="card-title" style="font-size: 16px;">xy2</h3></div>
+                        </div>
+                    </a>
+                    <a id="ctl00_ContentPlaceHolder1_aTimer" class="col-sm-6 col-md-4" style="text-decoration: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body"><h3 class="card-title" style="font-size: 16px;">abc2</h3></div>
+                        </div>
+                    </a><a href="#" class="col-sm-6 col-md-4" style="text-decoration: none; display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body"><h3 class="card-title" style="font-size: 16px;">xyz3</h3></div>
+                        </div>
+                    </a><a href="CreateMember.aspx" class="col-sm-6 col-md-4" style="text-decoration: none;
+                        display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body"><h3 class="card-title" style="font-size: 16px;">abc4</h3></div>
+                        </div>
+                    </a><a href="FreeJoining.aspx" class="col-sm-6 col-md-4" style="text-decoration: none;
+                        display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                           <div class="card-body"><h3 class="card-title" style="font-size: 16px;">abc123</h3></div>
+                        </div>
+                    </a><a href="#" class="col-sm-6 col-md-4" style="text-decoration: none; display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body"><h3 class="card-title" style="font-size: 16px;">abc123</h3></div>
+                        </div>
+                    </a><a href="WithdrawalRequest.aspx" class="col-sm-6 col-md-4" style="text-decoration: none;
+                        display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body"><h3 class="card-title" style="font-size: 16px;">xyz</h3></div>
+                        </div>
+                    </a><a href="WalletStatement.aspx?WalletType=Fund Wallet" class="col-sm-6 col-md-4"
+                        style="text-decoration: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #0D6EFD;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body"><h3 class="card-title" style="font-size: 16px;">Fund Wallet / Statement</h3></div>
+                        </div>
+                    </a><a href="WalletStatement.aspx?WalletType=Commission Wallet" class="col-sm-6 col-md-4"
+                        style="text-decoration: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Commission Wallet / Statement</h3>
+                            </div>
+                        </div>
+                    </a><a href="WalletStatement.aspx?WalletType=Reward Point" class="col-sm-6 col-md-4"
+                        style="text-decoration: none; display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Reward Point / Statement</h3>
+                            </div>
+                        </div>
+                    </a><a href="#" class="col-sm-6 col-md-4" style="text-decoration: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #DC3545;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Today Income</h3>
+                            </div>
+                        </div>
+                    </a><a href="TotalAmount.aspx?IncomeName=Direct Income" class="col-sm-6 col-md-4"
+                        style="text-decoration: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Direct Income</h3>
+                            </div>
+                        </div>
+                    </a><a href="DailyIncome.aspx?IncomeName=Daily Add View Income" class="col-sm-6 col-md-4"
+                        style="text-decoration: none; display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        UnComing Daily Add View Income</h3>
+                            </div>
+                        </div>
+                    </a><a href="DailyIncome.aspx?IncomeName=Daily Add View Team Income" class="col-sm-6 col-md-4"
+                        style="text-decoration: none; display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #0D6EFD;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        UpComing Daily Add View Team Income</h3>
+                            </div>
+                        </div>
+                    </a><a href="TotalAmount.aspx?IncomeName=Daily Add View Team Income" class="col-sm-6 col-md-4"
+                        style="text-decoration: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #0D6EFD;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Daily Add View Team Income</h3>
+                            </div>
+                        </div>
+                    </a><a href="TotalAmount.aspx?IncomeName=Team Level Income" class="col-sm-6 col-md-4"
+                        style="text-decoration: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Team Level Income</h3>
+                            </div>
+                        </div>
+                    </a><a href="TotalAmount.aspx?IncomeName=AutoPool Income" class="col-sm-6 col-md-4"
+                        style="text-decoration: none; display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        AutoPool Income</h3>
+                            </div>
+                        </div>
+                    </a><a href="TotalAmount.aspx?IncomeName=Reward Income" class="col-sm-6 col-md-4"
+                        style="text-decoration: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #0D6EFD;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Reward Income</h3>
+                            </div>
+                        </div>
+                    </a><a href="TotalAmount.aspx" class="col-sm-6 col-md-4" style="text-decoration: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #198754;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Total My Income</h3>
+                            </div>
+                        </div>
+                    </a><a href="MyReward.aspx" class="col-sm-6 col-md-4" style="text-decoration: none;
+                        display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        My Reward</h3>
+                            </div>
+                        </div>
+                    </a><a href="MyProfile.aspx" class="col-sm-6 col-md-4" style="text-decoration: none;
+                        display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        My Profile</h3>
+                            </div>
+                        </div>
+                    </a><a href="AutoPoolLevel.aspx" class="col-sm-6 col-md-4" style="text-decoration: none;
+                        display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        AutoPool Level</h3>
+                            </div>
+                        </div>
+                    </a><a href="DirectSponsor.aspx" class="col-sm-6 col-md-4" style="text-decoration: none;
+                        display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Direct Sponsor</h3>
+                            </div>
+                        </div>
+                    </a><a href="DirectSponsorActive.aspx" class="col-sm-6 col-md-4" style="text-decoration: none;
+                        display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Direct Sponsor Active</h3>
+                            </div>
+                        </div>
+                    </a><a href="DirectSponsorInActive.aspx" class="col-sm-6 col-md-4" style="text-decoration: none;
+                        display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Direct Sponsor InActive</h3>
+                            </div>
+                        </div>
+                    </a><a href="TotalDownlineMember.aspx?Status=True" class="col-sm-6 col-md-4" style="text-decoration: none;
+                        display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Total Downline Member Active</h3>
+                            </div>
+                        </div>
+                    </a><a href="TotalDownlineMember.aspx?Status=False" class="col-sm-6 col-md-4" style="text-decoration: none;
+                        display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Total Downline Member InActive</h3>
+                            </div>
+                        </div>
+                    </a><a href="TotalDownlineMember.aspx" class="col-sm-6 col-md-4" style="text-decoration: none;
+                        display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Total Downline Member</h3>
+                            </div>
+                        </div>
+                    </a><a href="GenerationTreeView.aspx" class="col-sm-6 col-md-4" style="text-decoration: none;
+                        display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <table width="100%">
+                                            <tr>
+                                                <td height="35">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td align="center">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Generation Tree View</h3>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="20">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a><a href="ChangePassword.aspx" class="col-sm-6 col-md-4" style="text-decoration: none;
+                        display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Change Password</h3>
+                            </div>
+                        </div>
+                    </a><a href="ChangeTransactionalPassword.aspx" class="col-sm-6 col-md-4" style="text-decoration: none;
+                        display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Change Tran Password</h3>
+                            </div>
+                        </div>
+                    </a><a href="LegalDocuments.aspx" class="col-sm-6 col-md-4" style="text-decoration: none;
+                        display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Legal Documents</h3>
+                            </div>
+                        </div>
+                    </a><a href="TotalDownlineMember.aspx" class="col-sm-6 col-md-4" style="text-decoration: none;
+                        display: none;">
+                        <div class="card card-stats card-primary card-round" style="background: #02090A;
+                            height: 100px; border: 5px solid #D69919">
+                            <div class="card-body">
+                                                    <h3 class="card-title" style="font-size: 16px;">
+                                                        Total Downline Member</h3>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <table class="table table-bordered" style="display: none;">
+        
+    </table>
+
+    </div>
+    <script src="js/jquery.3.2.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
+    <script src="js/ready.min.js"></script><script src="js/bootstrap.min.js"></script>
+    <!-- 
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/bootstrap-toggle.min.js"></script> -->
+    </form>
+</body>
+</html>

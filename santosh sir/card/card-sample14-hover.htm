@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+    margin: 0;
+    color: #545454;
+    font-size: 14px;
+    font-family: 'NoirPro',sans-serif;
+    font-variant: tabular-nums;
+    line-height: 1.3;
+    background-color: #f5f5f5;
+    font-feature-settings: 'tnum';
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+div {
+    display: block;
+}
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.col-md-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    position: relative;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.ant-card {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #545454;
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.3;
+    list-style: none;
+    font-feature-settings: 'tnum';
+    position: relative;
+    background: #fff;
+    border-radius: 6px;
+}
+.ant-card-bordered {
+    border: 1px solid #e8e8e8;
+}
+.ant-layout, .ant-layout * {
+    box-sizing: border-box;
+}
+.ant-card {
+    margin-bottom: 32px;
+}
+.gx-card-widget {
+    -webkit-box-shadow: 0 0 5px 5px rgb(0 0 0 / 3%);
+    -moz-box-shadow: 0 0 5px 5px rgba(0,0,0,0.03);
+    box-shadow: 0 0 5px 5px rgb(0 0 0 / 3%);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.gx-card-full {
+    overflow: hidden;
+}
+.gx-dot-arrow-hover {
+    position: relative;
+    overflow: hidden;
+}
+.gx-card-widget.ant-card-bordered {
+    border: 0 none;
+}
+.gx-card-full .ant-card-body {
+    padding: 0;
+}
+.ant-card-body::before {
+    display: table;
+    content: '';
+}
+.ant-card-body::after {
+    display: table;
+    clear: both;
+    content: '';
+}
+.gx-user-wid-row {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+}
+.gx-mr-3, .gx-mx-3 {
+    margin-right: 1rem !important;
+}
+.gx-user-wid {
+    width: 80px;
+    position: relative;
+}
+img {
+    max-width: 100%;
+}
+.gx-object-cover {
+    object-fit: cover;
+}
+.gx-user-wid img {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+.gx-pb-3, .gx-py-3 {
+    padding-bottom: 1rem !important;
+}
+
+.gx-pr-3, .gx-px-3 {
+    padding-right: 1rem !important;
+}
+.gx-pt-3, .gx-py-3 {
+    padding-top: 1rem !important;
+}
+.gx-user-wid-body {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+.gx-dot-arrow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+    padding-right: 10px;
+    cursor: pointer;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+}
+.gx-hover-arrow {
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    cursor: pointer;
+    -webkit-border-radius: 50% 0 0 50%;
+    -moz-border-radius: 50% 0 0 50%;
+    border-radius: 50% 0 0 50%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    width: 107px;
+    height: 107px;
+    position: absolute;
+    left: 15px;
+    padding: 10px;
+    font-size: 20px;
+}
+.gx-bg-primary {
+    background-color: #038fde !important;
+}
+.gx-dot-arrow-hover:hover .gx-hover-arrow {
+    left: -15px;
+}
+.gx-text-white {
+    color: #ffffff !important;
+}
+.gx-hover-arrow .icon {
+    display: flex;
+}
+[class*=" icon-"]:before, [class^=icon-]:before {
+    font-family: "Font Awesome 5 Pro"!important;
+    font-style: normal!important;
+    font-weight: 400!important;
+    -webkit-font-feature-settings: normal!important;
+    font-feature-settings: normal!important;
+    font-variant: normal!important;
+    text-transform: none!important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-long-arrow-right:before {
+    content: "\f178";
+}
+.gx-dot-arrow .gx-dot {
+    cursor: pointer;
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: -ms-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+}
+.gx-text-primary {
+    color: #038fde !important;
+}
+[class*=" icon-"]:before, [class^=icon-]:before {
+    font-family: "Font Awesome 6 Pro"!important;
+    font-style: normal!important;
+    font-weight: 400!important;
+    -webkit-font-feature-settings: normal!important;
+    font-feature-settings: normal!important;
+    font-variant: normal!important;
+    text-transform: none!important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.icon-ellipse-v:before {
+    content: "\f142";
+}
+</style>
+</head>
+<body>
+<div class="row">
+<div class="col-md-4">
+    <div class="ant-card ant-card-bordered gx-card-widget gx-card-full gx-dot-arrow-hover">
+        <div class="ant-card-body">
+            <div class="gx-user-wid-row">
+                <div class="gx-user-wid gx-mr-3"><img alt="..." src="https://wieldy.g-axon.work/assets/images/avatar/selena.jpg" class="gx-object-cover">
+                </div>
+                <div class="gx-user-wid-body gx-py-3 gx-pr-3">
+                    <div class="ant-row-flex">
+                        <h2 class="h4 gx-mr-1 gx-mb-1">Mila Alba</h2>
+                    </div>
+                    <p class="gx-mb-1 gx-text-grey gx-fs-sm">Creative Head<br> @example</p>
+                    <div class="gx-dot-arrow">
+                        <div class="gx-bg-primary gx-hover-arrow"><i class="icon icon-long-arrow-right gx-text-white"></i>
+                        </div>
+                        <div class="gx-dot">
+                            <i class="fa fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+    
+</body>
+</html>

@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <style>
+    html,
+    body,
+    form {
+      height: 100%;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      font-family: "Calibri", Arial, sans-serif;
+      color: #fff;
+      background: linear-gradient(50deg, #ff6e6e 40%, rgba(0, 0, 0, 0) 30%),
+        linear-gradient(67deg, #808080 60%, #ffe468 60%);
+    }
+    body,
+    #divHome {
+      overscroll-behavior-y: contain;
+    }
+    .wrap {
+      width: 300px;
+      position: absolute;
+      top: 10%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.44);
+      padding: 20px;
+      background: rgba(62, 61, 61, 0.6);
+    }
+
+    .divTitle {
+      width: 100%;
+      padding: 15px 0 30px 0;
+    }
+
+    .divTitle .lblTitle {
+      font-size: 20px;
+      font-weight: normal;
+      color: #fff;
+      text-align: center;
+      display: block;
+    }
+
+    .wrap .log_in_box {
+      position: relative;
+      margin: 18px 0;
+    }
+
+    #btnLogin {
+      width: 100%;
+      height: 40px;
+      border: none;
+      color: #fff;
+      font-size: 14px;
+      border-radius: 22px;
+      transition: 0.5s;
+      cursor: pointer;
+      outline: none;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      -webkit-box-shadow: 0 8px 6px -8px #0000007a;
+      -moz-box-shadow: 0 8px 6px -8px #0000007a;
+      background: #14c14e;
+    }
+
+    #btnLogin:before {
+      content: "\f090";
+      font-family: FontAwesome;
+      margin-right: 5px;
+    }
+
+    .form_box {
+      width: 100%;
+      margin: 0 auto;
+      padding: 7px 0;
+      background: #ecedf0e8;
+      border-radius: 3px;
+    }
+
+    .form_box .plea_sel_data {
+      width: 100%;
+      border: none;
+      outline: none;
+      background: none;
+      font-size: 13px;
+    }
+
+    .error {
+      font-size: 13px;
+      color: #ff8300;
+      text-align: center;
+      margin: 0 0 12px 0;
+      padding: 0;
+      display: none;
+    }
+    .success {
+      font-size: 13px;
+      color: #5dda37;
+      text-align: center;
+      margin: 0 0 12px 0;
+      padding: 0;
+      display: none;
+    }
+
+    #divHome {
+      z-index: 1;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      overflow: hidden;
+      display: none;
+      background: #fff;
+    }
+
+    .showHome #divHome {
+      display: block;
+    }
+
+    .touch #divHome {
+      -webkit-overflow-scrolling: touch;
+      /*overflow-y: scroll;*/
+    }
+
+    .log_input {
+      padding: 14px 0 6px 0;
+      width: 100%;
+      font-size: 14px;
+      border: none;
+      border-bottom: 1px solid #fff;
+      border-radius: 2px;
+      background: none;
+      color: #fff;
+    }
+
+    .log_input:focus {
+      outline: none;
+    }
+
+    .log_input + .log_label {
+      display: block;
+      cursor: text;
+      color: #fff;
+      transition: 0.15s ease-out all;
+      position: absolute;
+      top: 0.8em;
+      left: 0em;
+      letter-spacing: 0.5px;
+      font-size: 14px;
+      pointer-events: none;
+    }
+
+    .log_label_user:before {
+      content: "\f2c0";
+      font-family: FontAwesome;
+      margin-right: 5px;
+    }
+
+    .log_label_pass:before {
+      content: "\f13e";
+      font-family: FontAwesome;
+      margin-right: 5px;
+    }
+
+    .log_label_email:before {
+      content: "\f003";
+      font-family: FontAwesome;
+      margin-right: 5px;
+    }
+
+    .log_input:focus + .log_label,
+    .log_label.stay {
+      top: -0.4em;
+      left: 0em;
+      font-size: 14px;
+      color: #fff;
+      transition: 0.15s ease-out all;
+      opacity: 0.5;
+    }
+
+    .login_logo {
+      text-align: center;
+    }
+
+    .login_logo img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+    .login_logo svg {
+      height: 70px;
+      display: inline-block;
+      font-size: inherit !important;
+      overflow: visible;
+    }
+    .forget_pass {
+      position: absolute;
+      top: 6px;
+      right: 0;
+      width: 22px;
+      height: 22px;
+      display: block;
+      border-radius: 50%;
+      text-align: center;
+      background: #fff;
+      text-decoration: none;
+      line-height: 22px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.88), 0 1px 2px rgba(0, 0, 0, 0.48);
+    }
+
+    .forget_pass span {
+      font-size: 20px;
+      color: #000;
+      font-weight: 600;
+    }
+
+    .cancel_btn,
+    .reset_btn {
+      color: #ddd;
+      font-size: 14px;
+      text-decoration: none;
+      float: left;
+    }
+
+    .reset_btn {
+      float: right;
+    }
+
+    @-webkit-keyframes divHome {
+      0% {
+        opacity: 0;
+        -webkit-transform: scale(0.04) translateY(300%);
+        transform: scale(0.04) translateY(300%);
+      }
+
+      40% {
+        -webkit-transform: scale(0.04) translateY(0);
+        transform: scale(0.04) translateY(0);
+        transition: ease-out;
+      }
+
+      40% {
+        -webkit-transform: scale(0.04) translateY(0);
+        transform: scale(0.04) translateY(0);
+      }
+
+      60% {
+        opacity: 1;
+        -webkit-transform: scale(0.02) translateY(0px);
+        transform: scale(0.02) translateY(0px);
+      }
+
+      61% {
+        -webkit-transform: scale(0.04);
+        transform: scale(0.04);
+      }
+
+      99.9% {
+        height: 0;
+        padding-bottom: 100%;
+        border-radius: 100%;
+      }
+
+      100% {
+        -webkit-transform: scale(2);
+        transform: scale(2);
+        height: 100%;
+        padding-bottom: 0;
+        border-radius: 0;
+      }
+    }
+    #imgLoader {
+      position: relative;
+    }
+    #imgLoader:before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background: #fff;
+      margin: auto;
+      left: 50%;
+      top: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      visibility: hidden;
+    }
+    #imgLoader.anim svg {
+      visibility: hidden;
+    }
+    #imgLoader.anim:before {
+      visibility: visible;
+      content: "";
+      position: absolute;
+      transition: 0.5s;
+      height: 4000px;
+      width: 4000px;
+      transition-timing-function: ease-out;
+      transition-property: height, width;
+    }
+  </style>
+  <body>
+    <form method="post" action="./mobile?key=varsity" id="form1">
+      <div class="aspNetHidden">
+        <input
+          type="hidden"
+          name="__ViewStateGuid"
+          id="__ViewStateGuid"
+          value="84K2fFAkxYXiGD3hdjXxY6bTIaFeiCO4hrBosdSFkGJ+OG7HD9K+z3dO38NWZS9Nwri/HNrENHEd9XR7omvfzLDHx+LIMIem8ndFJ6mOcaK48QhxnuJcCmpXbtSWpP1bXjrGMrniJNkr1RLVCWivow=="
+        />
+        <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
+      </div>
+
+      <div class="aspNetHidden">
+        <input
+          type="hidden"
+          name="__EVENTVALIDATION"
+          id="__EVENTVALIDATION"
+          value="fyIVHHqa1mlvq6qf9Nod6iOmvL2H62S6btZPW1ygv13hJZrhjGrW6YBREpgBwmJsF8hTuQ6fHjTX2KPJEFB1cI3gtUqq0VtHzNy7WXsr75PtvhCstPAfT3NH4co1C6zN/oQsH0Z2zEZyHDLFwB4AP3Lig5Os7X0XXzW79sm3be2KYRkD2jdJZXSzfllhLK51"
+        />
+      </div>
+
+      <div id="divHome">
+        <iframe
+          src="main/default.aspx?_ap=&_devid=&_token=&_os=&_axn="
+          id="ifrHost"
+          frameborder="0"
+          style="height: 100%; width: 1px; min-width: 100%;"
+        ></iframe>
+      </div>
+
+      <div id="divLogin" class="wrap">
+        <div class="login_logo"></div>
+        <div class="divTitle">
+          <span id="lblTitle" class="lblTitle">Thread - ERP</span>
+        </div>
+        <div class="form_box _ddl">
+          <select
+            name="ddlDb"
+            id="ddlDb"
+            class="plea_sel_data"
+            style="display: none;"
+          >
+            <option value="0">Please Select Database</option>
+            <option selected="selected" value="DbERP_ATT">Attendance</option>
+          </select>
+        </div>
+
+        <div class="log_in_box">
+          <input
+            name="txtUser"
+            type="text"
+            id="txtUser"
+            autocomplete="off"
+            class="log_input"
+          />
+          <label class="log_label log_label_user" for="txtUser"
+            >User Name</label
+          >
+        </div>
+
+        <div class="log_in_box">
+          <input
+            name="txtPassword"
+            type="password"
+            id="txtPassword"
+            autocomplete="off"
+            class="log_input"
+          />
+          <label class="log_label log_label_pass" for="txtPassword"
+            >Password</label
+          >
+          <a
+            tabindex="-1"
+            href="javascript:void(0)"
+            class="forget_pass"
+            title="Forgot your password?"
+          >
+            <span>?</span>
+          </a>
+        </div>
+        <p id="lblError" class="error">Invalid Username/Password</p>
+        <button
+          tabindex="-1"
+          onclick="return loginUser()"
+          href="javascript:void(0)"
+          id="btnLogin"
+        >
+          Login
+        </button>
+        <p
+          class="img"
+          id="imgLoader"
+          style="
+            width: 100%;
+            height: 40px;
+            margin: 0;
+            text-align: center;
+            display: none;
+          "
+        >
+          <svg
+            width="44"
+            height="44"
+            viewBox="0 0 44 44"
+            xmlns="http://www.w3.org/2000/svg"
+            stroke="#fff"
+          >
+            <g fill="none" fill-rule="evenodd" stroke-width="2">
+              <circle cx="22" cy="22" r="1">
+                <animate
+                  attributeName="r"
+                  begin="0s"
+                  dur="1.8s"
+                  values="1;20"
+                  calcMode="spline"
+                  keyTimes="0;1"
+                  keySplines="0.165, 0.84, 0.44, 1"
+                  repeatCount="indefinite"
+                />
+                <animate
+                  attributeName="stroke-opacity"
+                  begin="0s"
+                  dur="1.8s"
+                  values="1;0"
+                  calcMode="spline"
+                  keyTimes="0;1"
+                  keySplines="0.3, 0.61, 0.355, 1"
+                  repeatCount="indefinite"
+                />
+              </circle>
+              <circle cx="22" cy="22" r="1">
+                <animate
+                  attributeName="r"
+                  begin="-0.9s"
+                  dur="1.8s"
+                  values="1;20"
+                  calcMode="spline"
+                  keyTimes="0;1"
+                  keySplines="0.165, 0.84, 0.44, 1"
+                  repeatCount="indefinite"
+                />
+                <animate
+                  attributeName="stroke-opacity"
+                  begin="-0.9s"
+                  dur="1.8s"
+                  values="1;0"
+                  calcMode="spline"
+                  keyTimes="0;1"
+                  keySplines="0.3, 0.61, 0.355, 1"
+                  repeatCount="indefinite"
+                />
+              </circle>
+            </g>
+          </svg>
+        </p>
+
+        <div id="divLoginProvider"></div>
+      </div>
+
+      <div id="divForgot" style="display: none; top: -20%;" class="wrap">
+        <div class="log_in_box">
+          <input class="log_input" type="text" name="" id="loginusernamef" />
+          <label class="log_label log_label_user" for="loginusernamef"
+            >User Name</label
+          >
+        </div>
+
+        <div class="log_in_box">
+          <input class="log_input" type="text" name="" id="registeredemailid" />
+          <label class="log_label log_label_email" for="registeredemailid"
+            >Registered Email ID</label
+          >
+        </div>
+        <p id="lblfgtmsg" class="error">Invalid Username/Email ID</p>
+        <a class="cancel_btn" href="javascript:;">Cancel</a>
+        <a
+          class="reset_btn"
+          onclick="submitForgotPass(this)"
+          href="javascript:void(0)"
+          >Reset Password</a
+        >
+      </div>
+
+      <div id="divOtpCtr" style="display: none; top: -20%;" class="wrap">
+        <span
+          style="
+            color: #000;
+            font-size: 14px;
+            font-family: sans-serif;
+            display: block;
+            text-align: center;
+            margin: 10px 0;
+            background: #fbff00;
+            padding: 5px;
+            border-radius: 10px;
+          "
+          id="lblOtpTitle"
+          >Please enter OTP code</span
+        >
+        <div
+          id="divOtp"
+          style="height: 45px; padding-bottom: 37px; position: relative;"
+          class="loginEntry"
+        >
+          <div class="log_in_box" style="width: 200px;">
+            <input id="txtOtp" type="text" class="log_input" />
+            <span class="log_label">Enter OTP</span>
+          </div>
+          <a
+            class="enterIcon"
+            id="btnSubmitOtp"
+            style="position: absolute; top: 2px; right: 1px; width: 80px;"
+            href="javascript:void(0)"
+            onclick="submitOtp(this)"
+            >Enter</a
+          >
+          <div
+            style="display: block; clear: both; margin: 10px 0;"
+            id="lblOtpErr"
+            class="error"
+          ></div>
+          <a
+            class="cancel_btn"
+            id="btnCancelOtp"
+            style="width: 50px;"
+            href="javascript:void(0)"
+            onclick="hideOtp(this)"
+            >Cancel</a
+          >
+          <a
+            class="redoIcon"
+            id="btnResendOtp"
+            style="width: 155px; text-align: right; float: right;"
+            href="javascript:void(0)"
+            onclick="resendOtp(this)"
+            >Resend Otp (120)</a
+          >
+        </div>
+      </div>
+      <div id="div2f">
+        <iframe
+          style="height: 100%; width: 1px; min-width: 100%;"
+          frameborder="0"
+        ></iframe>
+      </div>
+    </form>
+  </body>
+</html>

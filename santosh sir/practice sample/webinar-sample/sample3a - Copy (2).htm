@@ -1,0 +1,545 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel='stylesheet' id='style-css'  href='https://www.hrmthread.com/wp-content/themes/hrthread/style.css?ver=4.6.20' type='text/css' media='all' />
+    <script  type="text/javascript">
+        var date = document.getElementById('html_webinarDate').innerHTML;
+        var selectedDate = new Date(date);
+        var currentDate = new Date();
+
+        if (selectedDate < currentDate) {
+            document.getElementById('html_container').style.display = 'none';
+        }
+    </script>
+
+</head>
+<body>
+<style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+      @media only screen {
+        .serif {font-family: 'Lato', Helvetica, Arial, sans-serif;}
+        .sans-serif {font-family: 'Lato', Helvetica, Arial, sans-serif;}
+      }
+
+      ::selection {color: #FFFFFF; background: #33363A;}
+      #outlook a {padding: 0;}
+      table, th, td {-webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; font-size: 16px; font-weight: 400; line-height: 26px; text-align: left;}
+      table, th, td, h1, h2, h3, h4, h5, h6 {font-family: Helvetica, Arial, sans-serif;}
+      img {-ms-interpolation-mode: bicubic; border: 0; display: block; height: auto; line-height: 100%; outline: none; text-decoration: none;}
+      table {border-collapse: collapse;}
+
+      .row {width: 700px;}
+      .row .row {width: 100%;}
+
+      th.menu-item {display: inline;}
+
+      .hover-shrink:hover {transform: scale(0.7);}
+
+      @media only screen and (max-width: 699px) {
+
+        .row {width: 90% !important;}
+        .row .row {width: 100% !important;}
+
+        .column {
+          box-sizing: border-box;
+          display: inline-block !important; 
+          width: 100% !important;
+        }
+        .mobile-1  {max-width: 8.33333%;}
+        .mobile-2  {max-width: 16.66667%;}
+        .mobile-3  {max-width: 25%;}
+        .mobile-4  {max-width: 33.33333%;}
+        .mobile-5  {max-width: 41.66667%;}
+        .mobile-6  {max-width: 50%;}
+        .mobile-7  {max-width: 58.33333%;}
+        .mobile-8  {max-width: 66.66667%;}
+        .mobile-9  {max-width: 75%;}
+        .mobile-10 {max-width: 83.33333%;}
+        .mobile-11 {max-width: 91.66667%;}
+        .mobile-12 {
+          padding-right: 30px !important;
+          padding-left: 30px !important;
+        }
+
+        .mobile-offset-1  {margin-left: 8.33333% !important;}
+        .mobile-offset-2  {margin-left: 16.66667% !important;}
+        .mobile-offset-3  {margin-left: 25% !important;}
+        .mobile-offset-4  {margin-left: 33.33333% !important;}
+        .mobile-offset-5  {margin-left: 41.66667% !important;}
+        .mobile-offset-6  {margin-left: 50% !important;}
+        .mobile-offset-7  {margin-left: 58.33333% !important;}
+        .mobile-offset-8  {margin-left: 66.66667% !important;}
+        .mobile-offset-9  {margin-left: 75% !important;}
+        .mobile-offset-10 {margin-left: 83.33333% !important;}
+        .mobile-offset-11 {margin-left: 91.66667% !important;}
+
+        .has-columns {
+          padding-right: 20px !important;
+          padding-left: 20px !important;
+        }
+
+        .has-columns .column {
+          padding-right: 10px !important;
+          padding-left: 10px !important;
+        }
+
+        .mobile-collapsed .column {
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+
+        img {
+          max-width: 100%;
+          width: auto;
+          height: auto;
+        }
+
+        .mobile-center {
+          display: table !important;
+          float: none;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+        .mobile-text-center {text-align: center !important;}
+        .mobile-text-left   {text-align: left !important;}
+        .mobile-text-right  {text-align: right !important;}
+
+        .show-on-mobile {
+          display: table !important;
+          overflow: visible !important;
+          line-height: inherit !important;
+        }
+
+        .hide-on-mobile {
+          display: none !important;
+          width: 0;
+          overflow: hidden;
+        }
+
+        .mobile-full-width {
+          display: table;
+          width: 100%;
+        }
+
+        .mobile-first {display: table-header-group !important;}
+        .mobile-intermediate {display: table-row !important;}
+        .mobile-last {display: table-footer-group !important;}
+
+        .mobile-first th,
+        .mobile-intermediate th,
+        .mobile-last th {
+          padding-left: 30px !important;
+          padding-right: 30px !important;
+        }
+
+        .menu[align=&quot;center&quot;],
+        .menu.mobile-center {
+          width: auto !important;
+        }
+        .menu th {
+          width: auto !important;
+          display: inline-block !important;
+          padding-bottom: 15px !important;
+        }
+        .menu.mobile-vertical th {
+          display: block !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
+        }
+
+        .hamburger-menu,
+        .accordion-content {
+          max-height: 0;
+          overflow: hidden;
+          -ms-transition: max-height .2s ease-in-out;
+          -webkit-transition: max-height .2s ease-in-out;
+            transition: max-height .2s ease-in-out;
+        }
+        .menu-trigger img {
+          display: block;
+          margin: 0 auto !important;
+          float: none !important;
+          max-height: none !important;
+        }
+        .menu-trigger:hover + .hamburger-menu,
+        .hamburger-menu:hover,
+        .accordion-item:hover .accordion-content {
+          max-height: 999px !important;
+          overflow: visible !important;
+        }
+
+        .spacer,
+        .divider th                 {height: 30px; line-height: 100% !important; font-size: 100% !important;}
+		.spacer20                	{height: 20px; line-height: 100% !important; font-size: 100% !important;}
+		.spacer15                	{height: 15px; line-height: 100% !important; font-size: 100% !important;}
+		.spacer10                	{height: 10px; line-height: 100% !important; font-size: 100% !important;}
+        .mobile-padding-top         {padding-top: 30px !important;}
+        .mobile-padding-top-mini    {padding-top: 10px !important;}
+        .mobile-padding-bottom      {padding-bottom: 30px !important;}
+        .mobile-padding-bottom-mini {padding-bottom: 10px !important;}
+        .mobile-margin-top          {margin-top: 30px !important;}
+        .mobile-margin-top-mini     {margin-top: 10px !important;}
+        .mobile-margin-bottom       {margin-bottom: 30px !important;}
+        .mobile-margin-bottom-mini  {margin-bottom: 10px !important;}
+		.mobile-margin-bottom-none  {margin-bottom: 0 !important;}
+		.rounded-mobile				{border-radius:6px !important; margin: 0 auto;}
+		.no-collapse				{border-collapse: separate;}
+      }
+
+    </style>
+    <style>
+    .main-container{width:990px;}
+    .main-container .container{display:inline-block; width:46%; border:1px solid #e5e5e5; padding:1%; border-radius:15px; background: #f9f9f955; margin-bottom:5px;}
+    .container .dateDiv{display:inline-block; width:20%;    vertical-align: middle;}
+    .container .titleDiv{display:inline-block; width:55%;    vertical-align: middle;}
+    .titleDiv h4{padding: 0; margin: 0; color: #4A494F; font-size: 16px; line-height: 24px; font-weight: 700; max-width: 255px;}
+    .container .linkDiv{display:inline-block; width:22%;    vertical-align: middle;}
+    .linkDiv a{border:1px solid #2d8cff; border-radius: 3px;  display: inline-block; font-size: 13px; font-weight: 600; padding: 5px; text-align: center; text-decoration:none;color: #2d8cff; float:right; background:#f2f2f2;}
+    .linkDiv a:hover{    background: #000; color: #bdbdbd;  border: 1px solid #959595;}
+    .dateNumber{padding: 0; margin: 0; text-align: center; color: #2d8cff; font-size: 28px; line-height: 100%; font-weight: 600; padding-top: 14px; padding-bottom: 6px;}
+    @media only screen and (max-width: 999px) 
+    {
+       .main-container{width:100%;} 
+       .main-container .container{width:480px; display:block; margin:auto; margin-bottom:5px;}
+    }
+    </style>
+<img src="https://www.hrmthread.com/webinar/images/inner-header.jpg" style="width: 100%;">
+<div class="main-container" id='html_mainContainer' style="margin:auto;">
+<table align="center" class="row mobile-margin-bottom-none" style="border-spacing:0; margin:0 auto; margin-bottom: 15px;">
+							<tbody>
+								<tr style="vertical-align: middle;" valign="middle">
+									<th class="column" style="width: 640px; padding: 0;" width="640">
+									<h2 class="sans-serif mobile-text-center" style="margin: 0; color: #4A494F; font-size: 22px; font-weight: 700; text-align:center;">Upcoming Webinars</h2>
+									</th>
+								</tr>
+							</tbody>
+						</table>
+    <!-- 1 -->
+    <div class="container">
+        <div class="dateDiv">
+            <div class="mobile-center" style="border: 1px solid #E4E4ED; border-radius: 100px; height: 95px; width: 95px; text-align: center; ">
+				<h2 class="sans-serif dateNumber" style="">31</h2>
+				<table align="center" class="" style="border-spacing:0; margin:0 auto; line-height: 1px;">
+					<tbody>
+						<tr>
+							<th class="column" style="width: 30px; padding: 0;" width="30">
+							<table class="divider" style="border-spacing:0; width:30px; margin: 0 auto; ">
+								<tbody>
+									<tr>
+										<td height="1" style="height: 1px; border-top: 1px solid #E4E4ED; padding: 0; font-size: 1px; line-height: 1px;" class="">&nbsp;</td>
+									</tr>
+								</tbody>
+							</table>
+							</th>
+						</tr>
+					</tbody>
+				</table>
+				<p class="sans-serif" style="padding: 0; margin: 0; text-align: center; color: #4A494F; font-size: 15px; line-height: 100%; letter-spacing: 2px; font-weight: 600; padding-top: 8px;">AUG</p>
+			</div>
+        </div>
+        <div class="titleDiv">
+            <div class="column mobile-12 mobile-padding-top-mini" style="width: 310px; padding: 0; padding-left: 10px; font-weight: 400;" width="310">
+			    <h4 class="sans-serif mobile-center mobile-text-center" style="">Webinar on HRMTHREAD PAYROLL & HR SOFTWARE</h4>
+			    <h5 class="sans-serif mobile-center" style="margin: 0; color: #747487; font-size: 15px; font-weight: 400; line-height: 30px; padding: 0; ">Thursday, Aug 31st, 3:30 PM - 4:30 PM</h5>
+			</div>
+        </div>
+        <div class="linkDiv">
+            <div class="sans-serif"><a href="https://teams.microsoft.com/registration/UnwS8wWVK0WHM7iV3hMhEA,aovu7lMFJ0iEcgDSEJkJmg,ZLmQzD7QoEu-YvjQrMPaow,v5Oo8Z3gGEKEXVAiOGtGOw,tzl7_G63LES2tM9tSjcWMQ,PNhIFCtokkmhiYBpju_Osw?mode=read&tenantId=f3127c52-9505-452b-8733-b895de132110" target="_blank">Click to Join</a></div>
+        </div>
+    </div>
+    <!-- /1-->
+    <!-- 1 -->
+    <div class="container">
+        <div class="dateDiv">
+            <div class="mobile-center" style="border: 1px solid #E4E4ED; border-radius: 100px; height: 95px; width: 95px; text-align: center; ">
+									<h2 class="sans-serif dateNumber" style="">24</h2>
+									<table align="center" class="" style="border-spacing:0; margin:0 auto; line-height: 1px;">
+										<tbody>
+											<tr>
+												<th class="column" style="width: 30px; padding: 0;" width="30">
+												<table class="divider" style="border-spacing:0; width:30px; margin: 0 auto; ">
+													<tbody>
+														<tr>
+															<td height="1" style="height: 1px; border-top: 1px solid #E4E4ED; padding: 0; font-size: 1px; line-height: 1px;" class="">&nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+
+									<p class="sans-serif" style="padding: 0; margin: 0; text-align: center; color: #4A494F; font-size: 15px; line-height: 100%; letter-spacing: 2px; font-weight: 600; padding-top: 8px;">AUG</p>
+									</div>
+        </div>
+        <div class="titleDiv">
+            <div class="column mobile-12 mobile-padding-top-mini" style="width: 310px; padding: 0; padding-left: 10px; font-weight: 400;" width="310">
+									<h4 class="sans-serif mobile-center mobile-text-center" style="">Webinar on HRMTHREAD PAYROLL & HR SOFTWARE</h4>
+
+									<h5 class="sans-serif mobile-center" style="margin: 0; color: #747487; font-size: 15px; font-weight: 400; line-height: 30px; padding: 0; ">Thursday, August 24th, 3:30 PM - 4:30 PM</h5>
+									</div>
+        </div>
+        <div class="linkDiv">
+            <div class="sans-serif"><a href="https://teams.microsoft.com/registration/UnwS8wWVK0WHM7iV3hMhEA,aovu7lMFJ0iEcgDSEJkJmg,ZLmQzD7QoEu-YvjQrMPaow,R4YULejBTUGkH1wftkC5hw,11dnyzS5M0GEyzGAKciscg,GEU-ljZ950W9DLVg9t-vwA?mode=read&tenantId=f3127c52-9505-452b-8733-b895de132110" style="" target="_blank">Click to Join</a></div>
+        </div>
+    <!-- /1-->
+    </div>
+    <!-- 1 -->
+    <div class="container">
+        <div class="dateDiv">
+            <div class="mobile-center" style="border: 1px solid #E4E4ED; border-radius: 100px; height: 95px; width: 95px; text-align: center; ">
+									<h2 class="sans-serif dateNumber" style="">17</h2>
+									<table align="center" class="" style="border-spacing:0; margin:0 auto; line-height: 1px;">
+										<tbody>
+											<tr>
+												<th class="column" style="width: 30px; padding: 0;" width="30">
+												<table class="divider" style="border-spacing:0; width:30px; margin: 0 auto; ">
+													<tbody>
+														<tr>
+															<td height="1" style="height: 1px; border-top: 1px solid #E4E4ED; padding: 0; font-size: 1px; line-height: 1px;" class="">&nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+
+									<p class="sans-serif" style="padding: 0; margin: 0; text-align: center; color: #4A494F; font-size: 15px; line-height: 100%; letter-spacing: 2px; font-weight: 600; padding-top: 8px;">AUG</p>
+									</div>
+        </div>
+        <div class="titleDiv">
+            <div class="column mobile-12 mobile-padding-top-mini" style="width: 310px; padding: 0; padding-left: 10px; font-weight: 400;" width="310">
+									<h4 class="sans-serif mobile-center mobile-text-center" style="">Webinar on HRMTHREAD PAYROLL & HR SOFTWARE</h4>
+
+									<h5 class="sans-serif mobile-center" style="margin: 0; color: #747487; font-size: 15px; font-weight: 400; line-height: 30px; padding: 0; ">Thursday, August 17th, 3:30 PM - 4:30 PM</h5>
+									</div>
+        </div>
+        <div class="linkDiv">
+            <div class="sans-serif"><a href="https://teams.microsoft.com/registration/UnwS8wWVK0WHM7iV3hMhEA,aovu7lMFJ0iEcgDSEJkJmg,ZLmQzD7QoEu-YvjQrMPaow,pbJqWEsiEkeWQ-kjZKJmJw,X6z3-wFHPk-xU9TFuCCsLw,E4Xb9KXhxEOnvUtyJjOUZQ?mode=read&tenantId=f3127c52-9505-452b-8733-b895de132110" style="" target="_blank">Click to Join</a></div>
+        </div>
+    <!-- /1-->
+    </div>
+    <!-- 1 -->
+    <div class="container">
+        <div class="dateDiv">
+            <div class="mobile-center" style="border: 1px solid #E4E4ED; border-radius: 100px; height: 95px; width: 95px; text-align: center; ">
+									<h2 class="sans-serif dateNumber" style="">10</h2>
+									<table align="center" class="" style="border-spacing:0; margin:0 auto; line-height: 1px;">
+										<tbody>
+											<tr>
+												<th class="column" style="width: 30px; padding: 0;" width="30">
+												<table class="divider" style="border-spacing:0; width:30px; margin: 0 auto; ">
+													<tbody>
+														<tr>
+															<td height="1" style="height: 1px; border-top: 1px solid #E4E4ED; padding: 0; font-size: 1px; line-height: 1px;" class="">&nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+
+									<p class="sans-serif" style="padding: 0; margin: 0; text-align: center; color: #4A494F; font-size: 15px; line-height: 100%; letter-spacing: 2px; font-weight: 600; padding-top: 8px;">AUG</p>
+									</div>
+        </div>
+        <div class="titleDiv">
+            <div class="column mobile-12 mobile-padding-top-mini" style="width: 310px; padding: 0; padding-left: 10px; font-weight: 400;" width="310">
+									<h4 class="sans-serif mobile-center mobile-text-center" style="">Webinar on HRMTHREAD PAYROLL & HR SOFTWARE</h4>
+
+									<h5 class="sans-serif mobile-center" style="margin: 0; color: #747487; font-size: 15px; font-weight: 400; line-height: 30px; padding: 0; ">Thursday, August 10th, 3:30 PM - 4:30 PM</h5>
+									</div>
+        </div>
+        <div class="linkDiv">
+            <div class="sans-serif"><a href="https://teams.microsoft.com/registration/UnwS8wWVK0WHM7iV3hMhEA,aovu7lMFJ0iEcgDSEJkJmg,ZLmQzD7QoEu-YvjQrMPaow,U5wu1ll-tUmrM9BW3tPQaw,Ojv4twwwakS3TztVGxJhfg,alWgge4PlUuCMJo-GgjrOA?mode=read&tenantId=f3127c52-9505-452b-8733-b895de132110" style="" target="_blank">Click to Join</a></div>
+        </div>
+    <!-- /1-->
+    </div>
+    <!-- 1 -->
+    <div class="container">
+        <div class="dateDiv">
+            <div class="mobile-center" style="border: 1px solid #E4E4ED; border-radius: 100px; height: 95px; width: 95px; text-align: center; ">
+									<h2 class="sans-serif dateNumber" style="">3</h2>
+									<table align="center" class="" style="border-spacing:0; margin:0 auto; line-height: 1px;">
+										<tbody>
+											<tr>
+												<th class="column" style="width: 30px; padding: 0;" width="30">
+												<table class="divider" style="border-spacing:0; width:30px; margin: 0 auto; ">
+													<tbody>
+														<tr>
+															<td height="1" style="height: 1px; border-top: 1px solid #E4E4ED; padding: 0; font-size: 1px; line-height: 1px;" class="">&nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+
+									<p class="sans-serif" style="padding: 0; margin: 0; text-align: center; color: #4A494F; font-size: 15px; line-height: 100%; letter-spacing: 2px; font-weight: 600; padding-top: 8px;">AUG</p>
+									</div>
+        </div>
+        <div class="titleDiv">
+            <div class="column mobile-12 mobile-padding-top-mini" style="width: 310px; padding: 0; padding-left: 10px; font-weight: 400;" width="310">
+									<h4 class="sans-serif mobile-center mobile-text-center" style="">Webinar on HRMTHREAD PAYROLL & HR SOFTWARE</h4>
+
+									<h5 class="sans-serif mobile-center" style="margin: 0; color: #747487; font-size: 15px; font-weight: 400; line-height: 30px; padding: 0; ">Thursday, August 3rd, 3:30 PM - 4:30 PM</h5>
+									</div>
+        </div>
+        <div class="linkDiv">
+            <div class="sans-serif"><a href="https://teams.microsoft.com/registration/UnwS8wWVK0WHM7iV3hMhEA,aovu7lMFJ0iEcgDSEJkJmg,ZLmQzD7QoEu-YvjQrMPaow,dpH7BjxTXUeFWBX0tY064Q,NJoVyCZpy0i8ptysVqOnDA,ywOk8eZq10KFqWtJhA_Gaw?mode=read&tenantId=f3127c52-9505-452b-8733-b895de132110" style="" target="_blank">Click to Join</a></div>
+        </div>
+    <!-- /1-->
+    </div>
+    <!-- 1 -->
+    <div class="container">
+        <div class="dateDiv">
+            <div class="mobile-center" style="border: 1px solid #E4E4ED; border-radius: 100px; height: 95px; width: 95px; text-align: center; ">
+									<h2 class="sans-serif dateNumber" style="">27</h2>
+									<table align="center" class="" style="border-spacing:0; margin:0 auto; line-height: 1px;">
+										<tbody>
+											<tr>
+												<th class="column" style="width: 30px; padding: 0;" width="30">
+												<table class="divider" style="border-spacing:0; width:30px; margin: 0 auto; ">
+													<tbody>
+														<tr>
+															<td height="1" style="height: 1px; border-top: 1px solid #E4E4ED; padding: 0; font-size: 1px; line-height: 1px;" class="">&nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+
+									<p class="sans-serif" style="padding: 0; margin: 0; text-align: center; color: #4A494F; font-size: 15px; line-height: 100%; letter-spacing: 2px; font-weight: 600; padding-top: 8px;">JUL</p>
+									</div>
+        </div>
+        <div class="titleDiv">
+            <div class="column mobile-12 mobile-padding-top-mini" style="width: 310px; padding: 0; padding-left: 10px; font-weight: 400;" width="310">
+									<h4 class="sans-serif mobile-center mobile-text-center" style="">Webinar on HRMTHREAD PAYROLL & HR SOFTWARE</h4>
+
+									<h5 class="sans-serif mobile-center" style="margin: 0; color: #747487; font-size: 15px; font-weight: 400; line-height: 30px; padding: 0; ">Thursday, July 27th, 3:30 PM - 4:30 PM</h5>
+									</div>
+        </div>
+        <div class="linkDiv">
+            <div class="sans-serif"><a href="https://teams.microsoft.com/registration/UnwS8wWVK0WHM7iV3hMhEA,aovu7lMFJ0iEcgDSEJkJmg,ZLmQzD7QoEu-YvjQrMPaow,oeW4QAB2O0a17IWVzQCqpQ,Hf7AtIgDXU2dCVMkzsauTg,aU19h_DVKkOOzpjqQgu_bQ?mode=read&tenantId=f3127c52-9505-452b-8733-b895de132110" style="" target="_blank">Click to Join</a></div>
+        </div>
+    <!-- /1-->
+    </div>
+    <!-- 1 -->
+    <div class="container">
+        <div class="dateDiv">
+            <div class="mobile-center" style="border: 1px solid #E4E4ED; border-radius: 100px; height: 95px; width: 95px; text-align: center; ">
+									<h2 class="sans-serif dateNumber" style="">20</h2>
+									<table align="center" class="" style="border-spacing:0; margin:0 auto; line-height: 1px;">
+										<tbody>
+											<tr>
+												<th class="column" style="width: 30px; padding: 0;" width="30">
+												<table class="divider" style="border-spacing:0; width:30px; margin: 0 auto; ">
+													<tbody>
+														<tr>
+															<td height="1" style="height: 1px; border-top: 1px solid #E4E4ED; padding: 0; font-size: 1px; line-height: 1px;" class="">&nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+
+									<p class="sans-serif" style="padding: 0; margin: 0; text-align: center; color: #4A494F; font-size: 15px; line-height: 100%; letter-spacing: 2px; font-weight: 600; padding-top: 8px;">JUL</p>
+									</div>
+        </div>
+        <div class="titleDiv">
+            <div class="column mobile-12 mobile-padding-top-mini" style="width: 310px; padding: 0; padding-left: 10px; font-weight: 400;" width="310">
+									<h4 class="sans-serif mobile-center mobile-text-center" style="">Webinar on HRMTHREAD PAYROLL & HR SOFTWARE</h4>
+
+									<h5 class="sans-serif mobile-center" style="margin: 0; color: #747487; font-size: 15px; font-weight: 400; line-height: 30px; padding: 0; ">Thursday, July 20th, 3:30 PM - 4:30 PM</h5>
+									</div>
+        </div>
+        <div class="linkDiv">
+            <div class="sans-serif"><a href="https://teams.microsoft.com/registration/UnwS8wWVK0WHM7iV3hMhEA,aovu7lMFJ0iEcgDSEJkJmg,ZLmQzD7QoEu-YvjQrMPaow,Z1iyPh9QzUqh4r-KTHk2QA,OUzILf6bG0-BKFcvqfZjcg,FfQmPFGZZkqdI9talNmNdw?mode=read&tenantId=f3127c52-9505-452b-8733-b895de132110" style="" target="_blank">Click to Join</a></div>
+        </div>
+    <!-- /1-->
+    </div>
+    <!-- 1 -->
+    <div class="container">
+        <div class="dateDiv">
+            <div class="mobile-center" style="border: 1px solid #E4E4ED; border-radius: 100px; height: 95px; width: 95px; text-align: center; ">
+									<h2 class="sans-serif dateNumber" style="">13</h2>
+									<table align="center" class="" style="border-spacing:0; margin:0 auto; line-height: 1px;">
+										<tbody>
+											<tr>
+												<th class="column" style="width: 30px; padding: 0;" width="30">
+												<table class="divider" style="border-spacing:0; width:30px; margin: 0 auto; ">
+													<tbody>
+														<tr>
+															<td height="1" style="height: 1px; border-top: 1px solid #E4E4ED; padding: 0; font-size: 1px; line-height: 1px;" class="">&nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+
+									<p class="sans-serif" style="padding: 0; margin: 0; text-align: center; color: #4A494F; font-size: 15px; line-height: 100%; letter-spacing: 2px; font-weight: 600; padding-top: 8px;">JUL</p>
+									</div>
+        </div>
+        <div class="titleDiv">
+            <div class="column mobile-12 mobile-padding-top-mini" style="width: 310px; padding: 0; padding-left: 10px; font-weight: 400;" width="310">
+									<h4 class="sans-serif mobile-center mobile-text-center" style="">Webinar on HRMTHREAD PAYROLL & HR SOFTWARE</h4>
+
+									<h5 class="sans-serif mobile-center" style="margin: 0; color: #747487; font-size: 15px; font-weight: 400; line-height: 30px; padding: 0; ">Thursday, July 13th, 3:30 PM - 4:30 PM</h5>
+									</div>
+        </div>
+        <div class="linkDiv">
+            <div class="sans-serif"><a href="https://teams.microsoft.com/registration/UnwS8wWVK0WHM7iV3hMhEA,aovu7lMFJ0iEcgDSEJkJmg,ZLmQzD7QoEu-YvjQrMPaow,4qdwCnCPCUCW-yrbaa-s2Q,Z1XPoGTrT0OEiill2me-Nw,JYQx4BnAEECbhrblNZ4KLg?mode=read&tenantId=f3127c52-9505-452b-8733-b895de132110" style="" target="_blank">Click to Join</a></div>
+        </div>
+    <!-- /1-->
+    </div>
+    <!-- 1 -->
+    <div class="container" id="html_container">
+        <div class="dateDiv">
+            <div class="mobile-center" style="border: 1px solid #E4E4ED; border-radius: 100px; height: 95px; width: 95px; text-align: center; ">
+									<h2 class="sans-serif dateNumber" style="">6</h2>
+									<table align="center" class="" style="border-spacing:0; margin:0 auto; line-height: 1px;">
+										<tbody>
+											<tr>
+												<th class="column" style="width: 30px; padding: 0;" width="30">
+												<table class="divider" style="border-spacing:0; width:30px; margin: 0 auto; ">
+													<tbody>
+														<tr>
+															<td height="1" style="height: 1px; border-top: 1px solid #E4E4ED; padding: 0; font-size: 1px; line-height: 1px;" class="">&nbsp;</td>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+
+									<p class="sans-serif" style="padding: 0; margin: 0; text-align: center; color: #4A494F; font-size: 15px; line-height: 100%; letter-spacing: 2px; font-weight: 600; padding-top: 8px;">JUL</p>
+									</div>
+        </div>
+        <div class="titleDiv">
+            <div class="column mobile-12 mobile-padding-top-mini" style="width: 310px; padding: 0; padding-left: 10px; font-weight: 400;" width="310">
+									<h4 class="sans-serif mobile-center mobile-text-center" style="">Webinar on HRMTHREAD PAYROLL & HR SOFTWARE</h4>
+
+									<h5 class="sans-serif mobile-center" style="margin: 0; color: #747487; font-size: 15px; font-weight: 400; line-height: 30px; padding: 0; ">Thursday, July <span id="html_webinaDate">4</span>th, 3:30 PM - 4:30 PM</h5>
+									</div>
+        </div>
+        <div class="linkDiv">
+            <div class="sans-serif"><a href="https://teams.microsoft.com/registration/UnwS8wWVK0WHM7iV3hMhEA,aovu7lMFJ0iEcgDSEJkJmg,ZLmQzD7QoEu-YvjQrMPaow,ZxicZaCYOE2Mhy5pQb_6Ag,EDaHJ55zgEqR7viYjYPcUA,JeLzD9mtoEGRGArm1q7_FQ?mode=read&tenantId=f3127c52-9505-452b-8733-b895de132110" style="" target="_blank">Click to Join</a></div>
+        </div>
+    <!-- /1-->
+    </div>
+</div>
+
+</body>
+
+</html>

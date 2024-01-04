@@ -1,0 +1,173 @@
+﻿<html lang="en"><head>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'>
+<style>
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+body {
+  background: #0b9d83;
+  font-family: 'lato', sans-serif;
+}
+.form-block {
+  position: relative;
+  width: 95%;
+  max-width: 900px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+.main {
+  display: block;
+  position: relative;
+  background: #eaeaea;
+}
+.main__block {
+  display: block;
+  position: relative;
+  padding: 15px;
+}
+.main__block_right {
+  display: inline-block;
+  position: inherit;
+  width: calc(50% - 10px);
+  transition: all 2s ease-in-out;
+  text-align: center;
+  top: 76px;
+  vertical-align: top;
+}
+.main__block_left {
+  display: inline-block;
+  position: relative;
+  width: calc(50% - 10px);
+  transition: all 2s ease-in-out;
+}
+.main__block_sep {
+  position: absolute;
+  top: 191.5px;
+  left: 428.5px;
+  background: #eaeaea;
+  color: #595959;
+}
+.sign-up {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  width: 100%;
+}
+.sign-up__icon {
+  position: absolute;
+  color: #14ab99;
+  top: 30px;
+  left: 20px;
+}
+.sign-up__icon_submit {
+  top: 25px;
+  left: 40px;
+  color: #fff;
+  transition: color 0.5s ease-out;
+}
+.sign-up__form {
+  position: inherit;
+  top: 0;
+  border-width: 0 1px 0 0;
+  border-style: solid;
+  border-color: rgba(89,89,89,0.35);
+}
+.sign-up__block {
+  position: relative;
+  display: block;
+  width: 80%;
+  margin: 0 auto 10px auto;
+  height: 72.5px;
+}
+.sign-up__block:hover > .sign-up__submit {
+  cursor: pointer;
+  background: #fff;
+  color: #14ab99;
+  border: 1px solid #14ab99;
+}
+.sign-up__block:hover > .sign-up__icon_submit {
+  color: #14ab99;
+}
+.sign-up__label {
+  font-weight: 400;
+  font-size: 13px;
+  margin-bottom: 5px;
+  display: block;
+  color: #414141;
+}
+.sign-up__field {
+  border: 2px solid #14ab99;
+  padding: 16px 32px 16px 64px;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 300;
+  color: #595959;
+  outline: none;
+  transition: border-width 0.1s ease-out;
+}
+.sign-up__field::-webkit-input-placeholder {
+  color: #999fad;
+}
+.sign-up__field::-moz-placeholder {
+  color: #999fad;
+  opacity: 1;
+}
+.sign-up__field:focus {
+  border-width: 0 0 2px 0;
+}
+.sign-up__submit {
+  border: 0;
+  padding: 16px;
+  margin-top: 15px;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 300;
+  color: #fff;
+  background: #14ab99;
+  outline: none;
+  letter-spacing: 2px;
+  transition: background 0.5s ease-out, color 0.6s ease-out, border 0.5s ease-out;
+}
+
+</style>
+
+</head>
+
+<body>
+  <div class="form-block">
+  <main class="main">
+    <div class="main__block main__block_signup">
+      <div class="main__block_left">
+        <div class="sign-up">
+          <form class="sign-up__form">
+            <div class="sign-up__block">
+              <label class="sign-up__label" for="username">Enter your username</label><i class="fa fa-user fa-2x sign-up__icon" aria-hidden="true"></i>
+              <input class="sign-up__field sign-up__field_username" id="username" type="name" placeholder="e.g maister909" required="required">
+            </div>
+            <div class="sign-up__block">
+              <label class="sign-up__label" for="email">Enter your email</label><i class="fa fa-envelope fa-2x sign-up__icon" aria-hidden="true"></i>
+              <input class="sign-up__field sign-up__field_email" id="email" type="email" placeholder="e.g maister909@gmail.com" required="required">
+            </div>
+            <div class="sign-up__block">
+              <label class="sign-up__label" for="password">Enter your password</label><i class="fa fa-lock fa-2x sign-up__icon" aria-hidden="true"></i>
+              <input class="sign-up__field sign-up__field_username" id="password" type="password" placeholder="e.g qwerty!123" required="required">
+            </div>
+            <div class="sign-up__block">
+              <label class="sign-up__label" for="repeat-password">Confirm your password</label><i class="fa fa-lock fa-2x sign-up__icon" aria-hidden="true"></i>
+              <input class="sign-up__field sign-up__field_username" id="repeat-password" type="password" placeholder="e.g qwerty!123" required="required">
+            </div>
+            <div class="sign-up__block"><i class="fa fa-paper-plane fa-2x sign-up__icon sign-up__icon_submit" aria-hidden="true"></i>
+              <input class="sign-up__field sign-up__submit" id="submit" type="submit" value="CREATE ACCOUNT">
+            </div>
+          </form>
+        </div>
+      </div><span class="main__block_sep">OR</span>
+      <div class="main__block_right">
+      <p>Image here...</p>
+      </div>
+    </div>
+  </main>
+</div>
+</body></html>

@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<style>
+body {
+  font-family: 'Work Sans', sans-serif;
+  padding: 0.5rem;
+  line-height: 28px;
+  font-size: 16px;
+}
+
+.erp-MenuItem    ul {
+  display: inline-block;
+  border: solid 1px #bababa;
+  padding: 1rem 2rem;
+  max-width: 320px;
+  border-radius:5px;
+}
+
+.erp-MenuItem ul {
+  list-style: none;
+}
+
+.erp-MenuItem ul > li {
+  clear: left;
+  padding: .5rem 0;
+}
+ 
+.erp-MenuItem ul > li:before {
+  content: "";
+  height: 1rem;
+  width: 1rem;
+  display: block;
+  float: left;
+  margin-left: -1.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%:
+}
+
+.erp-MenuItem ul > li:before { 
+  background-size: cover;
+  background-position: center;
+  padding: .15rem;
+  margin-top:3px;
+  fill: #eb1c24;
+}
+li[val=show_all]:before {background: url("https://www.svgrepo.com/show/500326/all-layers.svg");}
+li[val=recent_resume]:before {background: url("svg-icon/open-by-application.svg");}
+li[val=recently_reviewed]:before {background: url("https://www.svgrepo.com/show/508080/git-pull-request.svg");}
+li[val=favourites]:before {background: url("https://www.svgrepo.com/show/324970/bookmark-empty.svg");}
+li[val=tagged]:before {background: url("https://www.svgrepo.com/show/360832/tag.svg");}
+li[val=newsavesearch]:before {background: url("https://www.svgrepo.com/show/500335/browser-search.svg");}
+li[val=my_folders]:before {background: url("https://www.svgrepo.com/show/450895/folders.svg");}
+
+</style>
+</head>
+<body>
+<div class="erp-MenuItem">
+  <ul>
+    <li val="show_all">Show All</li>
+    <li val="recent_resume">Recent Application</li>
+    <li val="recently_reviewed">Recently Reviewed</li>
+    <li val="favourites">Marks As Favourites</li>
+    <li val="tagged">Marks As Tagged</li>
+    <li val="newsavesearch">Saved Search</li>
+    <li val="my_folders">My Folder</li>
+  </ul>
+</div>
+</body>
+</html>

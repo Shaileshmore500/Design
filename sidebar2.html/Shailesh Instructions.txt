@@ -1,0 +1,72 @@
+#rpt_datails_tpgr .ctr{
+    white-space: nowrap;
+}
+
+input[type=number]:not(.browser-default){
+	margin-top: 0;
+	margin: 0 0 0 0;
+}
+
+Checkbox column html:
+<div class="isleft-container" id="html_checkboxContainer-tk-33">
+	<input type="checkbox" class="checkbox  disabled-field" style="opacity: 1" id="html_checkbox-tk-33" onchange="handleChange('html_checkbox-tk-33','html_isleftt-tk-33','html_leftdate-tk-33')">
+	<input type="text" class="valueCheckbox tk-33  disabled-field" inputstyle="tk-33" rpt-tk="tk-33" id="html_isleftt-tk-33" rpt-dm="isleft" value=" ">
+	<div class="checkmark">
+	</div>
+</div>
+
+.isleft-container{
+	display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 20px;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.isleft-container input {
+    display: none;
+}
+.checkmark {
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    height: 1.3em !important;
+    width: 1.3em !important;
+    background-color: #2196f300 !important;
+    border-radius: 0.25em !important;
+    transition: all 0.25s !important;
+}
+.checkmark:after {
+    content: "";
+    position: absolute !important;
+    transform: rotate(0deg) !important;
+    border: 0.1em solid black !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 1.05em !important;
+    height: 1.05em !important;
+    border-radius: 0.25em !important;
+    transition: all 0.25s, border-width 0.1s;
+}
+
+.employee_details .details strong {
+    font-size: .9rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.15px !important;
+    color: var(--primary-color) !important;
+    font-weight: normal !important;
+    color: rgb(34, 37, 49) !important;
+}
+
+.input-boxs{
+	color: rgb(34, 37, 49) !important;
+	box-shadow: none !important;
+    border-radius: 0px !important;
+    background: #e5e5e5!important;
+    font-weight: normal !important;
+    font-size: 0.9rem !important;
+}
+.custom__input >input {
+	color: rgb(34, 37, 49) !important;
+	text-align:center;
+}

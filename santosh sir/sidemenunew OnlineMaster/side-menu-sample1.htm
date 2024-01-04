@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html class="no-js" lang="sv">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=yes" />
+	<!--
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel='stylesheet' type='text/css'>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+	
+    -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <style>
+        @font-face {
+    font-family: 'FontAwesome';
+    src: url('../fonts/fontawesome-webfont.eot?v=4.3.0');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0') format('embedded-opentype'),url('../fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'),url('../fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'),url('../fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'),url('../fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal
+}
+        .fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+    .fa-navicon:before, .fa-reorder:before, .fa-bars:before {content: "\f0c9";}
+    </style>
+	<link rel="stylesheet" href="sample1css/flyPanels.css">
+	<link rel="stylesheet" href="sample1css/demo.css">
+<title>jQuery FlyPanels Plugin Basic Demo</title>
+</head>
+<body data-debug="true">
+	<div class="flypanels-container preload">
+		<div class="offcanvas flypanels-left">
+			<div class="panelcontent" data-panel="treemenu">
+				<nav class="flypanels-treemenu" role="navigation">
+					<ul>
+						<li class="haschildren"><div><a href="#" class="link">Example menu item Example menu item Example menu item</a> <a href="#" class="expand">2<i class="fa icon"></i></a></div>
+							<ul>
+								<li><div><a href="#" class="link">Example menu item</a></div></li>
+								<li><div><a href="#" class="link">Example menu item</a></div></li>
+							</ul>
+						</li>
+						<li class="haschildren"><div class="link"><a href="#" class="link">Example menu item</a> <a href="#" class="expand">5<i class="fa icon"></i></a></div>
+							<ul>
+								<li class="haschildren"><div class="link"><a href="#" class="link">Example menu item</a> <a href="#" class="expand">6<i class="fa icon"></i></a></div>
+									<ul>
+										<li class="active"><div><a href="#" class="link">Example menu item</a></div></li>
+										<li><div><a href="#" class="link">Example menu item</a></div></li>
+										<li><div><a href="#" class="link">Example menu item</a></div></li>
+										<li><div><a href="#" class="link">Example menu item</a></div></li>
+										<li><div><a href="#" class="link">Example menu item</a></div></li>
+										<li><div><a href="#" class="link">Example menu item</a></div></li>
+									</ul>
+								</li>
+								<li class="haschildren"><div class="link"><a href="#" class="link">Example menu item</a> <a href="#" class="expand">11<i class="fa icon"></i></a></div>
+									<ul>
+										<li><div><a href="#" class="link">Example menu item</a></div></li>
+										<li class="haschildren"><div class="link"><a href="#" class="link">Example menu item</a> <a href="#" class="expand">8<i class="fa icon"></i></a></div>
+											<ul>
+												<li><div><a href="#" class="link">Example menu item</a></div></li>
+												<li><div><a href="#" class="link">Example menu item</a></div></li>
+												<li><div><a href="#" class="link">Example menu item</a></div></li>
+												<li><div><a href="#" class="link">Example menu item</a></div></li>
+												<li><div><a href="#" class="link">Example menu item</a></div></li>
+												<li><div><a href="#" class="link">Example menu item</a></div></li>
+												<li><div><a href="#" class="link">Example menu item</a></div></li>
+												<li><div><a href="#" class="link">Example menu item</a></div></li>
+											</ul>
+										</li>
+										<li class="haschildren"><div class="link"><a href="#" class="link">Example menu item</a> <a href="#" class="expand">11<i class="fa icon"></i></a></div>
+											<ul>
+												<li><div><a href="#" class="link">Example menu item</a></div></li>
+												<li class="haschildren"><div class="link"><a href="#" class="link">Example menu item</a> <a href="#" class="expand">11<i class="fa icon"></i></a></div>
+													<ul>
+														<li><div><a href="#" class="link">Example menu item</a></div></li>
+														<li><div><a href="#" class="link">Example menu item</a></div></li>
+														<li><div><a href="#" class="link">Example menu item</a></div></li>
+														<li><div><a href="#" class="link">Example menu item</a></div></li>
+														<li><div><a href="#" class="link">Example menu item</a></div></li>
+														<li><div><a href="#" class="link">Example menu item</a></div></li>
+														<li><div><a href="#" class="link">Example menu item</a></div></li>
+														<li><div><a href="#" class="link">Example menu item</a></div></li>
+														<li><div><a href="#" class="link">Example menu item</a></div></li>
+														<li><div><a href="#" class="link">Example menu item</a></div></li>
+														<li><div><a href="#" class="link">Example menu item</a></div></li>
+													</ul>
+												</li>
+												<li class="haschildren"><div class="link"><a href="#" class="link">Example menu item</a> <a href="#" class="expand">11<i class="fa icon"></i></a></div>
+													<ul>
+														<li><div><a href="#" class="link">Example menu item</a></div></li>
+														<li><div><a href="#" class="link">Example menu item</a></div></li>
+													</ul>
+												</li>
+												<li><div><a href="#" class="link">Example menu item</a></div></li>
+											</ul>
+										</li>
+										<li><div><a href="#" class="link">Example menu item</a></div></li>
+									</ul>
+								</li>
+								<li><div><a href="#" class="link">Example menu item</a></div></li>
+								<li class="haschildren"><div class="link"><a href="#" class="link">Example menu item</a> <a href="#" class="expand">5<i class="fa icon"></i></a></div>
+								<ul>
+										<li><div><a href="#" class="link">Example menu item</a></div></li>
+										<li><div><a href="#" class="link">Example menu item</a></div></li>
+										<li><div><a href="#" class="link">Example menu item</a></div></li>
+										<li><div><a href="#" class="link">Example menu item</a></div></li>
+										<li><div><a href="#" class="link">Example menu item</a></div></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li class="haschildren"><div class="link"><a href="#" class="link">Example menu item</a> <a href="#" class="expand">1<i class="fa icon"></i></a></div>
+							<ul>
+								<li><div><a href="#" class="link">Example menu item</a></div></li>
+							</ul>
+						</li>
+						<li><div><a href="#" class="link">Example menu item</a></div></li>
+						<li><div><a href="#" class="link">Example menu item</a></div></li>
+						<li class="haschildren"><div class="link"><a href="#" class="link">Example menu item</a> <a href="#" class="expand">4<i class="fa icon"></i></a></div>
+							<ul>
+								<li><div><a href="#" class="link">Example menu item</a></div></li>
+								<li><div><a href="#" class="link">Example menu item</a></div></li>
+								<li><div><a href="#" class="link">Example menu item</a></div></li>
+								<li><div><a href="#" class="link">Example menu item</a></div></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="flypanels-main">
+			<div class="flypanels-topbar">
+				<a class="flypanels-button-left icon-menu" data-panel="treemenu" href="#"><i class="fa fa-bars"></i></a>
+			</div>
+			<div class="flypanels-content">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12 col-md-6 col-md-offset-3">
+							<h1>jQuery FlyPanels Plugin Basic Demo</h1>
+							<p>Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... Text will come here... </p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="C:/Users/SENSYS/Desktop/Front-End/santosh sir/sidemenunew OnlineMaster/sample1js/kitUtils.js"></script>
+	<script src="C:/Users/SENSYS/Desktop/Front-End/santosh sir/sidemenunew OnlineMaster/sample1js/jquery.flypanels.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.3/fastclick.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('.flypanels-container').flyPanels({
+				treeMenu: {
+					init: true
+				},
+			});
+			FastClick.attach(document.body);
+		});
+	</script>
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<style>
+body {
+  background: #AAAAAA;
+}
+
+.button {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: #148F77;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 25px;
+  transition-duration: 1s;
+  z-index: 2;
+}
+
+.clicked {
+  transform: rotate(135deg);
+  transition-duration: 0.8s;
+  background: #CB4335;
+}
+
+.cross {
+  width: 30px;
+  margin: auto;
+  margin-top: 0px;
+  height: 30px;
+  background: linear-gradient(to bottom, transparent 40%, white 40%, white 60%, transparent 60%), linear-gradient(to right, transparent 40%, white 40%, white 60%, transparent 60%);
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.user {
+  background: #148F77;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  margin-top: -50px;
+  border-radius: 25px;
+  transition-duration: 1s;
+  text-align: center;
+}
+.user:hover {
+  background: #17A589;
+  transition-duration: 0.1s;
+}
+
+.category {
+  background: #148F77;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  margin-top: -50px;
+  border-radius: 25px;
+  transition-duration: 1s;
+  text-align: center;
+}
+.category:hover {
+  background: #17A589;
+  transition-duration: 0.1s;
+}
+
+.question {
+  background: #148F77;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  margin-top: -50px;
+  border-radius: 25px;
+  transition-duration: 1s;
+  text-align: center;
+}
+.question:hover {
+  background: #17A589;
+  transition-duration: 0.1s;
+}
+
+.move {
+  margin-top: 0px;
+  transition-duration: 1s;
+}
+
+.userpic {
+  text-align: centre;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.glyphicon {
+  font-size: 20px;
+  color: white;
+}
+</style>
+</head>
+<body>
+<div class="button">
+  <div class="cross">  
+  </div>
+ </div>
+  <div class="user">
+    <span class="glyphicon glyphicon-user userpic"></span>
+  </div>
+  <div class="category">
+    <span class="glyphicon glyphicon-pencil userpic">
+  </div>
+  <div class="question">
+    <span class="glyphicon glyphicon-comment userpic">
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+</script>
+</body>
+</html>

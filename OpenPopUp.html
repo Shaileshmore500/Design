@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Open HTML Page in Popup</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#openPopup1').click(function() {
+                var url = './barcode.html';
+                var popupWindow = window.open(url, 'Popup', 'width=800, height=600');
+popupWindow.focus();
+            });
+        });
+    </script>
+
+<script>
+$(document).ready(function() {
+    $("#openPopup").click(function() {
+        $("#popup-content").dialog({
+            title: "Popup",
+            modal: true,
+            width: 600,
+            height: 400,
+            resizable: false,
+            buttons: {
+                "Close": function() {
+                    $(this).dialog("close");
+                }
+            }
+        });
+    });
+});
+</script>
+
+</head>
+<body>
+    <button id="openPopup">Open Popup</button>
+<div id="popup-content" >
+    <!-- Content you want to display in the popup goes here -->
+    <p>This is the popup content.</p>
+</div>
+
+</body>
+</html>

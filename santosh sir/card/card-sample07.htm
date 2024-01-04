@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<style>
+.mainRow{
+    width: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.mainRow .col-md-4{
+    position: relative;
+    cursor: pointer;
+    width: 33.33%;
+}
+.box {
+    border-radius: 5px;
+    box-shadow: 0px 30px 40px -20px #a3a5ae;
+    padding: 10px;
+    margin: 10px;
+    font-family:Arial;
+}
+.cyan {
+    border-top: 3px solid #45d3d3;
+}
+.red {
+    border-top: 3px solid #ea5353;
+}
+.blue {
+    border-top: 3px solid #549ef2;
+}
+.box h2 {
+    color: #4c4e61;
+    font-weight: 600;
+    margin-top:5px;
+    padding-top:0;
+}
+.box p {
+    color: #a3a5ae;
+    line-height: normal;
+    padding: 0;
+    margin: 0;
+}
+.box .sendby, .box p.r-label{font-size:12px;}
+.mainRow .col-md-4 p.remark{width:85%; margin-top:10px;}
+.mainRow .col-md-4 img {
+    float: right;
+    width: 30px;
+    margin-top: -30px;
+}
+@media only screen and (max-width: 768px){
+    .mainRow .col-md-4{
+        width:50%;
+    }
+}
+</style>
+</head>
+<body>
+<div class="mainRow">
+    <div class="col-md-4">
+        <div class="box box-down cyan">
+        <p class="sendby">Send By</p>
+          <h2>Sivadasan Kalangadan</h2>
+          <p class="r-label">User Remark</p>
+          <p class="remark">Remark Here</p><img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="box box-down red">
+        <p class="sendby">Send By</p>
+          <h2>Sivadasan Kalangadan</h2>
+          <p class="r-label">User Remark</p>
+          <p class="remark">Remark Here</p><img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="box box-down blue">
+        <p class="sendby">Send By</p>
+          <h2>Sivadasan Kalangadan</h2>
+          <p class="r-label">User Remark</p>
+          <p class="remark">Remark Here</p><img src="https://assets.codepen.io/2301174/icon-calculator.svg" alt="">
+        </div>
+    </div>
+</div>
+</body>
+</html>

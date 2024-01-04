@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("p").bind("click", function() {
+            $("<div>this is click event</div>").appendTo("body");
+        });
+        $("p").bind("dblclick", function() {
+            $("<div>This is double click</div>").appendTo("body");
+        });
+    });
+</script>
+  <meta charset="utf-8">
+  <title>Test if jQuery is loaded</title>
+</head>
+<body>
+<p>Click me!</p>
+</body>
+</html>

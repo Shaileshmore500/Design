@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <link rel="canonical" href="https://www.naukri.com/advanced-search"/>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+      <title> Advanced Job Search </title>
+      <meta name="description" content=""/>
+      
+         
+      <link rel="stylesheet" type="text/css" href="https://static.naukimg.com/s/4/101/c/common_v85.min.css" media="all"/>
+ 
+   </head>
+   <body>
+      
+      <div class="headGNBWrap">
+         <div class="headGNB cloneCont wrap">
+            <div class="septr"></div>
+         </div>
+      </div>
+
+      <div class="bgImg">
+         <div class="wrap">
+            <div class="ltBx mt15" id="embdAdvancedSearch">
+               <div id="advanceSearchLayer" class="ltBx lightbox_open wrappendInputs standalone">
+                  <div class="ltGlobalHd">
+                     <div class="ltGlobalTtl"> Advanced Search </div>
+                  </div>
+                  <div id="adv_msgBar" class="msgBar red dspN">
+                     <div class="cnt"> Your input has been successfully submitted. </div>
+                  </div>
+                  <div class="ltCntnt">
+                     <form id="advFrm" name="advanceSearchForm" method="get">
+                        <div class="row">
+                           <div class="rowL"> <label for="Sug_advKeyskills"> KeySkills </label> </div>
+                           <div class="rowR">
+                              <div class="suggest" id="advKeyskills">
+                                 <div class="sWrap">
+                                    <div class="iconWrap"> <span class="nLoder"> </span> </div>
+                                    <div class="inpWrap"> <input class="sugInp" name="qp" type="text" placeholder="Skills,Designation,Companies" rel="custom:2024" /> </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="rowL"> <label for="Sug_advLocation"> Location </label> </div>
+                           <div class="rowR">
+                              <div class="suggest" id="advLocation">
+                                 <div class="sWrap">
+                                    <div class="iconWrap"> <span class="nLoder"> </span> </div>
+                                    <div class="inpWrap"> <input name="ql" class="sugInp" id="Sug_advLocation" type="text" placeholder="Enter the cities you want to work in" rel="specialChar:2025" /> </div>
+                                 </div>
+                              </div>
+                              <i class="erLbl" id="Sug_advLocation_err"> </i> 
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="rowL"> <label for="inp_ddAdvIndusrty"> Industry </label> </div>
+                           <div class="rowR">
+                              <div id="ddAdvIndusrty" class="ddwn cover">
+                                 <div class="DDwrap">
+                                    <ul class="DDsearch">
+                                       <li class="frst">
+                                          <div class="DDinputWrap"> <input class="srchTxt" type="text" name="multipleqi" placeholder="Select the desired industry where you want to work" /> </div>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="overlay">
+                              <div class="nLoader20"></div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="rowL"> <label for="adv_jobCategory"> Job Category </label> </div>
+                           <div class="rowR">
+                              <div class="singleDD" id="dd_adv_jobCategory">
+                                 <div class="dWrap cover"> <input id="adv_jobCategory" class="sdTxt w45" type="text" name="qf[]" placeholder="Select your areas of expertise" rel="" readonly /> <span class="smArw"> </span> </div>
+                              </div>
+                           </div>
+                           <div class="overlay">
+                              <div class="nLoader20"></div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="rowL"> <label> Job Type </label> </div>
+                           <div class="rowR">
+                              <div class="multiToggle triple">
+                                 <div class="tab act" rel="0"><a href="javascript:"> All Jobs </a></div>
+                                 <div class="tab" rel="1" ><a href="javascript:" > Company Jobs </a></div>
+                                 <div class="tab" rel="2"><a href="javascript:" > Consultant Jobs </a></div>
+                                 <span class="actLayer"> </span> <input type="hidden" name="qk[]"/> 
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="rowL"> <label> Sort By </label> </div>
+                           <div class="rowR halfWidth">
+                              <div class="multiToggle double">
+                                 <div class="tab act" rel="r"><a href="javascript:" > Relevance </a></div>
+                                 <div class="tab" rel="f"><a href="javascript:" > Date </a></div>
+                                 <span class="actLayer"> </span> <input type="hidden" name="qs" /> 
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row"> <button id="adv_submit" class="blueBtn" type="submit"> Search </button> </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+           
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" media="all"/>
+   </body>
+</html>

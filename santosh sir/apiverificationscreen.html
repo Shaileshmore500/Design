@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Enhanced Verification Screen with Image</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #2980b9, #6dd5fa);
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border: 2px solid #2980b9;
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        p {
+            color: #444;
+        }
+
+        .card-button {
+            background: linear-gradient(to right, #5cb85c, #5cb85c);
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: background 0.3s, transform 0.3s;
+        }
+
+        .card-button:hover {
+            background: linear-gradient(to right, #34a334, #34a334);
+            transform: scale(1.05);
+        }
+
+        .verification-image {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enhanced Verification Screen</h2>
+        <p>Please click the "Verify" button to proceed.</p>
+        <img class="verification-image" src="https://metricool.com/wp-content/uploads/istockphoto-1396933001-612x612-1.jpg" alt="Verification Image" style="width:200px;">
+        <button class="card-button" id="verifyButton">Start Verification</button>
+    </div>
+</body>
+</html>

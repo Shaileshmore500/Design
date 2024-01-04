@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<style>
+    @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+.fa, .far, .fas {
+    font-family: normal normal normal 14px/1 FontAwesome;
+}
+:root{ --main-color: #0E9B32; }
+*:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.row {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.row:before, .row:after, .container:before, .container:after{
+    content: " ";
+    display: table;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+}
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container:before, .container:after{
+    clear: both;
+}
+.serviceBox{
+    color: #fff;
+    font-family:'Poppins', sans-serif;
+    text-align: center;
+    padding: 35px 32px 30px;
+    position: relative;
+    z-index: 1;
+}
+.serviceBox:before,
+.serviceBox:after{
+    content: "";
+    border-radius: 25px;
+    border: 10px solid var(--main-color);
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.serviceBox:after{
+    background: var(--main-color);
+    border: none;
+    box-shadow: none;
+    top: 10px;
+    left: 18px;
+    bottom: 10px;
+    right: 18px;
+    z-index: -2;
+}
+.serviceBox .service-icon{
+    color: var(--main-color);
+    background: #fff;
+    font-size: 40px;
+    line-height: 100px;
+    padding-top:15%;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 30px;
+    border: 2px dashed #aaa;
+    border-radius: 50px;
+    box-shadow: 0 0 0 5px #fff,0 0 30px rgba(0,0,0,0.5);
+}
+.serviceBox .title{
+    font-size: 19px;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    margin: 0 0 10px;
+}
+.serviceBox .description{
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    margin: 0;
+}
+.serviceBox.orange{ --main-color: #D66401; }
+.serviceBox.purple{ --main-color: #833688; }
+.serviceBox.blue{ --main-color: #019EE3; }
+
+@media (min-width: 768px){
+    .container {width: 750px;}
+    .col-sm-6 {width: 50%;}
+}
+@media (min-width: 992px){
+    .container {width: 970px;}
+    .col-md-3 {width: 25%;}
+}
+@media (min-width: 1200px){
+    .container {width: 1170px;}
+}
+@media only screen and (max-width: 1199px){
+    .serviceBox{ margin: 0 0 30px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3 col-sm-6">
+            <div class="serviceBox">
+                <div class="service-icon">
+                    <span><i class="fa fa-globe"></i></span>
+                </div>
+                <h3 class="title">Web Design</h3>
+                <p class="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="serviceBox orange">
+                <div class="service-icon">
+                    <span><i class="fa fa-rocket"></i></span>
+                </div>
+                <h3 class="title">Web Development</h3>
+                <p class="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="serviceBox purple">
+                <div class="service-icon">
+                    <span><i class="fa fa-mobile"></i></span>
+                </div>
+                <h3 class="title">Responsive Design</h3>
+                <p class="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+            <div class="serviceBox blue">
+                <div class="service-icon">
+                    <span><i class="fa fa-briefcase"></i></span>
+                </div>
+                <h3 class="title">Brand Building</h3>
+                <p class="description">Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Qui quaerat fugit quas veniam perferendis repudiandae sequi, dolore quisquam illum.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

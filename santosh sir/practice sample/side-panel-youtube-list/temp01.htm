@@ -1,0 +1,170 @@
+﻿
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+  
+  <title>CodePen - Gallery of YouTube Videos</title>
+    <link rel="canonical" href="https://codepen.io/mczolton/pen/JXbjBj" />
+  
+  
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.css'>
+  
+<style>
+.modal {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-header {
+  border-bottom: 1px solid #505050;
+  padding: 12px 16px 6px 16px;
+}
+.modal-header .modal-title {
+  color: #ccc;
+  margin: 0;
+}
+.modal-header .close {
+  font-size: 32px;
+  opacity: 1;
+  color: #ccc;
+  text-shadow: none;
+  outline: none;
+}
+
+.modal-content {
+  border-radius: 0;
+  border: 0;
+  background-color: #323232;
+}
+
+.img-responsive {
+  width: 100%;
+}
+
+button.btn-play {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 0;
+  margin: 0;
+  margin-left: -15px;
+  border: 0;
+  border-radius: 0;
+  outline: 0 !important;
+  width: 100%;
+  background-color: transparent;
+  color: rgba(245, 245, 245, 0.8);
+}
+button.btn-play:hover, button.btn-play:active, button.btn-play:visited, button.btn-play:focus {
+  color: white;
+}
+button.btn-play .glyphicon {
+  padding: 0;
+  margin: 0;
+  color: inherit;
+  background-color: inherit;
+  font-size: 64px;
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  button.btn-play .glyphicon {
+    font-size: 56px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  button.btn-play .glyphicon {
+    font-size: 46px;
+  }
+}
+@media (max-width: 767px) {
+  a.video {
+    display: block;
+  }
+
+  button.btn-play .glyphicon {
+    font-size: 56px;
+  }
+}
+</style>
+
+  <script>
+      window.console = window.console || function(t) { };
+</script>
+
+  
+  
+</head>
+
+<body translate="no">
+  <div class="container">
+  <h3 class="page-header" id="youtube-gallery">Gallery of YouTube Videos</h3>
+  <div class="row">
+    <a href="https://www.youtube.com/watch?v=hvXotgxBOvk"
+       data-title="Boss: Capra Demon"
+       data-width="1024"
+       data-toggle="lightbox" data-gallery="youtubevideos" class="col-sm-4 video">
+      <button type="button" class="btn btn-play">
+        <span class="glyphicon glyphicon-play" aria-label="Play"></span>
+      </button>
+      <img src="https://img.youtube.com/vi/hvXotgxBOvk/mqdefault.jpg" class="img-responsive">
+    </a>
+    <a href="https://www.youtube.com/watch?v=MmCTJNr10xc" 
+       data-title="Boss: Ornstein & Smough"
+       data-width="1024"
+       data-toggle="lightbox" data-gallery="youtubevideos" class="col-sm-4 video">
+      <button type="button" class="btn btn-play">
+        <span class="glyphicon glyphicon-play" aria-label="Play"></span>
+      </button>
+      <img src="//i1.ytimg.com/vi/MmCTJNr10xc/mqdefault.jpg" class="img-responsive">
+    </a>
+    <a href="https://www.youtube.com/watch?v=VXQuHSi0FqE"
+       data-title="Boss: Demon Firesage"
+       data-width="1024"
+       data-toggle="lightbox" data-gallery="youtubevideos" class="col-sm-4 video">
+      <button type="button" class="btn btn-play">
+        <span class="glyphicon glyphicon-play" aria-label="Play"></span>
+      </button>
+      <img src="//i1.ytimg.com/vi/VXQuHSi0FqE/mqdefault.jpg" class="img-responsive">
+    </a>
+  </div>
+</div>
+<!--
+https://img.youtube.com/vi/THE-VIDEO-ID/0.jpg or
+https://img.youtube.com/vi/THE-VIDEO-ID/default.jpg – full size thumb
+https://img.youtube.com/vi/THE-VIDEO-ID/mqdefault.jpg – medium default
+https://img.youtube.com/vi/THE-VIDEO-ID/maxresdefault.jpg – high res
+https://img.youtube.com/vi/THE-VIDEO-ID/1.jpg – small thumb
+https://img.youtube.com/vi/THE-VIDEO-ID/2.jpg – small thumb
+https://img.youtube.com/vi/THE-VIDEO-ID/3.jpg – small thumb
+-->
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+  <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.min.js'></script>
+      <script id="rendered-js" >
+          $(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+              event.preventDefault();
+              $(this).ekkoLightbox();
+          });
+          //# sourceURL=pen.js
+    </script>
+
+  
+</body>
+
+</html>

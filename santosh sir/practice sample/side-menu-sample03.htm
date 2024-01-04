@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<style>
+/*Who and what helped in the development:
+
+ - Hamburger icon:
+    https://codepen.io/ainalem/pen/GeMqdP
+
+ - Link hover:
+    http://kevinjannis.github.io/hovereffects.css/
+
+*/
+
+
+/*Defaults*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: roboto, sans-serif;
+}
+body{
+    background-color: #000;
+}
+
+/*Sidebar*/
+.sidebar{
+  position: fixed;
+  text-align: center;
+  background-color: #fff;
+  height: 100%;
+  width: 300px;
+  left: -300px;
+  transition: 0.5s ease-in-out;
+  z-index: 99;
+}
+.sidebar ul{
+    list-style: none;
+    font-size: 40px;
+}
+.sidebar ul li{
+    padding-top: 80px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #000;
+  background:
+    linear-gradient(-55deg, #000  40%, #fff 0 60%, #000  0) right/300% 100% no-repeat,
+    linear-gradient(-55deg, #0000 40%, #000 0 60%, #0000 0) right/300% 100% no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.9s
+}
+.sidebar a:hover {
+  background-position: left;
+}
+.sidebaractive{
+    left: 0;
+}
+
+
+/*Hamburger icon*/
+.hamburger{
+  top: 0px;
+  right: 10px;
+  position: relative;
+  background:#f00;
+}
+.hamburger svg {
+  height: 80px;
+  position: absolute;
+  width: 80px;
+  top: 0px;
+  right: 0px;
+}
+
+@media (max-width: 640px) {
+  .plates {
+    width: 320px;
+  }
+}
+.plate {
+  height: 80px;
+  width: 80px;
+  
+}
+.burger {
+  filter: url(#gooeyness);
+}
+.x {
+  transform: scale(0);
+  transition: transform 400ms;
+}
+.line {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform-origin: 50%;
+  transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+}
+.x .line {
+  stroke-width: 5.5px;
+}
+.plate .x {
+  transition: transform 400ms;
+}
+.plate .line {
+  transform-origin: 50%;
+  transition: transform 400ms 100ms;
+}
+.active.plate .line {
+  transition: transform 400ms;
+}
+.active.plate .line1 {
+  transform: translateX(18px) translateY(-3px) rotate(-45deg) scale(.7);
+}
+.active.plate .line2 {
+  transform: translateX(-18px) translateY(-3px) rotate(45deg) scale(.7);
+}
+.active.plate .line3 {
+  transform: translateY(0px) rotate(45deg) scale(.7);
+}
+.active.plate .line4 {
+  transform: translateY(0px) rotate(-45deg) scale(.7);
+}
+.active.plate .line5 {
+  transform: translateX(18px) translateY(3px) rotate(45deg) scale(.7);
+}
+.active.plate .line6 {
+  transform: translateX(-18px) translateY(3px) rotate(-45deg) scale(.7);
+}
+.active.plate .x {
+  transition: transform 400ms 100ms;
+  transform: scale(1);
+}
+
+
+/*Mobile/tablet responsive:*/
+@media screen and (max-width: 1000px) {
+  /*Sidebar*/
+  .sidebar{
+    height: 100%;
+    width: 60%;
+    left: -60%;
+  }
+  .sidebar ul{
+    list-style: none;
+    font-size: 30px;
+  }
+  .sidebar ul li{
+    padding-top: 50px;
+}
+  .sidebar a:hover {
+    background-position: left;
+  }
+  .sidebaractive{
+      left: 0;
+  }
+
+  /*Hamburger icon*/
+  .hamburger{
+    top: 0;
+    right: 0;
+  }
+  .hamburger svg{
+    width: 60px;
+  }
+}
+/*santosh*/
+.container{
+  width:1280px; 
+  margin:10px auto;
+  color:#fff;
+}
+</style>
+</head>
+<body>
+ <div class="sidebar" id="sidebar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">References</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+  </div>
+
+  <div class="hamburger">
+    <div class="plate" onclick="this.classList.toggle('active')">
+      <svg class="burger" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+        <path class="line line1" d="M 50,35 H 30" />
+        <path class="line line2" d="M 50,35 H 70" />
+        <path class="line line3" d="M 50,50 H 30" />
+        <path class="line line4" d="M 50,50 H 70" />
+        <path class="line line5" d="M 50,65 H 30" />
+        <path class="line line6" d="M 50,65 H 70" />
+      </svg>
+      <svg class="x" version="1.1" height="100" width="100" viewBox="0 0 100 100">
+        <path class="line" d="M 34,32 L 66,68" />
+        <path class="line" d="M 66,32 L 34,68" />
+      </svg>
+    </div>
+  </div>
+<div class="container">
+  <p>body text will come here...</p>
+</div>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script>
+const sidebar = document.getElementById('sidebar');
+const hamburger = document.querySelector('.hamburger');
+const sideLinks = sidebar.querySelectorAll('a');
+
+function toggleSidebar() {
+  sidebar.classList.toggle('sidebaractive');
+  
+}
+
+hamburger.addEventListener('click', toggleSidebar);
+
+sideLinks.forEach(link => {
+  link.addEventListener('click', toggleSidebar);
+
+});
+
+</script>
+</body>
+</html>

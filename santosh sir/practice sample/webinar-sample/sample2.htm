@@ -1,0 +1,316 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+  <meta charset="utf-8">
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+  <title>CodePen -  Responsive card design using css</title>
+
+  <link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/fullpage/fullpage-9a6f5ffcc359b81b95df109e4b8ce436f472f4f828fcc75227cd5266125d459b.css" />
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+
+
+  <title>CodePen -  Responsive card design using css</title>
+
+  <style>
+    html { font-size: 15px; }
+    html, body { margin: 0; padding: 0; min-height: 100%; }
+    body { height:100%; display: flex; flex-direction: column; }
+    .referer-warning {
+      background: black;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+      padding: 0.75em;
+      color: white;
+      text-align: center;
+      font-family: 'Lato', 'Lucida Grande', 'Lucida Sans Unicode', Tahoma, system-ui, Sans-Serif;
+      line-height: 1.2;
+      font-size: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    .referer-warning span { font-family: initial; }
+    .referer-warning h1 { font-size: 1.2rem; margin: 0; }
+    .referer-warning a { color: #56bcf9; }
+  </style>
+</head>
+
+<body class="">
+
+  <div id="result-iframe-wrap" role="main">
+    <iframe
+      id="result"
+      srcdoc="<!DOCTYPE html>
+<html lang=&quot;en&quot; >
+
+<head>
+  <meta charset=&quot;UTF-8&quot;>
+  
+
+    <link rel=&quot;apple-touch-icon&quot; type=&quot;image/png&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png&quot; />
+
+    <meta name=&quot;apple-mobile-web-app-title&quot; content=&quot;CodePen&quot;>
+
+    <link rel=&quot;shortcut icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico&quot; />
+
+    <link rel=&quot;mask-icon&quot; type=&quot;image/x-icon&quot; href=&quot;https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg&quot; color=&quot;#111&quot; />
+
+
+
+  
+  <title>CodePen -  Responsive card design using css</title>
+    <link rel=&quot;canonical&quot; href=&quot;https://codepen.io/DhirajKhadka/pen/gOmqabw&quot; />
+  
+  
+  
+  
+<style>
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgba(243, 239, 239, 0.808);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 1200px;
+  flex-wrap: wrap;
+  padding: 44px 0px;
+}
+.container .card {
+  position: relative;
+  width: 320px;
+  height: 350px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.05),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.5),
+    5px 5px 5px rgba(0, 0, 0, 0.05), -5px -5px 5px rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  margin: 30px;
+}
+
+.container .card .box {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: rgb(248, 248, 248);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .card .box .content {
+  margin: 10px;
+  text-align: center;
+}
+
+.container .card .box .content h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8em;
+  color: rgba(0, 0, 0, 0.03);
+  transition: 0.6s;
+  pointer-events: none;
+}
+
+.container .card:hover .box .content h2 {
+  color: rgba(199, 225, 247, 0.329);
+}
+
+.container .card .box .content h3 {
+  font-size: 1.8em;
+  color: #777;
+  z-index: 1;
+  transition: 0.6s;
+}
+
+.container .card .box .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: #777;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.container .card .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(9, 33, 248, 0.527);
+  border-radius: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+}
+.container .card:hover .box .content a {
+  background: rgb(252, 46, 80);
+}
+</style>
+
+
+  
+  
+</head>
+
+<body translate=&quot;no&quot;>
+  <!-- Designed by:DhirajKhadka-->
+
+<html lang=&quot;en&quot;>
+<head>
+  <meta charset=&quot;UTF-8&quot;>
+  <meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;>
+  <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
+  <link rel=&quot;stylesheet&quot; href=&quot;css/main.css&quot;>
+  <title>Card</title>
+</head>
+
+<body>
+  <div class=&quot;container&quot;>
+    <div class=&quot;card&quot;>
+      <div class=&quot;box&quot;>
+        <div class=&quot;content&quot;>
+          <h2>01</h2>
+          <h3>Card One</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus iste voluptatibus
+            delectus
+            impedit quaerat inventore quos, cum dolorum neque beatae, sequi eius illo odit non
+            voluptatum
+            amet? Corrupti, dignissimos fuga.</p>
+          <a href=&quot;#&quot;> Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class=&quot;card&quot;>
+      <div class=&quot;box&quot;>
+        <div class=&quot;content&quot;>
+          <h2>02</h2>
+          <h3>Card Two</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus iste voluptatibus
+            delectus
+            impedit quaerat inventore quos, cum dolorum neque beatae, sequi eius illo odit non
+            voluptatum
+            amet? Corrupti, dignissimos fuga.</p>
+          <a href=&quot;#&quot;> Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class=&quot;card&quot;>
+      <div class=&quot;box&quot;>
+        <div class=&quot;content&quot;>
+          <h2>03</h2>
+          <h3>Card Three</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus iste voluptatibus
+            delectus
+            impedit quaerat inventore quos, cum dolorum neque beatae, sequi eius illo odit non
+            voluptatum
+            amet? Corrupti, dignissimos fuga.</p>
+          <a href=&quot;#&quot;> Read More</a>
+
+        </div>
+      </div>
+    </div>
+
+    <div class=&quot;card&quot;>
+      <div class=&quot;box&quot;>
+        <div class=&quot;content&quot;>
+          <h2>04</h2>
+          <h3>Card Four</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus iste voluptatibus
+            delectus
+            impedit quaerat inventore quos, cum dolorum neque beatae, sequi eius illo odit non
+            voluptatum
+            amet? Corrupti, dignissimos fuga.</p>
+          <a href=&quot;#&quot;> Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class=&quot;card&quot;>
+      <div class=&quot;box&quot;>
+        <div class=&quot;content&quot;>
+          <h2>05</h2>
+          <h3>Card Five</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus iste voluptatibus
+            delectus
+            impedit quaerat inventore quos, cum dolorum neque beatae, sequi eius illo odit non
+            voluptatum
+            amet? Corrupti, dignissimos fuga.</p>
+          <a href=&quot;#&quot;> Read More</a>
+        </div>
+      </div>
+    </div>
+    <div class=&quot;card&quot;>
+      <div class=&quot;box&quot;>
+        <div class=&quot;content&quot;>
+          <h2>06</h2>
+          <h3>Card six</h3>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloribus iste voluptatibus
+            delectus
+            impedit quaerat inventore quos, cum dolorum neque beatae, sequi eius illo odit non
+            voluptatum
+            amet? Corrupti, dignissimos fuga.</p>
+          <a href=&quot;#&quot;> Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+  
+  
+  
+  
+</body>
+
+</html>
+"
+      sandbox="allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation" allow="accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write; web-share" allowTransparency="true"
+      allowpaymentrequest="true" allowfullscreen="true" class="result-iframe">
+      </iframe>
+  </div>
+
+</body>
+
+</html>

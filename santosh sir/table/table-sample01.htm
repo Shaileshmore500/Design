@@ -1,0 +1,436 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+<style>
+body {
+    background-color: #f7f7f7;
+    color: rgba(118, 118, 118, 1.0);
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    overflow-x: hidden;
+    padding: 0px !important;
+    margin: 0px !important;
+    line-height: 23px;
+    font-style: normal;
+    font-weight: normal;
+    min-height: 100%;
+    float: left;
+    position: relative;
+    width: 100%;
+}
+*, *::before, *::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.row:after, .row:before {
+    display: table;
+    content: " ";
+}
+.row:after {
+    clear: both;
+}
+.col-lg-12, .col-xs-12{
+    width: 100%;float: left;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+section, header{display:block;}
+section.box {
+    background-color: #ffffff;
+    margin: 15px 0;
+    overflow: hidden;
+    -webkit-box-shadow: 0 2px 28px rgb(0 0 0 / 10%);
+    box-shadow: 0 2px 28px rgb(0 0 0 / 10%);
+}
+section header {
+    width: 100%;
+    display: inline-block;
+    border: 1px solid rgba(0,0,0,0.09);
+    border-bottom: 0px solid transparent;
+    vertical-align: top;
+    position: relative;
+    min-height: 75px;
+}
+section header .title {
+    margin-top: 10px;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-top: 15px;
+    line-height: 30px;
+    color: #676767;
+    font-weight: 400;
+    display: inline-block;
+}
+section .content-body {
+    padding: 5px 20px 30px 20px;
+    border: 1px solid #e8e8e8;
+    border-top: 0px;
+    -webkit-transition: 800ms;
+    -moz-transition: 800ms;
+    -o-transition: 800ms;
+    transition: 800ms;
+}
+.table-responsive {
+    min-height: .01%;
+    overflow-x: auto;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    background-color: transparent;
+    display: table;
+    box-sizing: border-box;
+    text-indent: initial;
+}
+.table-bordered {
+    border: 1px solid #ddd;
+}
+.vm {
+    vertical-align: middle;
+}
+.no-mb {
+    margin-bottom: 0 !important;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+    text-align: -internal-center;
+}
+th {
+    text-align: left;
+}
+td, th {
+    padding: 0;
+}
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+}
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border: 1px solid #ddd;
+}
+.table>tbody>tr>td, .table>tfoot>tr>td, .table>thead>tr>td {
+    padding: 15px 12px;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+    border-color: #eaeaea;
+    padding: 10px;
+}
+.vm.table td, .vm.table th {
+    vertical-align: middle;
+    position: relative;
+}
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+.round {
+    position: absolute;
+    line-height: 44px;
+    color: #ffffff;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 100%;
+    background: #20aee3;
+}
+.round.img2 {
+    border-radius: 0%;
+    background: transparent;
+    top: 48%;
+}
+.gradient-blue {
+    background-image: linear-gradient(-12deg,#2a57d7 0,#9eeeff 100%) !important;
+}
+.gradient-pink {
+    background-image: linear-gradient(-12deg,#F88691 0, #FCD3BB 100%) !important;
+}
+.gradient-green {
+    background-image: linear-gradient(126deg,#7bead0 0,#4BC39D 100%) !important;
+}
+.gradient-violet {
+    background-image: linear-gradient(126deg,#b960e0 0,#a890f5 100%) !important;
+}
+.gradient-orange {
+    background-image: linear-gradient(to right bottom, #e8962e, #e45131) !important;
+}
+.colored-block {
+    width: 20px;
+    height: 20px;
+    display: block;
+    border-radius: 5px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.designer-info {
+    padding-left: 40px;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin: 10px 0;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: #505458;
+}
+.vm.table h6 {
+    margin-bottom: 3px;
+    margin-top: 0;
+    font-weight: 600;
+    font-size: 14px;
+}
+.small, small {
+    font-size: 85%;
+}
+text-muted {
+    color: #777;
+}
+.text-muted {
+    color: #999999;
+}
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    display: inline-block;
+}
+.w-70 {
+    min-width: 70px !important;
+}
+.round-success {
+    background: #24d2b5 !important;
+}
+.round-primary {
+    background: #6772e5;
+}
+.round-warning {
+    background: #ff9041 !important;
+}
+.round-danger {
+    background: #ff5c6c !important;
+}
+.badge.badge-md {
+    font-size: 14px;
+    padding: 5px 8px;
+    border-radius: 15px;
+    -o-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+}
+.doc-rating i {
+    color: #f2c134;
+}
+.doc-rating span {
+    margin-left: 15px;
+    padding: 1px 9px;
+    font-size: 12px;
+    display: inline-block;
+    border: 1px solid #2698e2;
+    border-radius: 38px;
+}
+</style>
+</head>
+<body>
+<div class="col-lg-12">
+                    <section class="box">
+                        <header class="panel_header">
+                            <h2 class="title pull-left">Recent Orders Queue</h2>
+                            <div class="actions panel_actions pull-right">
+                                <a class="box_toggle fa fa-chevron-down"></a>
+                                <a class="box_setting fa fa-cog" data-toggle="modal" href="#section-settings"></a>
+                                <a class="box_close fa fa-times"></a>
+                            </div>
+                        </header>
+                        <div class="content-body">
+                            <div class="row">
+                                <div class="col-xs-12">
+
+                                    <div class="table-responsive" data-pattern="priority-columns">
+                                        <table id="tech-companies-1" class="table vm table-small-font no-mb table-bordered table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th>Product</th>
+                                                    <th>Order No.</th>
+                                                    <th>Customer</th>
+                                                    <th>Status</th>
+                                                    <th>Ratings</th>
+                                                    <th>Quantity</th>
+                                                    <th>Bills</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <div class="round img2">
+                                                            <span class="colored-block gradient-blue"></span>
+                                                        </div>
+                                                        <div class="designer-info">
+                                                            <h6>Mobile Game</h6>
+                                                            <small class="text-muted">Swift, Python, Java SDK</small>
+                                                        </div>
+                                                    </td>
+                                                    <td>#45202</td>
+                                                    <td>Fady solima</td>
+                                                    <td><span class="badge badge-md w-70 round-success">Paid</span></td>
+                                                    <td class="doc-rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <span>4.8</span>
+                                                    </td>
+                                                    <td class="text-center">7</td>
+                                                    <td>$320</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="round img2">
+                                                            <span class="colored-block gradient-pink"></span>
+                                                        </div>
+                                                        <div class="designer-info">
+                                                            <h6>B2B2C Solutions</h6>
+                                                            <small class="text-muted">ASP.NET, Ruby, Python</small>
+                                                        </div>
+                                                    </td>
+                                                    <td>#45204</td>
+                                                    <td>Gandy Alien</td>
+                                                    <td><span class="badge badge-md w-70 round-success">Paid</span></td>
+                                                    <td class="doc-rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <span>4.8</span>
+                                                    </td>
+                                                    <td class="text-center">10</td>
+                                                    <td>$170</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="round img2">
+                                                            <span class="colored-block gradient-green"></span>
+                                                        </div>
+                                                        <div class="designer-info">
+                                                            <h6>HTML Templates</h6>
+                                                            <small class="text-muted">HTML, CSS, JS</small>
+                                                        </div>
+                                                    </td>
+                                                    <td>#45459</td>
+                                                    <td>Junior Smith</td>
+                                                    <td><span class="badge badge-md w-70 round-danger">Failed</span></td>
+                                                    <td class="doc-rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <span>4.8</span>
+                                                    </td>
+                                                    <td class="text-center">5</td>
+                                                    <td>$86</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="round img2">
+                                                            <span class="colored-block gradient-violet"></span>
+                                                        </div>
+                                                        <div class="designer-info">
+                                                            <h6>Back-end Plugins</h6>
+                                                            <small class="text-muted">PHP, Ruby, C#, ASP.NET</small>
+                                                        </div>
+                                                    </td>
+                                                    <td>#45206</td>
+                                                    <td>Flaion fanzzy</td>
+                                                    <td><span class="badge badge-md w-70 round-warning">Pending</span></td>
+                                                    <td class="doc-rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <span>4.8</span>
+                                                    </td>
+                                                    <td class="text-center">19</td>
+                                                    <td>$433</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <div class="round img2">
+                                                            <span class="colored-block gradient-orange"></span>
+                                                        </div>
+                                                        <div class="designer-info">
+                                                            <h6>Admin Dashboards</h6>
+                                                            <small class="text-muted">Bootsrap, CSS, SCSS, AngularJS</small>
+                                                        </div>
+                                                    </td>
+                                                    <td> #45406</td>
+                                                    <td> Light Ads</td>
+                                                    <td><span class="badge badge-md w-70 round-success">Paid</span></td>
+                                                    <td class="doc-rating">
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <i class="fa fa-star"></i>
+                                                        <span>4.8</span>
+                                                    </td>
+                                                    <td class="text-center">10</td>
+                                                    <td>$162</td>
+                                                </tr>
+                                                
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                        
+                </div>
+</body>
+</html>

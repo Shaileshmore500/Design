@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+<style>
+    body {
+  font: 300 14px/16px Arial;
+  padding: 20px;
+}
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+.table2 {
+  display: table;
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 3px;
+}
+.table2 > div > div {
+  display: table-row;
+  width: 100%;
+}
+.table2 > div > div > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+.table2 > .table2_header {
+  display: table-header-group;
+  table-layout: fixed;
+  background: #398eb9;
+}
+.table2 > .table2_header > div > div {
+  padding: 10px;
+  color: #fff;
+}
+.table2 > .table2_header > div > div:first-child {
+  -webkit-border-radius: 6px 0 0 6px;
+  -moz-border-radius: 6px 0 0 6px;
+  border-radius: 6px 0 0 6px;
+}
+.table2 > .table2_header > div > div:last-child {
+  -webkit-border-radius: 0 6px 6px 0;
+  -moz-border-radius: 0 6px 6px 0;
+  border-radius: 0 6px 6px 0;
+}
+.table2 > .table2_body {
+  display: table-row-group;
+}
+.table2 > .table2_body > div:hover {
+  position: relative;
+  z-index: 5 !important;
+}
+.table2 > .table2_body > div:hover > div {
+  -webkit-box-shadow: inset 0 0 500px 200px rgba(0, 0, 0, 0.03);
+  -moz-box-shadow: inset 0 0 500px 200px rgba(0, 0, 0, 0.03);
+  box-shadow: inset 0 0 500px 200px rgba(0, 0, 0, 0.03);
+}
+.table2 > .table2_body > div > div {
+  padding: 5px 10px;
+  background: #eff4f6;
+}
+.table2 > .table2_body > div > div:first-child {
+  -webkit-border-radius: 6px 0 0 6px;
+  -moz-border-radius: 6px 0 0 6px;
+  border-radius: 6px 0 0 6px;
+}
+.table2 > .table2_body > div > div:last-child {
+  -webkit-border-radius: 0 6px 6px 0;
+  -moz-border-radius: 0 6px 6px 0;
+  border-radius: 0 6px 6px 0;
+}
+.table2 > .table2_body > div > div > div {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.table2 > .table2_body > div.better_position > div {
+  background: #398eb9;
+  color: #fff;
+}
+.table2.resp1 > .table2_header {
+  display: none !important;
+}
+.table2.resp1 > .table2_body > div > div {
+  vertical-align: top;
+}
+.table2.resp1 > .table2_body > div > div::before {
+  content: attr(data-thn) ":";
+  display: block;
+  width: 100%;
+  opacity: 0.5;
+  font-size: 13px;
+}
+.table2.resp2 {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.table2.resp2 > div > div {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  margin-bottom: 3px;
+  border: 2px solid #f00;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+.table2.resp2 > .table2_body > div > div {
+  display: block;
+  width: 50%;
+}
+.table2.resp2 > .table2_body > div > div:nth-child(even){
+    border-bottom: 1px solid #ff000050;
+    padding: 5px;
+}
+.table2.resp2 > .table2_body > div > div:nth-child(odd){
+   border-bottom: 1px solid #ff000050; 
+}
+</style>
+</head>
+<body>
+  
+  <div class="table2">
+
+  <div class="table2_header">
+    <div>
+      <div>Garden Name</div>
+      <div>Garden ID</div>
+      <div>Adopted Date</div>
+      <div>Activity</div>
+      <div>Activity</div>
+      <div>Share to Social Media</div> 
+    </div>
+  </div>
+
+  <div class="table2_body">
+
+    <!-- row -->
+    <div>
+
+      <div>
+        <div>
+          <div>
+            <h4>visitacian vally garden1</h4>
+           
+          </div>
+        </div>
+      </div>
+
+      <div>
+       S-337803
+      </div>
+
+      <div>
+        2020-02-10
+      </div>
+
+      <div>
+        Activity
+      </div>
+      
+      <div>
+        button
+      </div>
+      <div>
+        <a href="#"> button 1 </a>   <a href="#"> button 2 </a>
+      </div>
+
+    </div>
+
+   <!-- row -->
+    <div>
+
+      <div>
+        <div>
+          <div>
+            <h4>visitacian vally garden1</h4>
+           
+          </div>
+        </div>
+      </div>
+
+      <div>
+       S-337803
+      </div>
+
+      <div>
+        2020-02-10
+      </div>
+
+      <div>
+        Activity
+      </div>
+      
+      <div>
+        button
+      </div>
+      <div>
+        <a href="#"> button 1 </a>   <a href="#"> button 2 </a>
+      </div>
+
+    </div>
+    
+    
+    <!-- row -->
+    <div>
+
+      <div>
+        <div>
+          <div>
+            <h4>visitacian vally garden1</h4>
+           
+          </div>
+        </div>
+      </div>
+
+      <div>
+       S-337803
+      </div>
+
+      <div>
+        2020-02-10
+      </div>
+
+      <div>
+        Activity
+      </div>
+      
+      <div>
+        button
+      </div>
+      <div>
+        <a href="#"> button 1 </a>   <a href="#"> button 2 </a>
+      </div>
+
+    </div>
+    
+    
+    <!-- row -->
+    <div>
+
+      <div>
+        <div>
+          <div>
+            <h4>visitacian vally garden1</h4>
+           
+          </div>
+        </div>
+      </div>
+
+      <div>
+       S-337803
+      </div>
+
+      <div>
+        2020-02-10
+      </div>
+
+      <div>
+        Activity
+      </div>
+      
+      <div>
+        button
+      </div>
+      <div>
+        <a href="#"> button 1 </a>   <a href="#"> button 2 </a>
+      </div>
+
+    </div>
+    
+    
+    <!-- row -->
+    <div>
+
+      <div>
+        <div>
+          <div>
+            <h4>visitacian vally garden1</h4>
+           
+          </div>
+        </div>
+      </div>
+
+      <div>
+       S-337803
+      </div>
+
+      <div>
+        2020-02-10
+      </div>
+
+      <div>
+        Activity
+      </div>
+      
+      <div>
+        button
+      </div>
+      <div>
+        <a href="#"> button 1 </a>   <a href="#"> button 2 </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+      "use strict";
+      // TABLE 2 (adaptive) //==============================================
+      var $thn_index, $thn_html, $table_name = $('.table2');
+      $table_name.children(":first-child").children().children().each(function() {
+          $thn_html = $(this).html();
+          $thn_index = $(this).index();
+          //console.log('index: '+thn_index+' text: '+thn_html);
+          $table_name.children().children().each(function() {
+              $(this).children().eq($thn_index).attr('data-thn', $thn_html);
+          });
+      });
+      var $last_win_w = $(window).width();
+      $(window).on("resize", function() {
+          if ($(window).width() != $last_win_w) {
+              var $table_w = Math.round($table_name.width());
+              console.log($table_w);
+              if ($table_w <= 720) {
+                  $table_name.addClass('resp1');
+              }
+              else {
+                  $table_name.removeClass('resp1');
+              }
+              if ($table_w <= 480) {
+                  $table_name.addClass('resp2');
+              }
+              else {
+                  $table_name.removeClass('resp2');
+              }
+              $last_win_w = $(window).width();
+          }
+      });
+
+  </script>
+</body>
+</html>

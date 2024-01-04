@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+<!------<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ Include the above in your HEAD tag ---------->
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+<style>
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+button:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1300px;
+  }
+}
+.box{
+    margin:5rem 0 15rem;
+}
+.heading{
+     text-align: center;
+    position: relative;
+    font-size: 3.3rem;
+    font-weight: bold;
+    margin: 3rem 0;
+    
+}
+.box figure {
+  -webkit-transition: 1s all;
+  transition: 1s all;
+  position: relative;
+}
+
+.box figure img {
+  height: 223px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.box figure figcaption {
+  position: absolute;
+  bottom: -50px;
+  left: 8%;
+  right: 8%;
+  background: #fff;
+  color: #000;
+  padding: 20px 15px;
+  -webkit-box-shadow: 0 5px 10px #00000033;
+          box-shadow: 0 5px 10px #00000033;
+  -webkit-transition: .5s all;
+  transition: .5s all;
+}
+
+.box figure figcaption::after {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  height: 2px;
+  background: #fc5546;
+  content: '';
+  width: 0;
+  position: absolute;
+  -webkit-transition: .5s all;
+  transition: .5s all;
+}
+
+.box figure figcaption h5 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  -webkit-transition: .3s all;
+  transition: .3s all;
+}
+
+.box figure figcaption h3 {
+  font-size: 2.1rem;
+  font-weight: 500;
+}
+
+.box figure:hover {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.box figure:hover h5 {
+  color: #fc5546;
+}
+
+.box figure:hover img {
+  -webkit-box-shadow: 0px 0px 6px #0000004f, -10px -10px 1px #f97955;
+          box-shadow: 0px 0px 6px #0000004f, -10px -10px 1px #f97955;
+}
+
+.box2 figure:hover figcaption {
+  -webkit-transform: translateY(-7px);
+          transform: translateY(-7px);
+  -webkit-box-shadow: 0 10px 10px #0000004f;
+          box-shadow: 0 10px 10px #0000004f;
+}
+
+.box figure:hover figcaption::after {
+  width: 100%;
+}
+.box h3 {
+  font-size: 3rem;
+  font-family: inherit;
+  font-weight: bold;
+  line-height: 4rem;
+}
+
+.box p {
+  font-size: 2rem;
+  font-family: "helveticaregular";
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+</style>
+</head>
+<body>
+<div class="box">
+                <div class="container">
+                    <h2 class="heading">New Card Style</h2>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img src="https://picsum.photos/400/233" alt="img1">
+                                <figcaption>
+                                    <h5>Our Services</h5>
+                                    <h3>How We Can Help</h3>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img src="https://picsum.photos/402/233" alt="img1">
+                                <figcaption>
+                                    <h5>Our Expertise</h5>
+                                    <h3>Why Partners with us</h3>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-md-4">
+                            <figure class="text-center">
+                                <img src="https://picsum.photos/401/233" alt="img1">
+                                <figcaption>
+                                    <h5>Our customers</h5>
+                                    <h3>Client success Stories</h3>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+</body>
+</html>

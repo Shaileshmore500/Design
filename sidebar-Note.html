@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Page</title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <style>
+        
+        body{
+            background-color: antiquewhite;
+            margin:0;
+            font-family:  system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        }
+        #sidebar{
+            height: 100vh;
+            width:max-content;
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
+            z-index:2;
+            transform:translateX(100%);
+            background-color: whitesmoke;
+            border-left: solid 3px gray;
+            transition: all 0.2s ;
+        }
+        .show-sidebar{
+            transform: translateX(0%) !important;
+        }
+        .show{
+            display: block !important;
+        }
+        .hide{
+            display: none !important;
+        }
+        .btn {
+            display: inline-block;  
+            padding: 0.375rem 0.75rem;
+            white-space: nowrap;
+            text-align: center;
+            border-radius: 0.25rem;
+            border:none;
+            font-size: 1rem;
+            background:lightgray;
+            transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+        /* Hover effect for buttons */
+        .btn:hover {
+            text-decoration: none;
+            opacity: .9;
+        }
+        /* Active state for buttons */
+        .btn:active{
+            /* border: 1px solid black; */
+            background: gray;
+            outline: 0;
+            box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+            
+        }
+        .btn:active svg{
+            color:#000;
+        }
+        /* Focus state for buttons */
+        .btn:focus {
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+        .btn-toggler{
+            height: 30px;
+            position: absolute;
+            top: 105px;
+            left: -60px;
+            background-color: purple;
+            padding: 0;
+            border-radius: 2rem;
+            transition: all 0.15s ease-in-out;
+        }
+        .btn-toggler:hover{
+            font-size: 20px;
+            padding: 8px;
+            position: absolute;
+            top: 105px;
+            left: -80px;
+            background-color: purple;
+            height: 50px;
+            border: solid 3px darkgoldenrod;
+        }
+        .btn-toggler svg{
+            height:18px;
+            width:18px;
+            padding: 4px 6px 0;
+            color:#fff
+        }
+        #sidebar .close{
+            text-align: right;
+        }
+        .btn-close {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1;
+            color: #000;
+            text-shadow: 0 1px 0 #fff;
+            opacity: 0.5;
+            width: 30px;
+        }
+
+        .btn-close:hover,
+        .btn-close:focus {
+            color: #000;
+            text-decoration: none;
+            opacity: 0.75;
+        } 
+        .inputField{
+            padding:15px;
+        }
+        .row {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .col-auto {
+            flex: 1 0 auto;
+            margin-bottom: 15px;;
+        }
+        #inputText{
+            width: 25vw;
+        }
+
+        .form-control {
+            display: block;
+            width: 100%;
+            padding: 0.375rem 0.75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+            transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        }
+
+        /* Focus state for form-control */
+        .form-control:focus {
+            color: #495057;
+            background-color: #fff;
+            border-color: #80bdff;
+            outline: 0;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+        .icon-link {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: inherit;
+            transition:all .125s ease-in-out;
+        }
+        .inputField label.icon-link{
+            font-size: 30px;
+            cursor: pointer;
+            padding: 0 15px;
+            height: -webkit-fill-available;
+        }
+        .inputField label.icon-link svg{
+            height:25px;
+            width:25px;
+        }
+        .inputField label.icon-link:hover svg{
+            transform:rotate(45deg);
+            transition: .125s all ease-in-out;
+        }
+        .inputField [type="file"]{
+            display:none;
+        }
+        #img-preview {
+            display: none;
+            width: 155px;
+            border: 2px dashed #333;  
+            margin-bottom: 20px;
+        }
+        #img-preview img {
+        width: 100%;
+        height: auto;
+        display: block;
+        }
+        #filename-preview{
+        display: none;
+        width: max-content;
+        border: 2px dashed #333;
+        margin-bottom: 20px;
+        padding: 0 5px;
+        color: mediumpurple;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        }
+        .fileIcon{
+            height: 30px;
+            width: 30px;
+            display: block;
+            margin: 0 auto;
+        }
+        .btn-save{
+            display:block;
+            width: fit-content;
+            background-color: #714b69;
+            color:white;
+        }
+        .btn-save:hover{
+            background-color: #714b699c;
+            color:white;
+        }
+        .card{
+            padding: 1rem;
+            margin: 1rem;
+            border: solid 1px black;
+            border-radius: 0.375rem;
+            background: white;
+        }
+        /* width */
+.card::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.card::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+.card::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+.card::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+        .message-log {
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: max-content;
+            max-height: 75vh;
+        }
+        .date-marker{
+            text-align: center;
+            position: relative;
+        }
+        .date-marker hr{
+            margin:1rem 0;
+        }
+        .date {
+            display: inline-block;
+            position: absolute;
+            top: -12px;
+            left: calc(50% - (61.5px / 2));
+            padding: 0 10px;
+            background-color: #fff;
+            font-weight: bold;
+            color: dimgray;
+        }
+        .message-block{
+            display: flex;
+            flex-direction: column;
+            row-gap: 8px;
+            min-width: 30vw;
+            padding-top:10px;
+        }
+        .message-block .user-img{
+            height: 50px;
+            width: 50px;
+            position: relative;
+            border-radius: 0.375rem;
+            font-size: 12px;
+            float: left;
+            margin: 0;
+            margin-right: 8px;
+            background-color: #0ea3ff;
+            color: white;
+            text-align: center;
+            line-height: 45px;
+            font-size: 40px;
+            font-weight: 900;
+            text-shadow: 3px 3px 7px black;
+            box-shadow: 1px 1px 5px black;
+            z-index:2;
+        }
+        .user-img:hover .tooltip{
+            visibility: visible;
+            right: auto;
+            left: -15px;
+            opacity: 1;
+            width: max-content;
+            z-index: 1000;
+        }
+        .message-details{
+            flex:1;
+        }
+        .message-details-inner{
+            position: relative;
+        }
+        .sender{
+            margin: 0;
+            font-weight: bold;
+            font-size: 15px;
+            line-height: 18px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .sender-name{
+            display: inline-block;
+            width: 14vw;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .message-timestamp{
+            padding-left: 4px;
+            color: gray;
+            font-weight: normal;
+            font-size: 14px;
+            vertical-align: top;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .edit-message{
+            display: inline-block;
+            position: relative;
+        }
+        .btn-alterMessage{
+            background-color: lightgray;
+            font-weight: bold;
+            padding: 0;
+            height: 22px;
+            width: 25px;
+            margin-left: 5px;
+            vertical-align: top;
+        }
+        .btn-alterMessage:hover{
+            background-color: darkgray;
+        }
+        .btn-alterMessage svg{
+            vertical-align: middle;
+        }
+        .dropdown-menu{
+            display:none;
+            min-width: 95px;
+            padding: 0;
+            position: absolute;
+            right:0;
+            z-index: 5;
+            overflow: hidden;
+            font-size: 13px;
+            border: solid 2px gray;
+            background: white;
+            border-radius: 0.375rem;
+            margin: 0;
+        }
+        .dropdown-menu li{
+            border-bottom: solid 1px;
+            cursor: pointer;
+        }
+        .dropdown-item:active{
+            background-color: rgba(40, 98, 255, 0.993);
+            color:white;
+        }
+        .dropdown-menu li:nth-last-child(1){
+            border-bottom: none;
+        }
+        .dropdown-item{
+            display: inline-block;
+            width: 100%;
+            padding: 0.25rem;
+            text-decoration: none;
+            color:black;
+        }
+        .edit-message .dropdown-menu .dropdown-item svg{
+            width: 13px;
+            height: 13px;
+        }
+        .message-text{
+            position: relative;
+            margin: 0;
+            font-size: 14px;
+            max-width: 280px;
+            word-break: break-word;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .message-text:hover + .tooltip{
+            visibility: visible;
+            width: 25vw;
+            opacity: 1;
+            top: 60px;
+            left: 0;
+            z-index: 1000;
+        }
+        .attachment{
+            display: flex;
+            align-items: center;
+            width: max-content;
+            position: relative;
+            background: transparent;
+            border-radius: 20px;
+            align-self: end;
+            border: solid 2px lightgray;
+        }
+        .attachment:hover .tooltip{
+            /* display: block; */
+            visibility: visible;
+            opacity: 1;
+            z-index: 1000;
+        }
+        .attachment-preview{
+            height: 25px;
+            width: 25px;
+            margin: 5px;
+            object-fit: contain;
+        }
+        .attachment-name{
+            height: 20px;
+            max-width: 285px;
+            min-width: 140px;
+            margin: 5px 0;
+            position:relative;
+            font-size: 12px;
+            font-weight: bold;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .attachment-alter-buttons{
+            width: 48px;
+            padding: 5px;
+            text-align: center;
+            word-spacing: 5px;
+        }
+        a.icon-link.btn-attachment-delete:hover{
+            color:#0ea3ff;
+            transform: translateY(-2px);
+        }
+        a.icon-link.btn-attachment-download:hover{
+            color:green;
+            transform: translateY(-2px);
+        }
+        .tooltip{
+            visibility:hidden;
+            opacity: 0;
+            height: max-content;
+            padding: 10px;
+            position: absolute;
+            top: -42px;
+            right: 48px;
+            line-height: 14px;
+            border: solid;
+            border-radius: 20px;
+            background: #000000bd;
+            color: white;
+            font-size: 12px;
+            font-weight: 400;
+            transition:opacity .375s ease-in-out;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="sidebar" class="">
+        <button class="btn btn-toggler" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrows-expand-vertical" viewBox="0 0 16 16">
+                <path d="M8 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708l-2-2ZM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8"/>
+            </svg>
+        </button>
+
+        <div class="close">
+            <button type="button" class="btn-close">&times;</button>
+        </div>
+        
+        <form class="inputField">
+            <div class="row">
+                <div class="col-auto">
+                  <label for="inputText" class="visually-hidden"></label>
+                  <input type="text" class="form-control" id="inputText" placeholder="placeholder text">
+                </div>
+                <div class="col-auto">
+                    <input type="file" name="file-upload" id="file-upload">
+                    <label for="file-upload" class="icon-link" href="#file-upload">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-paperclip" viewBox="0 0 16 16">
+                            <path d="M4.5 3a2.5 2.5 0 0 1 5 0v9a1.5 1.5 0 0 1-3 0V5a.5.5 0 0 1 1 0v7a.5.5 0 0 0 1 0V3a1.5 1.5 0 1 0-3 0v9a2.5 2.5 0 0 0 5 0V5a.5.5 0 0 1 1 0v7a3.5 3.5 0 1 1-7 0z"/>
+                        </svg>
+                    </label>
+                </div>
+            </div>
+            <div id="img-preview"></div>
+            <div id="filename-preview"></div>
+            <button type="button" class="btn btn-save" >Add Notes</button>
+        </form>
+
+        
+        <div class="message-log card card-body m-3">
+            <div class="date-marker">
+                <hr><span class="date"> Today </span>
+            </div>
+            <div class="message-block">
+                <div class="message-details">
+                    <p class="user-img"> S<span class="tooltip">Sender Name Goes Here</span></p>
+                    <!-- <img src="Images.sidebar/bmp.png" class="user-img" alt="User Image"> -->
+                    <div class="message-details-inner">
+                        <div class="sender">
+                            <span class="sender-name">SensysSensysSensysSensysSensysSensysSensysSensys</span> 
+                            <span class="message-timestamp">&middot; now</span>
+                            <div class="edit-message">
+                                <button class="btn btn-alterMessage">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                                    <path d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3"/>
+                                  </svg>
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-fill" viewBox="0 0 16 16">
+                                        <path d="M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z"/></svg> Edit
+                                        <!-- <a  href="#"></a> -->
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                        <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/></svg> Delete
+                                        <!-- <a  href="#"></a> -->
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="message-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam beatae corrupti quod vel consectetur voluptas voluptatibus totam, sint quos, laborum veritatis necessitatibus autem pariatur repellendus soluta reprehenderit eum magni culpa! Neque ab veritatis recusandae laborum delectus iure quo cupiditate incidunt fugit optio nihil, id suscipit vitae consequuntur est excepturi accusamus?</p>
+                        <span class="tooltip">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam beatae corrupti quod vel consectetur voluptas voluptatibus totam, sint quos, laborum veritatis necessitatibus autem pariatur repellendus soluta reprehenderit eum magni culpa! Neque ab veritatis recusandae laborum delectus iure quo cupiditate incidunt fugit optio nihil, id suscipit vitae consequuntur est excepturi accusamus?</span>
+                    </div>
+                </div>
+                <div class="attachment">
+                    <span class="tooltip">Attachment Filename Goes Here</span>
+                    <img src="Images.sidebar/text.png" alt="" class="attachment-preview">
+                    <p class="attachment-name">logofattachmentfiles.txt</p>
+                    <div class="attachment-alter-buttons">
+                        <a href="#" class="icon-link btn-attachment-delete">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5m3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0z"/>
+                                <path d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4zM2.5 3h11V2h-11z"/>
+                              </svg>
+                          </a>
+                          <a href="#" class="icon-link btn-attachment-download">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                              </svg>
+                          </a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
+    <script>
+        window.onload = function(){
+                dropDownShowFunction();
+                };
+
+        // Sidebar Toggle Code
+        const toggler = document.getElementsByClassName('btn-toggler')[0];
+        toggler.addEventListener("click", expandSidebar);
+        function expandSidebar(){
+            let sidebarDiv = document.getElementById('sidebar');
+            this.classList.add('hide');
+            sidebarDiv.classList.toggle("show-sidebar");
+        }
+
+        const closeBtn = document.getElementsByClassName('btn-close')[0];
+        closeBtn.addEventListener("click", closeSidebar);
+        function closeSidebar(){
+            let sidebarDiv = document.getElementById('sidebar');
+            sidebarDiv.classList.remove("show-sidebar");
+            toggler.classList.remove('hide');
+        }
+
+        const chooseFile = document.getElementById("file-upload");
+        const imgPreview = document.getElementById("img-preview");
+        const filePreview = document.getElementById("filename-preview");
+        chooseFile.addEventListener("change", function () {
+        getImgData();
+        });
+
+        //File Upload Preview
+        function getImgData() {
+            const files = chooseFile.files[0];
+            if (files && files.type.includes('image') ) {
+                const fileReader = new FileReader();
+                fileReader.readAsDataURL(files);
+                fileReader.addEventListener("load", function () {
+                imgPreview.style.display = "block";
+                imgPreview.innerHTML = '<img src="' + this.result + '" />';
+                filePreview.style.display = "block";
+                filePreview.innerHTML += files.name;
+                });
+            }
+            else{
+                filePreview.style.display = "block";
+                let type = extensionFunction(files.type);
+                filePreview.innerHTML = '<img class="fileIcon" src="Images.sidebar/' + type + '" />';
+                filePreview.innerHTML += files.name;
+            }
+        }
+        function extensionFunction(type){
+            if(type.includes('bmp')){
+                //Bitmap image extension
+                return "bmp.png";
+            }
+            else if(type.includes('openxmlformats-officedocument.wordprocessingml.document') || type.includes('msword')){
+                //Word document extensions
+                return "doc.png";
+            }
+            else if(type.includes('pdf')){
+                //PDF extensions
+                return "pdf.png";
+            }
+            else if(type.includes('vnd.ms-powerpoint') || type.includes('vnd.openxmlformats-officedocument.presentationml.presentation') || type.includes('vnd.oasis.opendocument.presentation')){
+                //PowerPoint extensions
+                return "ppt.png";
+            }
+            else if(type.includes('plain') || type.includes('vnd.oasis.opendocument.text')){
+                //Plain text extensions
+                return "text.png";
+            }
+            else if(type.includes('csv') || type.includes('vnd.ms-excel') || type.includes('vnd.openxmlformats-officedocument.spreadsheetml.sheet') || type.includes('vnd.oasis.opendocument.spreadsheet')){
+                //Excel extensions
+                return "xls.png";
+            }
+            else{
+                //All other extensions
+                return "file.png";
+            }
+            
+        }
+        
+        //Alter message code dropdown menu opening:
+        let dropDownButtonList = document.getElementsByClassName('btn-alterMessage');
+        function dropDownShowFunction(){
+                for(let element of dropDownButtonList){
+                    element.addEventListener('click',showOptionsList);
+                    element.addEventListener('click',hideOptionsList);
+                }
+        }
+        function showOptionsList(){
+            let options = this.nextElementSibling;
+            options.classList.toggle("show");
+            
+        }
+        function hideOptionsList(){
+            let menu =  this.nextElementSibling;
+            let menuListItems = this.nextElementSibling.children;
+            for(let element of menuListItems)
+            {
+                element.addEventListener('mouseover', function(){
+                    element.addEventListener('mouseout', function(){
+                        let timer = setTimeout(()=>{
+                            menu.classList.remove('show');},1500);
+                        });
+                });
+            }
+        }
+
+    </script>
+</body>
+</html>
